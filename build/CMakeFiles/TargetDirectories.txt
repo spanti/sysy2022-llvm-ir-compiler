@@ -1,0 +1,7 @@
+/mnt/f/test/build/CMakeFiles/intrinsics_gen.dir
+/mnt/f/test/build/CMakeFiles/omp_gen.dir
+/mnt/f/test/build/CMakeFiles/acc_gen.dir
+/mnt/f/test/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/mnt/f/test/build/CMakeFiles/c_edu_compiler.dir
+/mnt/f/test/build/CMakeFiles/edit_cache.dir
+/mnt/f/test/build/CMakeFiles/rebuild_cache.dir

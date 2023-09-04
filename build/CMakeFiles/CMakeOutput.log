@@ -1,0 +1,413 @@
+The system is: Linux - 5.10.16.3-microsoft-standard-WSL2 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/clang 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/mnt/f/test/build/CMakeFiles/3.25.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/mnt/f/test/build/CMakeFiles/3.25.2/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f7dbd/fast && /usr/bin/make  -f CMakeFiles/cmTC_f7dbd.dir/build.make CMakeFiles/cmTC_f7dbd.dir/build
+make[1]: Entering directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE'
+Building C object CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o
+/usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Candidate multilib: x32;@mx32
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-16/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE -resource-dir /usr/lib/llvm-16/lib/clang/16 -dependency-file CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-16/lib/clang/16/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE -ferror-limit 19 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+clang -cc1 version 16.0.6 based upon LLVM 16.0.6 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-16/lib/clang/16/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_f7dbd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7dbd.dir/link.txt --verbose=1
+/usr/bin/clang  -v CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -o cmTC_f7dbd 
+Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Candidate multilib: x32;@mx32
+Selected multilib: .;@m64
+ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f7dbd /usr/lib/x86_64-linux-gnu/Scrt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/llvm-16/lib/clang/16/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/llvm-16/lib/clang/16/include] ==> [/usr/lib/llvm-16/lib/clang/16/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/llvm-16/lib/clang/16/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_f7dbd/fast && /usr/bin/make  -f CMakeFiles/cmTC_f7dbd.dir/build.make CMakeFiles/cmTC_f7dbd.dir/build]
+  ignore line: [make[1]: Entering directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE']
+  ignore line: [Building C object CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/clang   -v -MD -MT CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Candidate multilib: 32]
+  ignore line: [@m32]
+  ignore line: [Candidate multilib: x32]
+  ignore line: [@mx32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ (in-process)]
+  ignore line: [ "/usr/lib/llvm-16/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE -resource-dir /usr/lib/llvm-16/lib/clang/16 -dependency-file CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-16/lib/clang/16/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-X782WE -ferror-limit 19 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 16.0.6 based upon LLVM 16.0.6 default target x86_64-pc-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/llvm-16/lib/clang/16/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_f7dbd]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7dbd.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang  -v CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -o cmTC_f7dbd ]
+  ignore line: [Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Candidate multilib: 32]
+  ignore line: [@m32]
+  ignore line: [Candidate multilib: x32]
+  ignore line: [@mx32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f7dbd /usr/lib/x86_64-linux-gnu/Scrt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f7dbd] ==> ignore
+    arg [/usr/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+    arg [/usr/lib/x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/x86_64-linux-gnu/crti.o]
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o]
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_f7dbd.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o]
+    arg [/usr/lib/x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/x86_64-linux-gnu/crtn.o]
+  collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o]
+  collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/7;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f73a0/fast && /usr/bin/make  -f CMakeFiles/cmTC_f73a0.dir/build.make CMakeFiles/cmTC_f73a0.dir/build
+make[1]: Entering directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd'
+Building CXX object CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Candidate multilib: x32;@mx32
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-16/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd -resource-dir /usr/lib/llvm-16/lib/clang/16 -dependency-file CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward -internal-isystem /usr/lib/llvm-16/lib/clang/16/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 16.0.6 based upon LLVM 16.0.6 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward
+ /usr/lib/llvm-16/lib/clang/16/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_f73a0
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f73a0.dir/link.txt --verbose=1
+/usr/bin/clang++  -v CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f73a0 
+Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Candidate multilib: .;@m64
+Candidate multilib: 32;@m32
+Candidate multilib: x32;@mx32
+Selected multilib: .;@m64
+ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f73a0 /usr/lib/x86_64-linux-gnu/Scrt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7]
+    add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7]
+    add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward]
+    add: [/usr/lib/llvm-16/lib/clang/16/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7] ==> [/usr/include/c++/7]
+  collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7] ==> [/usr/include/x86_64-linux-gnu/c++/7]
+  collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward] ==> [/usr/include/c++/7/backward]
+  collapse include dir [/usr/lib/llvm-16/lib/clang/16/include] ==> [/usr/lib/llvm-16/lib/clang/16/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/7;/usr/include/x86_64-linux-gnu/c++/7;/usr/include/c++/7/backward;/usr/lib/llvm-16/lib/clang/16/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_f73a0/fast && /usr/bin/make  -f CMakeFiles/cmTC_f73a0.dir/build.make CMakeFiles/cmTC_f73a0.dir/build]
+  ignore line: [make[1]: Entering directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd']
+  ignore line: [Building CXX object CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Candidate multilib: 32]
+  ignore line: [@m32]
+  ignore line: [Candidate multilib: x32]
+  ignore line: [@mx32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ (in-process)]
+  ignore line: [ "/usr/lib/llvm-16/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -fcoverage-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd -resource-dir /usr/lib/llvm-16/lib/clang/16 -dependency-file CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward -internal-isystem /usr/lib/llvm-16/lib/clang/16/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-tnLNCd -ferror-limit 19 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 16.0.6 based upon LLVM 16.0.6 default target x86_64-pc-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward]
+  ignore line: [ /usr/lib/llvm-16/lib/clang/16/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_f73a0]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f73a0.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++  -v CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f73a0 ]
+  ignore line: [Ubuntu clang version 16.0.6 (++20230610113324+7cbf1a259152-1~exp1~20230610233415.100)]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.5.0]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Candidate multilib: 32]
+  ignore line: [@m32]
+  ignore line: [Candidate multilib: x32]
+  ignore line: [@mx32]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -pie -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f73a0 /usr/lib/x86_64-linux-gnu/Scrt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/7 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/lib -L/usr/lib CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f73a0] ==> ignore
+    arg [/usr/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+    arg [/usr/lib/x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/x86_64-linux-gnu/crti.o]
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o]
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_f73a0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o]
+    arg [/usr/lib/x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/x86_64-linux-gnu/crtn.o]
+  collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o]
+  collapse obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/7] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/7;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/lib;/usr/lib]
+  implicit fwks: []
+
+
+Performing C SOURCE FILE Test HAVE_FFI_CALL succeeded with the following output:
+Change Dir: /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-wUFfhQ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_dc4ae/fast && /usr/bin/make  -f CMakeFiles/cmTC_dc4ae.dir/build.make CMakeFiles/cmTC_dc4ae.dir/build
+make[1]: Entering directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-wUFfhQ'
+Building C object CMakeFiles/cmTC_dc4ae.dir/src.c.o
+/usr/bin/clang -DHAVE_FFI_CALL   -MD -MT CMakeFiles/cmTC_dc4ae.dir/src.c.o -MF CMakeFiles/cmTC_dc4ae.dir/src.c.o.d -o CMakeFiles/cmTC_dc4ae.dir/src.c.o -c /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-wUFfhQ/src.c
+Linking C executable cmTC_dc4ae
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc4ae.dir/link.txt --verbose=1
+/usr/bin/clang CMakeFiles/cmTC_dc4ae.dir/src.c.o -o cmTC_dc4ae  /usr/lib/x86_64-linux-gnu/libffi.so 
+make[1]: Leaving directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-wUFfhQ'
+
+
+Source file was:
+
+    struct ffi_cif;
+    typedef struct ffi_cif ffi_cif;
+    void ffi_call(ffi_cif *cif, void (*fn)(void), void *rvalue, void **avalue);
+    int main(void) { ffi_call(0, 0, 0, 0); }
+
+Performing C SOURCE FILE Test Terminfo_LINKABLE succeeded with the following output:
+Change Dir: /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-OP63Fv
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1de3c/fast && /usr/bin/make  -f CMakeFiles/cmTC_1de3c.dir/build.make CMakeFiles/cmTC_1de3c.dir/build
+make[1]: Entering directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-OP63Fv'
+Building C object CMakeFiles/cmTC_1de3c.dir/src.c.o
+/usr/bin/clang -DTerminfo_LINKABLE   -MD -MT CMakeFiles/cmTC_1de3c.dir/src.c.o -MF CMakeFiles/cmTC_1de3c.dir/src.c.o.d -o CMakeFiles/cmTC_1de3c.dir/src.c.o -c /mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-OP63Fv/src.c
+Linking C executable cmTC_1de3c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1de3c.dir/link.txt --verbose=1
+/usr/bin/clang CMakeFiles/cmTC_1de3c.dir/src.c.o -o cmTC_1de3c  /usr/lib/x86_64-linux-gnu/libtinfo.so 
+make[1]: Leaving directory '/mnt/f/test/build/CMakeFiles/CMakeScratch/TryCompile-OP63Fv'
+
+
+Source file was:
+
+    int setupterm(char *term, int filedes, int *errret);
+    int main(void) { return setupterm(0, 0, 0); }
+
