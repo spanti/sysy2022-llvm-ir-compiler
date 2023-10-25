@@ -3445,6 +3445,54 @@ antlr-runtime/tree/xpath/XPathWildcardElement.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.s
 .PHONY : antlr-runtime/tree/xpath/XPathWildcardElement.cpp.s
 
+src/ast/AST.o: src/ast/AST.cpp.o
+.PHONY : src/ast/AST.o
+
+# target to build an object file
+src/ast/AST.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o
+.PHONY : src/ast/AST.cpp.o
+
+src/ast/AST.i: src/ast/AST.cpp.i
+.PHONY : src/ast/AST.i
+
+# target to preprocess a source file
+src/ast/AST.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.i
+.PHONY : src/ast/AST.cpp.i
+
+src/ast/AST.s: src/ast/AST.cpp.s
+.PHONY : src/ast/AST.s
+
+# target to generate assembly for a file
+src/ast/AST.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.s
+.PHONY : src/ast/AST.cpp.s
+
+src/ast/ASTTypeChecker.o: src/ast/ASTTypeChecker.cpp.o
+.PHONY : src/ast/ASTTypeChecker.o
+
+# target to build an object file
+src/ast/ASTTypeChecker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o
+.PHONY : src/ast/ASTTypeChecker.cpp.o
+
+src/ast/ASTTypeChecker.i: src/ast/ASTTypeChecker.cpp.i
+.PHONY : src/ast/ASTTypeChecker.i
+
+# target to preprocess a source file
+src/ast/ASTTypeChecker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.i
+.PHONY : src/ast/ASTTypeChecker.cpp.i
+
+src/ast/ASTTypeChecker.s: src/ast/ASTTypeChecker.cpp.s
+.PHONY : src/ast/ASTTypeChecker.s
+
+# target to generate assembly for a file
+src/ast/ASTTypeChecker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.s
+.PHONY : src/ast/ASTTypeChecker.cpp.s
+
 src/ast/ASTbuilder.o: src/ast/ASTbuilder.cpp.o
 .PHONY : src/ast/ASTbuilder.o
 
@@ -3469,6 +3517,30 @@ src/ast/ASTbuilder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.s
 .PHONY : src/ast/ASTbuilder.cpp.s
 
+src/ast/ASTprinter.o: src/ast/ASTprinter.cpp.o
+.PHONY : src/ast/ASTprinter.o
+
+# target to build an object file
+src/ast/ASTprinter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o
+.PHONY : src/ast/ASTprinter.cpp.o
+
+src/ast/ASTprinter.i: src/ast/ASTprinter.cpp.i
+.PHONY : src/ast/ASTprinter.i
+
+# target to preprocess a source file
+src/ast/ASTprinter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.i
+.PHONY : src/ast/ASTprinter.cpp.i
+
+src/ast/ASTprinter.s: src/ast/ASTprinter.cpp.s
+.PHONY : src/ast/ASTprinter.s
+
+# target to generate assembly for a file
+src/ast/ASTprinter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.s
+.PHONY : src/ast/ASTprinter.cpp.s
+
 src/ast/Type.o: src/ast/Type.cpp.o
 .PHONY : src/ast/Type.o
 
@@ -3492,6 +3564,54 @@ src/ast/Type.s: src/ast/Type.cpp.s
 src/ast/Type.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.s
 .PHONY : src/ast/Type.cpp.s
+
+src/common/common.o: src/common/common.cpp.o
+.PHONY : src/common/common.o
+
+# target to build an object file
+src/common/common.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o
+.PHONY : src/common/common.cpp.o
+
+src/common/common.i: src/common/common.cpp.i
+.PHONY : src/common/common.i
+
+# target to preprocess a source file
+src/common/common.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.i
+.PHONY : src/common/common.cpp.i
+
+src/common/common.s: src/common/common.cpp.s
+.PHONY : src/common/common.s
+
+# target to generate assembly for a file
+src/common/common.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.s
+.PHONY : src/common/common.cpp.s
+
+src/common/errors.o: src/common/errors.cpp.o
+.PHONY : src/common/errors.o
+
+# target to build an object file
+src/common/errors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o
+.PHONY : src/common/errors.cpp.o
+
+src/common/errors.i: src/common/errors.cpp.i
+.PHONY : src/common/errors.i
+
+# target to preprocess a source file
+src/common/errors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.i
+.PHONY : src/common/errors.cpp.i
+
+src/common/errors.s: src/common/errors.cpp.s
+.PHONY : src/common/errors.s
+
+# target to generate assembly for a file
+src/common/errors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.s
+.PHONY : src/common/errors.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -3660,6 +3780,30 @@ src/parser/SysYVisitor.s: src/parser/SysYVisitor.cpp.s
 src/parser/SysYVisitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.s
 .PHONY : src/parser/SysYVisitor.cpp.s
+
+src/semantic/SymbolTable.o: src/semantic/SymbolTable.cpp.o
+.PHONY : src/semantic/SymbolTable.o
+
+# target to build an object file
+src/semantic/SymbolTable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o
+.PHONY : src/semantic/SymbolTable.cpp.o
+
+src/semantic/SymbolTable.i: src/semantic/SymbolTable.cpp.i
+.PHONY : src/semantic/SymbolTable.i
+
+# target to preprocess a source file
+src/semantic/SymbolTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.i
+.PHONY : src/semantic/SymbolTable.cpp.i
+
+src/semantic/SymbolTable.s: src/semantic/SymbolTable.cpp.s
+.PHONY : src/semantic/SymbolTable.s
+
+# target to generate assembly for a file
+src/semantic/SymbolTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c_edu_compiler.dir/build.make CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.s
+.PHONY : src/semantic/SymbolTable.cpp.s
 
 # Help Target
 help:
@@ -4082,12 +4226,27 @@ help:
 	@echo "... antlr-runtime/tree/xpath/XPathWildcardElement.o"
 	@echo "... antlr-runtime/tree/xpath/XPathWildcardElement.i"
 	@echo "... antlr-runtime/tree/xpath/XPathWildcardElement.s"
+	@echo "... src/ast/AST.o"
+	@echo "... src/ast/AST.i"
+	@echo "... src/ast/AST.s"
+	@echo "... src/ast/ASTTypeChecker.o"
+	@echo "... src/ast/ASTTypeChecker.i"
+	@echo "... src/ast/ASTTypeChecker.s"
 	@echo "... src/ast/ASTbuilder.o"
 	@echo "... src/ast/ASTbuilder.i"
 	@echo "... src/ast/ASTbuilder.s"
+	@echo "... src/ast/ASTprinter.o"
+	@echo "... src/ast/ASTprinter.i"
+	@echo "... src/ast/ASTprinter.s"
 	@echo "... src/ast/Type.o"
 	@echo "... src/ast/Type.i"
 	@echo "... src/ast/Type.s"
+	@echo "... src/common/common.o"
+	@echo "... src/common/common.i"
+	@echo "... src/common/common.s"
+	@echo "... src/common/errors.o"
+	@echo "... src/common/errors.i"
+	@echo "... src/common/errors.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -4109,6 +4268,9 @@ help:
 	@echo "... src/parser/SysYVisitor.o"
 	@echo "... src/parser/SysYVisitor.i"
 	@echo "... src/parser/SysYVisitor.s"
+	@echo "... src/semantic/SymbolTable.o"
+	@echo "... src/semantic/SymbolTable.i"
+	@echo "... src/semantic/SymbolTable.s"
 .PHONY : help
 
 

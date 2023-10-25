@@ -20,16 +20,20 @@ file (GLOB_RECURSE DIR_SRC "src/*.cpp")
 file(GLOB_RECURSE DIR_LIB "antlr-runtime/*.cpp")
 #llvm libraries
 include_directories(${LLVM_INCLUDE_DIRS})
-#include library
+#添加头文件检索路径
 include_directories(src)
+include_directories(src/ast)
+include_directories(src/semantic)
+include_directories(src/common)
 include_directories(antlr-runtime)
 separate_arguments(LLVM_DEFINITIONS_LIST NATIVE_COMMAND ${LLVM_DEFINITIONS})
 add_definitions(${LLVM_DEFINITIONS})
-# add an executable
+message(STATUS "DIR_SRC: ${DIR_SRC}")
+#生成可执行文件
 add_executable(c_edu_compiler ${DIR_SRC} ${DIR_LIB})
 #add_executable(${PROJECT_NAME} test.cpp)
 # Find the libraries that correspond to the LLVM components
 # that we wish to use
 llvm_map_components_to_libnames(llvm_libs support core irreader)
-# Link against LLVM libraries
+# Link against LLVM libraries - 链接库
 target_link_libraries(c_edu_compiler ${llvm_libs})

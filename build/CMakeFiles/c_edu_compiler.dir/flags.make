@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime
+CXX_INCLUDES = -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime
 
 CXX_FLAGS = -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17
 

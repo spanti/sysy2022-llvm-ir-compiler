@@ -155,21 +155,37 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/ostream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/istream.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/memory \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_construct.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_uninitialized.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/utility \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_relops.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_tempbuf.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ext/concurrence.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/uses_allocator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/unique_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/tuple \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/array \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/invoke.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/shared_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/shared_ptr_base.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/allocated_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/refwrap.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ext/aligned_buffer.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/atomic_base.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward/auto_ptr.h \
   /mnt/f/test/antlr-runtime/antlr4-runtime.h \
   /mnt/f/test/antlr-runtime/antlr4-common.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/algorithm \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/utility \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_relops.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/algorithmfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_heap.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_tempbuf.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_construct.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/uniform_int_dist.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/any \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/atomic \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/atomic_base.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/atomic_lockfree_defines.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bitset \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cassert \
   /usr/include/assert.h \
@@ -191,27 +207,11 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stream_iterator.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_tree.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ext/aligned_buffer.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/node_handle.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/optional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/enable_special_members.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_map.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/tuple \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/array \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/uses_allocator.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/invoke.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_multimap.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/memory \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_uninitialized.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_raw_storage_iter.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ext/concurrence.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/unique_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/shared_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/shared_ptr_base.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/allocated_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/refwrap.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/shared_ptr_atomic.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/backward/auto_ptr.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/set \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_set.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_multiset.h \
@@ -408,9 +408,151 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.h \
   /mnt/f/test/src/ast/ASTBuilder.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/variant \
+  /mnt/f/test/src/ast/AST.h /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/llvm-16/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/functional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/std_function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
   /mnt/f/test/src/parser/SysYBaseVisitor.h \
   /mnt/f/test/src/parser/SysYVisitor.h \
-  /mnt/f/test/src/parser/SysYParser.h /mnt/f/test/src/ast/AST.h \
-  /mnt/f/test/src/ast/Type.h /mnt/f/test/src/parser/SysYBaseListener.h \
+  /mnt/f/test/src/parser/SysYParser.h /mnt/f/test/src/ast/ASTvisitor.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APInt.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constants.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFold.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/Operator.h \
+  /usr/lib/llvm-16/include/llvm/IR/FMF.h \
+  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
+  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
+  /usr/lib/llvm-16/include/llvm/IR/FPEnv.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/IR/Intrinsics.h \
+  /usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc \
+  /usr/lib/llvm-16/include/llvm/IR/Module.h \
+  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
+  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
+  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
+  /usr/lib/llvm-16/include/llvm/IR/Verifier.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
+  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
+  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
+  /usr/lib/llvm-16/include/llvm/Support/Error.h \
+  /usr/lib/llvm-16/include/llvm-c/Error.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
+  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
+  /usr/lib/llvm-16/include/llvm/Support/Format.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/list \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_list.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/list.tcc \
+  /usr/include/llvm-16/llvm/IR/DerivedTypes.h \
+  /usr/include/llvm-16/llvm/IR/Type.h \
+  /usr/include/llvm-16/llvm/IR/Value.h \
+  /usr/include/llvm-16/llvm/Support/raw_ostream.h \
+  /mnt/f/test/src/parser/SysYBaseListener.h \
   /mnt/f/test/src/parser/SysYListener.h \
   /mnt/f/test/src/parser/SysYLexer.h

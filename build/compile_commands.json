@@ -1,727 +1,757 @@
 [
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o -c /mnt/f/test/src/ast/ASTbuilder.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o -c /mnt/f/test/src/ast/AST.cpp",
+  "file": "/mnt/f/test/src/ast/AST.cpp"
+},
+{
+  "directory": "/mnt/f/test/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o -c /mnt/f/test/src/ast/ASTTypeChecker.cpp",
+  "file": "/mnt/f/test/src/ast/ASTTypeChecker.cpp"
+},
+{
+  "directory": "/mnt/f/test/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o -c /mnt/f/test/src/ast/ASTbuilder.cpp",
   "file": "/mnt/f/test/src/ast/ASTbuilder.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o -c /mnt/f/test/src/ast/Type.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o -c /mnt/f/test/src/ast/ASTprinter.cpp",
+  "file": "/mnt/f/test/src/ast/ASTprinter.cpp"
+},
+{
+  "directory": "/mnt/f/test/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o -c /mnt/f/test/src/ast/Type.cpp",
   "file": "/mnt/f/test/src/ast/Type.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/main.cpp.o -c /mnt/f/test/src/main.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o -c /mnt/f/test/src/common/common.cpp",
+  "file": "/mnt/f/test/src/common/common.cpp"
+},
+{
+  "directory": "/mnt/f/test/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o -c /mnt/f/test/src/common/errors.cpp",
+  "file": "/mnt/f/test/src/common/errors.cpp"
+},
+{
+  "directory": "/mnt/f/test/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/main.cpp.o -c /mnt/f/test/src/main.cpp",
   "file": "/mnt/f/test/src/main.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o -c /mnt/f/test/src/parser/SysYBaseListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o -c /mnt/f/test/src/parser/SysYBaseListener.cpp",
   "file": "/mnt/f/test/src/parser/SysYBaseListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o -c /mnt/f/test/src/parser/SysYBaseVisitor.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o -c /mnt/f/test/src/parser/SysYBaseVisitor.cpp",
   "file": "/mnt/f/test/src/parser/SysYBaseVisitor.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o -c /mnt/f/test/src/parser/SysYLexer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o -c /mnt/f/test/src/parser/SysYLexer.cpp",
   "file": "/mnt/f/test/src/parser/SysYLexer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o -c /mnt/f/test/src/parser/SysYListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o -c /mnt/f/test/src/parser/SysYListener.cpp",
   "file": "/mnt/f/test/src/parser/SysYListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o -c /mnt/f/test/src/parser/SysYParser.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o -c /mnt/f/test/src/parser/SysYParser.cpp",
   "file": "/mnt/f/test/src/parser/SysYParser.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o -c /mnt/f/test/src/parser/SysYVisitor.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o -c /mnt/f/test/src/parser/SysYVisitor.cpp",
   "file": "/mnt/f/test/src/parser/SysYVisitor.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRErrorListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o -c /mnt/f/test/src/semantic/SymbolTable.cpp",
+  "file": "/mnt/f/test/src/semantic/SymbolTable.cpp"
+},
+{
+  "directory": "/mnt/f/test/build",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRErrorListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/ANTLRErrorListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRErrorStrategy.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRErrorStrategy.cpp",
   "file": "/mnt/f/test/antlr-runtime/ANTLRErrorStrategy.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRFileStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRFileStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/ANTLRFileStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRInputStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRInputStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/ANTLRInputStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/BailErrorStrategy.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/BailErrorStrategy.cpp",
   "file": "/mnt/f/test/antlr-runtime/BailErrorStrategy.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/BaseErrorListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/BaseErrorListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/BaseErrorListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/BufferedTokenStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/BufferedTokenStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/BufferedTokenStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o -c /mnt/f/test/antlr-runtime/CharStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o -c /mnt/f/test/antlr-runtime/CharStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/CharStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o -c /mnt/f/test/antlr-runtime/CommonToken.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o -c /mnt/f/test/antlr-runtime/CommonToken.cpp",
   "file": "/mnt/f/test/antlr-runtime/CommonToken.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o -c /mnt/f/test/antlr-runtime/CommonTokenFactory.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o -c /mnt/f/test/antlr-runtime/CommonTokenFactory.cpp",
   "file": "/mnt/f/test/antlr-runtime/CommonTokenFactory.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/CommonTokenStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/CommonTokenStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/CommonTokenStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ConsoleErrorListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ConsoleErrorListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/ConsoleErrorListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/DefaultErrorStrategy.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/DefaultErrorStrategy.cpp",
   "file": "/mnt/f/test/antlr-runtime/DefaultErrorStrategy.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/DiagnosticErrorListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/DiagnosticErrorListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/DiagnosticErrorListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o -c /mnt/f/test/antlr-runtime/Exceptions.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o -c /mnt/f/test/antlr-runtime/Exceptions.cpp",
   "file": "/mnt/f/test/antlr-runtime/Exceptions.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o -c /mnt/f/test/antlr-runtime/FailedPredicateException.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o -c /mnt/f/test/antlr-runtime/FailedPredicateException.cpp",
   "file": "/mnt/f/test/antlr-runtime/FailedPredicateException.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o -c /mnt/f/test/antlr-runtime/InputMismatchException.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o -c /mnt/f/test/antlr-runtime/InputMismatchException.cpp",
   "file": "/mnt/f/test/antlr-runtime/InputMismatchException.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o -c /mnt/f/test/antlr-runtime/IntStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o -c /mnt/f/test/antlr-runtime/IntStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/IntStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o -c /mnt/f/test/antlr-runtime/InterpreterRuleContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o -c /mnt/f/test/antlr-runtime/InterpreterRuleContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/InterpreterRuleContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o -c /mnt/f/test/antlr-runtime/Lexer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o -c /mnt/f/test/antlr-runtime/Lexer.cpp",
   "file": "/mnt/f/test/antlr-runtime/Lexer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o -c /mnt/f/test/antlr-runtime/LexerInterpreter.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o -c /mnt/f/test/antlr-runtime/LexerInterpreter.cpp",
   "file": "/mnt/f/test/antlr-runtime/LexerInterpreter.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o -c /mnt/f/test/antlr-runtime/LexerNoViableAltException.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o -c /mnt/f/test/antlr-runtime/LexerNoViableAltException.cpp",
   "file": "/mnt/f/test/antlr-runtime/LexerNoViableAltException.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o -c /mnt/f/test/antlr-runtime/ListTokenSource.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o -c /mnt/f/test/antlr-runtime/ListTokenSource.cpp",
   "file": "/mnt/f/test/antlr-runtime/ListTokenSource.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o -c /mnt/f/test/antlr-runtime/NoViableAltException.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o -c /mnt/f/test/antlr-runtime/NoViableAltException.cpp",
   "file": "/mnt/f/test/antlr-runtime/NoViableAltException.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o -c /mnt/f/test/antlr-runtime/Parser.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o -c /mnt/f/test/antlr-runtime/Parser.cpp",
   "file": "/mnt/f/test/antlr-runtime/Parser.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o -c /mnt/f/test/antlr-runtime/ParserInterpreter.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o -c /mnt/f/test/antlr-runtime/ParserInterpreter.cpp",
   "file": "/mnt/f/test/antlr-runtime/ParserInterpreter.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o -c /mnt/f/test/antlr-runtime/ParserRuleContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o -c /mnt/f/test/antlr-runtime/ParserRuleContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/ParserRuleContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ProxyErrorListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ProxyErrorListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/ProxyErrorListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o -c /mnt/f/test/antlr-runtime/RecognitionException.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o -c /mnt/f/test/antlr-runtime/RecognitionException.cpp",
   "file": "/mnt/f/test/antlr-runtime/RecognitionException.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o -c /mnt/f/test/antlr-runtime/Recognizer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o -c /mnt/f/test/antlr-runtime/Recognizer.cpp",
   "file": "/mnt/f/test/antlr-runtime/Recognizer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o -c /mnt/f/test/antlr-runtime/RuleContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o -c /mnt/f/test/antlr-runtime/RuleContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/RuleContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o -c /mnt/f/test/antlr-runtime/RuleContextWithAltNum.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o -c /mnt/f/test/antlr-runtime/RuleContextWithAltNum.cpp",
   "file": "/mnt/f/test/antlr-runtime/RuleContextWithAltNum.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o -c /mnt/f/test/antlr-runtime/RuntimeMetaData.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o -c /mnt/f/test/antlr-runtime/RuntimeMetaData.cpp",
   "file": "/mnt/f/test/antlr-runtime/RuntimeMetaData.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o -c /mnt/f/test/antlr-runtime/Token.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o -c /mnt/f/test/antlr-runtime/Token.cpp",
   "file": "/mnt/f/test/antlr-runtime/Token.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o -c /mnt/f/test/antlr-runtime/TokenSource.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o -c /mnt/f/test/antlr-runtime/TokenSource.cpp",
   "file": "/mnt/f/test/antlr-runtime/TokenSource.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o -c /mnt/f/test/antlr-runtime/TokenStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o -c /mnt/f/test/antlr-runtime/TokenStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/TokenStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o -c /mnt/f/test/antlr-runtime/TokenStreamRewriter.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o -c /mnt/f/test/antlr-runtime/TokenStreamRewriter.cpp",
   "file": "/mnt/f/test/antlr-runtime/TokenStreamRewriter.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o -c /mnt/f/test/antlr-runtime/UnbufferedCharStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o -c /mnt/f/test/antlr-runtime/UnbufferedCharStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/UnbufferedCharStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/UnbufferedTokenStream.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/UnbufferedTokenStream.cpp",
   "file": "/mnt/f/test/antlr-runtime/UnbufferedTokenStream.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o -c /mnt/f/test/antlr-runtime/Vocabulary.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o -c /mnt/f/test/antlr-runtime/Vocabulary.cpp",
   "file": "/mnt/f/test/antlr-runtime/Vocabulary.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o -c /mnt/f/test/antlr-runtime/WritableToken.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o -c /mnt/f/test/antlr-runtime/WritableToken.cpp",
   "file": "/mnt/f/test/antlr-runtime/WritableToken.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATN.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATN.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATN.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNConfig.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNConfig.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNConfig.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNConfigSet.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNConfigSet.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNConfigSet.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNDeserializationOptions.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNDeserializationOptions.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNDeserializationOptions.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNDeserializer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNDeserializer.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNDeserializer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNSimulator.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNSimulator.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNSimulator.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNState.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNState.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNState.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNStateType.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNStateType.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ATNStateType.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/ActionTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/ActionTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ActionTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/AmbiguityInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/AmbiguityInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/AmbiguityInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/ArrayPredictionContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/ArrayPredictionContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ArrayPredictionContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/AtomTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/AtomTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/AtomTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ContextSensitivityInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ContextSensitivityInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ContextSensitivityInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionEventInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionEventInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/DecisionEventInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/DecisionInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionState.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionState.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/DecisionState.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/EpsilonTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/EpsilonTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/EpsilonTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ErrorInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ErrorInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ErrorInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o -c /mnt/f/test/antlr-runtime/atn/LL1Analyzer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o -c /mnt/f/test/antlr-runtime/atn/LL1Analyzer.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LL1Analyzer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerATNConfig.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerATNConfig.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerATNConfig.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerATNSimulator.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerATNSimulator.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerATNSimulator.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerActionExecutor.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerActionExecutor.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerActionExecutor.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerChannelAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerChannelAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerChannelAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerCustomAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerCustomAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerCustomAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerIndexedCustomAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerIndexedCustomAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerIndexedCustomAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerModeAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerModeAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerModeAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerMoreAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerMoreAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerMoreAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerPopModeAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerPopModeAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerPopModeAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerPushModeAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerPushModeAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerPushModeAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerSkipAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerSkipAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerSkipAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerTypeAction.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerTypeAction.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LexerTypeAction.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/LookaheadEventInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/LookaheadEventInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/LookaheadEventInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/NotSetTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/NotSetTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/NotSetTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o -c /mnt/f/test/antlr-runtime/atn/OrderedATNConfigSet.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o -c /mnt/f/test/antlr-runtime/atn/OrderedATNConfigSet.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/OrderedATNConfigSet.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ParseInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ParseInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ParseInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ParserATNSimulator.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ParserATNSimulator.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ParserATNSimulator.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/PrecedencePredicateTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/PrecedencePredicateTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PrecedencePredicateTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredicateEvalInfo.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredicateEvalInfo.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PredicateEvalInfo.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredicateTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredicateTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PredicateTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PredictionContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContextCache.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContextCache.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PredictionContextCache.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContextMergeCache.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContextMergeCache.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PredictionContextMergeCache.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionMode.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionMode.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/PredictionMode.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ProfilingATNSimulator.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ProfilingATNSimulator.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/ProfilingATNSimulator.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/RangeTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/RangeTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/RangeTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/RuleTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/RuleTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/RuleTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/SemanticContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/SemanticContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/SemanticContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/SetTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/SetTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/SetTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/SingletonPredictionContext.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/SingletonPredictionContext.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/SingletonPredictionContext.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o -c /mnt/f/test/antlr-runtime/atn/StarLoopbackState.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o -c /mnt/f/test/antlr-runtime/atn/StarLoopbackState.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/StarLoopbackState.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o -c /mnt/f/test/antlr-runtime/atn/Transition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o -c /mnt/f/test/antlr-runtime/atn/Transition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/Transition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o -c /mnt/f/test/antlr-runtime/atn/TransitionType.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o -c /mnt/f/test/antlr-runtime/atn/TransitionType.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/TransitionType.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/WildcardTransition.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/WildcardTransition.cpp",
   "file": "/mnt/f/test/antlr-runtime/atn/WildcardTransition.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFA.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFA.cpp",
   "file": "/mnt/f/test/antlr-runtime/dfa/DFA.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFASerializer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFASerializer.cpp",
   "file": "/mnt/f/test/antlr-runtime/dfa/DFASerializer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFAState.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFAState.cpp",
   "file": "/mnt/f/test/antlr-runtime/dfa/DFAState.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o -c /mnt/f/test/antlr-runtime/dfa/LexerDFASerializer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o -c /mnt/f/test/antlr-runtime/dfa/LexerDFASerializer.cpp",
   "file": "/mnt/f/test/antlr-runtime/dfa/LexerDFASerializer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o -c /mnt/f/test/antlr-runtime/internal/Synchronization.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o -c /mnt/f/test/antlr-runtime/internal/Synchronization.cpp",
   "file": "/mnt/f/test/antlr-runtime/internal/Synchronization.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o -c /mnt/f/test/antlr-runtime/misc/InterpreterDataReader.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o -c /mnt/f/test/antlr-runtime/misc/InterpreterDataReader.cpp",
   "file": "/mnt/f/test/antlr-runtime/misc/InterpreterDataReader.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o -c /mnt/f/test/antlr-runtime/misc/Interval.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o -c /mnt/f/test/antlr-runtime/misc/Interval.cpp",
   "file": "/mnt/f/test/antlr-runtime/misc/Interval.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o -c /mnt/f/test/antlr-runtime/misc/IntervalSet.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o -c /mnt/f/test/antlr-runtime/misc/IntervalSet.cpp",
   "file": "/mnt/f/test/antlr-runtime/misc/IntervalSet.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o -c /mnt/f/test/antlr-runtime/misc/MurmurHash.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o -c /mnt/f/test/antlr-runtime/misc/MurmurHash.cpp",
   "file": "/mnt/f/test/antlr-runtime/misc/MurmurHash.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o -c /mnt/f/test/antlr-runtime/misc/Predicate.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o -c /mnt/f/test/antlr-runtime/misc/Predicate.cpp",
   "file": "/mnt/f/test/antlr-runtime/misc/Predicate.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o -c /mnt/f/test/antlr-runtime/support/Any.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o -c /mnt/f/test/antlr-runtime/support/Any.cpp",
   "file": "/mnt/f/test/antlr-runtime/support/Any.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o -c /mnt/f/test/antlr-runtime/support/Arrays.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o -c /mnt/f/test/antlr-runtime/support/Arrays.cpp",
   "file": "/mnt/f/test/antlr-runtime/support/Arrays.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o -c /mnt/f/test/antlr-runtime/support/CPPUtils.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o -c /mnt/f/test/antlr-runtime/support/CPPUtils.cpp",
   "file": "/mnt/f/test/antlr-runtime/support/CPPUtils.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o -c /mnt/f/test/antlr-runtime/support/StringUtils.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o -c /mnt/f/test/antlr-runtime/support/StringUtils.cpp",
   "file": "/mnt/f/test/antlr-runtime/support/StringUtils.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o -c /mnt/f/test/antlr-runtime/support/Utf8.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o -c /mnt/f/test/antlr-runtime/support/Utf8.cpp",
   "file": "/mnt/f/test/antlr-runtime/support/Utf8.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o -c /mnt/f/test/antlr-runtime/tree/ErrorNodeImpl.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o -c /mnt/f/test/antlr-runtime/tree/ErrorNodeImpl.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/ErrorNodeImpl.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o -c /mnt/f/test/antlr-runtime/tree/IterativeParseTreeWalker.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o -c /mnt/f/test/antlr-runtime/tree/IterativeParseTreeWalker.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/IterativeParseTreeWalker.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTree.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTree.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/ParseTree.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/ParseTreeListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeVisitor.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeVisitor.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/ParseTreeVisitor.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeWalker.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeWalker.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/ParseTreeWalker.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o -c /mnt/f/test/antlr-runtime/tree/TerminalNodeImpl.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o -c /mnt/f/test/antlr-runtime/tree/TerminalNodeImpl.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/TerminalNodeImpl.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o -c /mnt/f/test/antlr-runtime/tree/Trees.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o -c /mnt/f/test/antlr-runtime/tree/Trees.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/Trees.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/Chunk.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/Chunk.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/Chunk.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreeMatch.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreeMatch.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/ParseTreeMatch.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePattern.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePattern.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/ParseTreePattern.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/RuleTagToken.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/RuleTagToken.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/RuleTagToken.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TagChunk.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TagChunk.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/TagChunk.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TextChunk.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TextChunk.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/TextChunk.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TokenTagToken.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TokenTagToken.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/pattern/TokenTagToken.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPath.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPath.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPath.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathElement.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathLexer.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathLexer.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathLexer.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathRuleElement.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathTokenElement.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp"
 },
 {
   "directory": "/mnt/f/test/build",
-  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.cpp",
+  "command": "/usr/bin/clang++  -I/usr/lib/llvm-16/include -I/mnt/f/test/src -I/mnt/f/test/src/ast -I/mnt/f/test/src/semantic -I/mnt/f/test/src/common -I/mnt/f/test/antlr-runtime -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -std=gnu++17 -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.cpp",
   "file": "/mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.cpp"
 }
 ]

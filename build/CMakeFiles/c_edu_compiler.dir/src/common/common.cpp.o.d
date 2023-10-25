@@ -1,5 +1,6 @@
-CMakeFiles/c_edu_compiler.dir/test.cpp.o: /mnt/f/test/test.cpp \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/iostream \
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o: \
+  /mnt/f/test/src/common/common.cpp \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cassert \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/c++config.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
   /usr/include/features.h /usr/include/stdc-predef.h \
@@ -9,16 +10,34 @@ CMakeFiles/c_edu_compiler.dir/test.cpp.o: /mnt/f/test/test.cpp \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ostream \
+  /usr/include/assert.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cctype \
+  /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/climits \
+  /usr/lib/llvm-16/lib/clang/16/include/limits.h /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/sstream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ios \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/iosfwd \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stringfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/memoryfwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/postypes.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cwchar \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
   /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
@@ -28,8 +47,6 @@ CMakeFiles/c_edu_compiler.dir/test.cpp.o: /mnt/f/test/test.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/exception \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/exception.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/exception_ptr.h \
@@ -59,20 +76,12 @@ CMakeFiles/c_edu_compiler.dir/test.cpp.o: /mnt/f/test/test.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/predefined_ops.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cstdint \
   /usr/lib/llvm-16/lib/clang/16/include/stdint.h /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/localefwd.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/clocale \
   /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cctype \
-  /usr/include/ctype.h /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/ios_base.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ext/atomicity.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/gthr.h \
@@ -152,6 +161,27 @@ CMakeFiles/c_edu_compiler.dir/test.cpp.o: /mnt/f/test/test.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/locale_facets.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/basic_ios.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/ostream.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/istream \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/istream.tcc
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/istream.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/sstream.tcc \
+  /mnt/f/test/src/common/commom.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/iostream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_tree.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ext/aligned_buffer.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/node_handle.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/optional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/utility \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_relops.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/enable_special_members.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/tuple \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/array \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/uses_allocator.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/invoke.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_multimap.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_multiset.h \
+  /mnt/f/test/src/common/errors.h

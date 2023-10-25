@@ -31,13 +31,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 29,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -101,6 +101,24 @@
 				"file" : 0,
 				"line" : 25,
 				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
 			}
 		]
 	},
@@ -128,6 +146,18 @@
 				},
 				{
 					"backtrace" : 13,
+					"path" : "/mnt/f/test/src/ast"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/mnt/f/test/src/semantic"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/mnt/f/test/src/common"
+				},
+				{
+					"backtrace" : 16,
 					"path" : "/mnt/f/test/antlr-runtime"
 				}
 			],
@@ -286,7 +316,13 @@
 				141,
 				142,
 				143,
-				144
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150
 			]
 		}
 	],
@@ -553,12 +589,30 @@
 				141,
 				142,
 				143,
-				144
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ast/AST.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ast/ASTTypeChecker.cpp",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
@@ -568,7 +622,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/ast/ASTprinter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/ast/Type.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/common/common.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/common/errors.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -611,6 +683,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/parser/SysYVisitor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/semantic/SymbolTable.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

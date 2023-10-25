@@ -37070,10 +37070,12 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.
   /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.h \
   /mnt/f/test/antlr-runtime/tree/xpath/XPathElement.h
 
-CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTbuilder.cpp \
-  /mnt/f/test/src/ast/ASTBuilder.h \
-  /usr/include/c++/7/optional \
-  /usr/include/c++/7/utility \
+CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o: /mnt/f/test/src/ast/AST.cpp \
+  /mnt/f/test/src/ast/ASTvisitor.h \
+  /mnt/f/test/src/ast/AST.h \
+  /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/c++/7/iostream \
   /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
   /usr/include/features.h \
@@ -37084,46 +37086,18 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
-  /usr/include/c++/7/bits/stl_relops.h \
-  /usr/include/c++/7/bits/stl_pair.h \
-  /usr/include/c++/7/bits/move.h \
-  /usr/include/c++/7/bits/concept_check.h \
-  /usr/include/c++/7/type_traits \
-  /usr/include/c++/7/initializer_list \
-  /usr/include/c++/7/stdexcept \
-  /usr/include/c++/7/exception \
-  /usr/include/c++/7/bits/exception.h \
-  /usr/include/c++/7/bits/exception_ptr.h \
-  /usr/include/c++/7/bits/exception_defines.h \
-  /usr/include/c++/7/bits/cxxabi_init_exception.h \
-  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
-  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
-  /usr/include/c++/7/typeinfo \
-  /usr/include/c++/7/bits/hash_bytes.h \
-  /usr/include/c++/7/new \
-  /usr/include/c++/7/bits/nested_exception.h \
-  /usr/include/c++/7/string \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/iosfwd \
   /usr/include/c++/7/bits/stringfwd.h \
   /usr/include/c++/7/bits/memoryfwd.h \
-  /usr/include/c++/7/bits/char_traits.h \
-  /usr/include/c++/7/bits/stl_algobase.h \
-  /usr/include/c++/7/bits/functexcept.h \
-  /usr/include/c++/7/bits/cpp_type_traits.h \
-  /usr/include/c++/7/ext/type_traits.h \
-  /usr/include/c++/7/ext/numeric_traits.h \
-  /usr/include/c++/7/bits/stl_iterator_base_types.h \
-  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/7/debug/assertions.h \
-  /usr/include/c++/7/bits/stl_iterator.h \
-  /usr/include/c++/7/bits/ptr_traits.h \
-  /usr/include/c++/7/debug/debug.h \
-  /usr/include/c++/7/bits/predefined_ops.h \
   /usr/include/c++/7/bits/postypes.h \
   /usr/include/c++/7/cwchar \
   /usr/include/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
   /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -37133,6 +37107,33 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
   /usr/include/c++/7/cstdint \
   /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
   /usr/include/stdint.h \
@@ -37140,15 +37141,11 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/7/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
-  /usr/include/c++/7/ext/new_allocator.h \
   /usr/include/c++/7/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
   /usr/include/c++/7/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/c++/7/iosfwd \
   /usr/include/c++/7/cctype \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -37156,12 +37153,7 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/c++/7/bits/ostream_insert.h \
-  /usr/include/c++/7/bits/cxxabi_forced.h \
-  /usr/include/c++/7/bits/stl_function.h \
-  /usr/include/c++/7/backward/binders.h \
-  /usr/include/c++/7/bits/range_access.h \
-  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/bits/ios_base.h \
   /usr/include/c++/7/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
@@ -37185,6 +37177,18 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/basic_string.h \
   /usr/include/c++/7/ext/alloc_traits.h \
   /usr/include/c++/7/bits/alloc_traits.h \
   /usr/include/c++/7/string_view \
@@ -37220,33 +37224,95 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/c++/7/bits/basic_string.tcc \
-  /usr/include/c++/7/bits/enable_special_members.h \
-  /usr/include/c++/7/variant \
-  /usr/include/c++/7/bits/invoke.h \
-  /usr/include/c++/7/ext/aligned_buffer.h \
-  /usr/include/c++/7/bits/parse_numbers.h \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/istream \
+  /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/c++/7/memory \
   /usr/include/c++/7/bits/stl_construct.h \
-  /usr/include/c++/7/vector \
   /usr/include/c++/7/bits/stl_uninitialized.h \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
+  /usr/include/c++/7/vector \
   /usr/include/c++/7/bits/stl_vector.h \
   /usr/include/c++/7/bits/stl_bvector.h \
   /usr/include/c++/7/bits/vector.tcc \
-  /mnt/f/test/src/parser/SysYBaseVisitor.h \
-  /mnt/f/test/antlr-runtime/antlr4-runtime.h \
-  /mnt/f/test/antlr-runtime/antlr4-common.h \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/include/c++/7/cstddef \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
   /usr/include/c++/7/algorithm \
   /usr/include/c++/7/bits/stl_algo.h \
   /usr/include/c++/7/bits/algorithmfwd.h \
   /usr/include/c++/7/bits/stl_heap.h \
-  /usr/include/c++/7/bits/stl_tempbuf.h \
   /usr/include/c++/7/bits/uniform_int_dist.h \
-  /usr/include/c++/7/any \
-  /usr/include/c++/7/atomic \
-  /usr/include/c++/7/bits/atomic_base.h \
-  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/7/bitset \
   /usr/include/c++/7/cassert \
   /usr/include/assert.h \
+  /usr/include/c++/7/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/bits/enable_special_members.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/include/c++/7/functional \
+  /usr/include/c++/7/bits/std_function.h \
+  /usr/include/c++/7/unordered_map \
+  /usr/include/c++/7/bits/hashtable.h \
+  /usr/include/c++/7/bits/hashtable_policy.h \
+  /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/bits/unordered_map.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
   /usr/include/c++/7/climits \
   /usr/lib/llvm-16/lib/clang/16/include/limits.h \
   /usr/include/limits.h \
@@ -37256,9 +37322,697 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/c++/7/cstddef \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/include/c++/7/variant \
+  /usr/include/c++/7/bits/parse_numbers.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/include/c++/7/bitset \
+  /usr/include/c++/7/set \
+  /usr/include/c++/7/bits/stl_tree.h \
+  /usr/include/c++/7/bits/stl_set.h \
+  /usr/include/c++/7/bits/stl_multiset.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
+  /usr/include/c++/7/map \
+  /usr/include/c++/7/bits/stl_map.h \
+  /usr/include/c++/7/bits/stl_multimap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APInt.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constants.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFold.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/Operator.h \
+  /usr/lib/llvm-16/include/llvm/IR/FMF.h \
+  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
+  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
+  /usr/lib/llvm-16/include/llvm/IR/FPEnv.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/IR/Intrinsics.h \
+  /usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc \
+  /usr/lib/llvm-16/include/llvm/IR/Module.h \
+  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
+  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
+  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
+  /usr/lib/llvm-16/include/llvm/IR/Verifier.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
+  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
+  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
+  /usr/lib/llvm-16/include/llvm/Support/Error.h \
+  /usr/lib/llvm-16/include/llvm-c/Error.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
+  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
+  /usr/lib/llvm-16/include/llvm/Support/Format.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
+  /usr/include/c++/7/list \
+  /usr/include/c++/7/bits/stl_list.h \
+  /usr/include/c++/7/bits/list.tcc \
   /usr/include/c++/7/fstream \
+  /usr/include/c++/7/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
+  /usr/include/c++/7/bits/fstream.tcc
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o: /mnt/f/test/src/ast/ASTTypeChecker.cpp \
+  /mnt/f/test/src/ast/ASTvisitor.h \
+  /mnt/f/test/src/ast/AST.h \
+  /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/iosfwd \
+  /usr/include/c++/7/bits/stringfwd.h \
+  /usr/include/c++/7/bits/memoryfwd.h \
+  /usr/include/c++/7/bits/postypes.h \
+  /usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
+  /usr/include/c++/7/cstdint \
+  /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/7/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+  /usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/c++/7/bits/ios_base.h \
+  /usr/include/c++/7/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/ext/alloc_traits.h \
+  /usr/include/c++/7/bits/alloc_traits.h \
+  /usr/include/c++/7/string_view \
+  /usr/include/c++/7/limits \
+  /usr/include/c++/7/bits/functional_hash.h \
+  /usr/include/c++/7/bits/string_view.tcc \
+  /usr/include/c++/7/ext/string_conversions.h \
+  /usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/7/bits/std_abs.h \
+  /usr/include/c++/7/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libio.h \
+  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/c++/7/bits/basic_string.tcc \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/bits/ostream.tcc \
   /usr/include/c++/7/istream \
+  /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_construct.h \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/include/c++/7/cstddef \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
+  /usr/include/c++/7/algorithm \
+  /usr/include/c++/7/bits/stl_algo.h \
+  /usr/include/c++/7/bits/algorithmfwd.h \
+  /usr/include/c++/7/bits/stl_heap.h \
+  /usr/include/c++/7/bits/uniform_int_dist.h \
+  /usr/include/c++/7/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/7/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/bits/enable_special_members.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/include/c++/7/functional \
+  /usr/include/c++/7/bits/std_function.h \
+  /usr/include/c++/7/unordered_map \
+  /usr/include/c++/7/bits/hashtable.h \
+  /usr/include/c++/7/bits/hashtable_policy.h \
+  /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/bits/unordered_map.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
+  /usr/include/c++/7/climits \
+  /usr/lib/llvm-16/lib/clang/16/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/include/c++/7/variant \
+  /usr/include/c++/7/bits/parse_numbers.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/include/c++/7/bitset \
+  /usr/include/c++/7/set \
+  /usr/include/c++/7/bits/stl_tree.h \
+  /usr/include/c++/7/bits/stl_set.h \
+  /usr/include/c++/7/bits/stl_multiset.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
+  /usr/include/c++/7/map \
+  /usr/include/c++/7/bits/stl_map.h \
+  /usr/include/c++/7/bits/stl_multimap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APInt.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constants.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFold.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/Operator.h \
+  /usr/lib/llvm-16/include/llvm/IR/FMF.h \
+  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
+  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
+  /usr/lib/llvm-16/include/llvm/IR/FPEnv.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/IR/Intrinsics.h \
+  /usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc \
+  /usr/lib/llvm-16/include/llvm/IR/Module.h \
+  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
+  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
+  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
+  /usr/lib/llvm-16/include/llvm/IR/Verifier.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
+  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
+  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
+  /usr/lib/llvm-16/include/llvm/Support/Error.h \
+  /usr/lib/llvm-16/include/llvm-c/Error.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
+  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
+  /usr/lib/llvm-16/include/llvm/Support/Format.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
+  /usr/include/c++/7/list \
+  /usr/include/c++/7/bits/stl_list.h \
+  /usr/include/c++/7/bits/list.tcc \
+  /usr/include/c++/7/fstream \
+  /usr/include/c++/7/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
+  /usr/include/c++/7/bits/fstream.tcc \
+  /mnt/f/test/src/common/errors.h \
+  /usr/include/llvm-16/llvm/ADT/APInt.h \
+  /usr/include/llvm-16/llvm/IR/Constants.h
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTbuilder.cpp \
+  /mnt/f/test/src/ast/ASTBuilder.h \
+  /usr/include/c++/7/cstdint \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/memoryfwd.h \
+  /usr/include/c++/7/bits/stl_construct.h \
+  /usr/include/c++/7/ext/alloc_traits.h \
+  /usr/include/c++/7/bits/alloc_traits.h \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/iosfwd \
+  /usr/include/c++/7/bits/stringfwd.h \
+  /usr/include/c++/7/bits/postypes.h \
+  /usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+  /usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/string_view \
+  /usr/include/c++/7/limits \
+  /usr/include/c++/7/bits/functional_hash.h \
+  /usr/include/c++/7/bits/string_view.tcc \
+  /usr/include/c++/7/ext/string_conversions.h \
+  /usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/7/bits/std_abs.h \
+  /usr/include/c++/7/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libio.h \
+  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/c++/7/bits/basic_string.tcc \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/bits/enable_special_members.h \
+  /usr/include/c++/7/variant \
+  /usr/include/c++/7/bits/parse_numbers.h \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc \
+  /mnt/f/test/src/ast/AST.h \
+  /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/c++/7/ostream \
   /usr/include/c++/7/ios \
   /usr/include/c++/7/bits/ios_base.h \
   /usr/include/c++/7/bits/locale_classes.h \
@@ -37277,37 +38031,145 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
   /usr/include/c++/7/bits/locale_facets.tcc \
   /usr/include/c++/7/bits/basic_ios.tcc \
-  /usr/include/c++/7/ostream \
   /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/istream \
   /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/include/c++/7/cstddef \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
+  /usr/include/c++/7/algorithm \
+  /usr/include/c++/7/bits/stl_algo.h \
+  /usr/include/c++/7/bits/algorithmfwd.h \
+  /usr/include/c++/7/bits/stl_heap.h \
+  /usr/include/c++/7/bits/uniform_int_dist.h \
+  /usr/include/c++/7/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/7/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/include/c++/7/functional \
+  /usr/include/c++/7/bits/std_function.h \
+  /usr/include/c++/7/unordered_map \
+  /usr/include/c++/7/bits/hashtable.h \
+  /usr/include/c++/7/bits/hashtable_policy.h \
+  /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/bits/unordered_map.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
+  /usr/include/c++/7/climits \
+  /usr/lib/llvm-16/lib/clang/16/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/include/c++/7/bitset \
+  /usr/include/c++/7/set \
+  /usr/include/c++/7/bits/stl_tree.h \
+  /usr/include/c++/7/bits/stl_set.h \
+  /usr/include/c++/7/bits/stl_multiset.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
+  /usr/include/c++/7/map \
+  /usr/include/c++/7/bits/stl_map.h \
+  /usr/include/c++/7/bits/stl_multimap.h \
+  /mnt/f/test/src/parser/SysYBaseVisitor.h \
+  /mnt/f/test/antlr-runtime/antlr4-runtime.h \
+  /mnt/f/test/antlr-runtime/antlr4-common.h \
+  /usr/include/c++/7/any \
+  /usr/include/c++/7/atomic \
+  /usr/include/c++/7/fstream \
   /usr/include/c++/7/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
   /usr/include/c++/7/bits/fstream.tcc \
-  /usr/include/c++/7/iostream \
-  /usr/include/c++/7/iterator \
-  /usr/include/c++/7/bits/stream_iterator.h \
-  /usr/include/c++/7/map \
-  /usr/include/c++/7/bits/stl_tree.h \
-  /usr/include/c++/7/bits/node_handle.h \
-  /usr/include/c++/7/bits/stl_map.h \
-  /usr/include/c++/7/tuple \
-  /usr/include/c++/7/array \
-  /usr/include/c++/7/bits/uses_allocator.h \
-  /usr/include/c++/7/bits/stl_multimap.h \
-  /usr/include/c++/7/memory \
-  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/7/ext/concurrence.h \
-  /usr/include/c++/7/bits/unique_ptr.h \
-  /usr/include/c++/7/bits/shared_ptr.h \
-  /usr/include/c++/7/bits/shared_ptr_base.h \
-  /usr/include/c++/7/bits/allocated_ptr.h \
-  /usr/include/c++/7/bits/refwrap.h \
-  /usr/include/c++/7/bits/shared_ptr_atomic.h \
-  /usr/include/c++/7/backward/auto_ptr.h \
-  /usr/include/c++/7/set \
-  /usr/include/c++/7/bits/stl_set.h \
-  /usr/include/c++/7/bits/stl_multiset.h \
   /usr/include/c++/7/sstream \
   /usr/include/c++/7/bits/sstream.tcc \
   /usr/include/c++/7/stack \
@@ -37315,10 +38177,6 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /usr/include/c++/7/bits/stl_deque.h \
   /usr/include/c++/7/bits/deque.tcc \
   /usr/include/c++/7/bits/stl_stack.h \
-  /usr/include/c++/7/unordered_map \
-  /usr/include/c++/7/bits/hashtable.h \
-  /usr/include/c++/7/bits/hashtable_policy.h \
-  /usr/include/c++/7/bits/unordered_map.h \
   /usr/include/c++/7/unordered_set \
   /usr/include/c++/7/bits/unordered_set.h \
   /mnt/f/test/antlr-runtime/support/Declarations.h \
@@ -37359,9 +38217,6 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /mnt/f/test/antlr-runtime/ProxyErrorListener.h \
   /mnt/f/test/antlr-runtime/support/Casts.h \
   /mnt/f/test/antlr-runtime/atn/SerializedATNView.h \
-  /usr/include/c++/7/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /mnt/f/test/antlr-runtime/misc/MurmurHash.h \
   /mnt/f/test/antlr-runtime/internal/Synchronization.h \
   /usr/include/c++/7/mutex \
@@ -37497,11 +38352,788 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTb
   /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.h \
   /mnt/f/test/src/parser/SysYVisitor.h \
   /mnt/f/test/src/parser/SysYParser.h \
+  /mnt/f/test/src/common/commom.h \
+  /mnt/f/test/src/common/errors.h
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: /mnt/f/test/src/ast/ASTprinter.cpp \
   /mnt/f/test/src/ast/AST.h \
-  /mnt/f/test/src/ast/Type.h
+  /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/iosfwd \
+  /usr/include/c++/7/bits/stringfwd.h \
+  /usr/include/c++/7/bits/memoryfwd.h \
+  /usr/include/c++/7/bits/postypes.h \
+  /usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
+  /usr/include/c++/7/cstdint \
+  /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/7/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+  /usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/c++/7/bits/ios_base.h \
+  /usr/include/c++/7/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/ext/alloc_traits.h \
+  /usr/include/c++/7/bits/alloc_traits.h \
+  /usr/include/c++/7/string_view \
+  /usr/include/c++/7/limits \
+  /usr/include/c++/7/bits/functional_hash.h \
+  /usr/include/c++/7/bits/string_view.tcc \
+  /usr/include/c++/7/ext/string_conversions.h \
+  /usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/7/bits/std_abs.h \
+  /usr/include/c++/7/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libio.h \
+  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/c++/7/bits/basic_string.tcc \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/istream \
+  /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_construct.h \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/include/c++/7/cstddef \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
+  /usr/include/c++/7/algorithm \
+  /usr/include/c++/7/bits/stl_algo.h \
+  /usr/include/c++/7/bits/algorithmfwd.h \
+  /usr/include/c++/7/bits/stl_heap.h \
+  /usr/include/c++/7/bits/uniform_int_dist.h \
+  /usr/include/c++/7/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/7/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/bits/enable_special_members.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/include/c++/7/functional \
+  /usr/include/c++/7/bits/std_function.h \
+  /usr/include/c++/7/unordered_map \
+  /usr/include/c++/7/bits/hashtable.h \
+  /usr/include/c++/7/bits/hashtable_policy.h \
+  /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/bits/unordered_map.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
+  /usr/include/c++/7/climits \
+  /usr/lib/llvm-16/lib/clang/16/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/include/c++/7/variant \
+  /usr/include/c++/7/bits/parse_numbers.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/include/c++/7/bitset \
+  /usr/include/c++/7/set \
+  /usr/include/c++/7/bits/stl_tree.h \
+  /usr/include/c++/7/bits/stl_set.h \
+  /usr/include/c++/7/bits/stl_multiset.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
+  /usr/include/c++/7/map \
+  /usr/include/c++/7/bits/stl_map.h \
+  /usr/include/c++/7/bits/stl_multimap.h \
+  /mnt/f/test/src/ast/ASTvisitor.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APInt.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constants.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFold.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/Operator.h \
+  /usr/lib/llvm-16/include/llvm/IR/FMF.h \
+  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
+  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
+  /usr/lib/llvm-16/include/llvm/IR/FPEnv.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/IR/Intrinsics.h \
+  /usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc \
+  /usr/lib/llvm-16/include/llvm/IR/Module.h \
+  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
+  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
+  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
+  /usr/lib/llvm-16/include/llvm/IR/Verifier.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
+  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
+  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
+  /usr/lib/llvm-16/include/llvm/Support/Error.h \
+  /usr/lib/llvm-16/include/llvm-c/Error.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
+  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
+  /usr/lib/llvm-16/include/llvm/Support/Format.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
+  /usr/include/c++/7/list \
+  /usr/include/c++/7/bits/stl_list.h \
+  /usr/include/c++/7/bits/list.tcc \
+  /usr/include/c++/7/fstream \
+  /usr/include/c++/7/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++io.h \
+  /usr/include/c++/7/bits/fstream.tcc
 
 CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o: /mnt/f/test/src/ast/Type.cpp \
-  /mnt/f/test/src/ast/Type.h
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/iosfwd \
+  /usr/include/c++/7/bits/stringfwd.h \
+  /usr/include/c++/7/bits/memoryfwd.h \
+  /usr/include/c++/7/bits/postypes.h \
+  /usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
+  /usr/include/c++/7/cstdint \
+  /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/7/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+  /usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/c++/7/bits/ios_base.h \
+  /usr/include/c++/7/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/ext/alloc_traits.h \
+  /usr/include/c++/7/bits/alloc_traits.h \
+  /usr/include/c++/7/string_view \
+  /usr/include/c++/7/limits \
+  /usr/include/c++/7/bits/functional_hash.h \
+  /usr/include/c++/7/bits/string_view.tcc \
+  /usr/include/c++/7/ext/string_conversions.h \
+  /usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/7/bits/std_abs.h \
+  /usr/include/c++/7/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libio.h \
+  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/c++/7/bits/basic_string.tcc \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/istream \
+  /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_construct.h \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc
+
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o: /mnt/f/test/src/common/common.cpp \
+  /usr/include/c++/7/cassert \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+  /usr/include/assert.h \
+  /usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/climits \
+  /usr/lib/llvm-16/lib/clang/16/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/c++/7/sstream \
+  /usr/include/c++/7/istream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/iosfwd \
+  /usr/include/c++/7/bits/stringfwd.h \
+  /usr/include/c++/7/bits/memoryfwd.h \
+  /usr/include/c++/7/bits/postypes.h \
+  /usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
+  /usr/include/c++/7/cstdint \
+  /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/7/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+  /usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/7/bits/ios_base.h \
+  /usr/include/c++/7/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/ext/alloc_traits.h \
+  /usr/include/c++/7/bits/alloc_traits.h \
+  /usr/include/c++/7/string_view \
+  /usr/include/c++/7/limits \
+  /usr/include/c++/7/bits/functional_hash.h \
+  /usr/include/c++/7/bits/string_view.tcc \
+  /usr/include/c++/7/ext/string_conversions.h \
+  /usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/7/bits/std_abs.h \
+  /usr/include/c++/7/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libio.h \
+  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/c++/7/bits/basic_string.tcc \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/c++/7/bits/sstream.tcc \
+  /mnt/f/test/src/common/commom.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/c++/7/map \
+  /usr/include/c++/7/bits/stl_tree.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/bits/enable_special_members.h \
+  /usr/include/c++/7/bits/stl_map.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/stl_multimap.h \
+  /usr/include/c++/7/set \
+  /usr/include/c++/7/bits/stl_set.h \
+  /usr/include/c++/7/bits/stl_multiset.h \
+  /mnt/f/test/src/common/errors.h
+
+CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o: /mnt/f/test/src/common/errors.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/include/c++/7/iostream \
@@ -37672,34 +39304,37 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/include/c++/7/bits/ostream.tcc \
   /usr/include/c++/7/istream \
   /usr/include/c++/7/bits/istream.tcc \
-  /mnt/f/test/src/ast/ASTBuilder.h \
-  /usr/include/c++/7/optional \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_construct.h \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
   /usr/include/c++/7/utility \
   /usr/include/c++/7/bits/stl_relops.h \
-  /usr/include/c++/7/bits/enable_special_members.h \
-  /usr/include/c++/7/variant \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
   /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
   /usr/include/c++/7/ext/aligned_buffer.h \
-  /usr/include/c++/7/bits/parse_numbers.h \
-  /usr/include/c++/7/bits/stl_construct.h \
-  /usr/include/c++/7/vector \
-  /usr/include/c++/7/bits/stl_uninitialized.h \
-  /usr/include/c++/7/bits/stl_vector.h \
-  /usr/include/c++/7/bits/stl_bvector.h \
-  /usr/include/c++/7/bits/vector.tcc \
-  /mnt/f/test/src/parser/SysYBaseVisitor.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
   /mnt/f/test/antlr-runtime/antlr4-runtime.h \
   /mnt/f/test/antlr-runtime/antlr4-common.h \
   /usr/include/c++/7/algorithm \
   /usr/include/c++/7/bits/stl_algo.h \
   /usr/include/c++/7/bits/algorithmfwd.h \
   /usr/include/c++/7/bits/stl_heap.h \
-  /usr/include/c++/7/bits/stl_tempbuf.h \
   /usr/include/c++/7/bits/uniform_int_dist.h \
   /usr/include/c++/7/any \
   /usr/include/c++/7/atomic \
-  /usr/include/c++/7/bits/atomic_base.h \
-  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
   /usr/include/c++/7/bitset \
   /usr/include/c++/7/cassert \
   /usr/include/assert.h \
@@ -37723,21 +39358,10 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/include/c++/7/map \
   /usr/include/c++/7/bits/stl_tree.h \
   /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/bits/enable_special_members.h \
   /usr/include/c++/7/bits/stl_map.h \
-  /usr/include/c++/7/tuple \
-  /usr/include/c++/7/array \
-  /usr/include/c++/7/bits/uses_allocator.h \
   /usr/include/c++/7/bits/stl_multimap.h \
-  /usr/include/c++/7/memory \
-  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/7/ext/concurrence.h \
-  /usr/include/c++/7/bits/unique_ptr.h \
-  /usr/include/c++/7/bits/shared_ptr.h \
-  /usr/include/c++/7/bits/shared_ptr_base.h \
-  /usr/include/c++/7/bits/allocated_ptr.h \
-  /usr/include/c++/7/bits/refwrap.h \
-  /usr/include/c++/7/bits/shared_ptr_atomic.h \
-  /usr/include/c++/7/backward/auto_ptr.h \
   /usr/include/c++/7/set \
   /usr/include/c++/7/bits/stl_set.h \
   /usr/include/c++/7/bits/stl_multiset.h \
@@ -37754,6 +39378,10 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/include/c++/7/bits/unordered_map.h \
   /usr/include/c++/7/unordered_set \
   /usr/include/c++/7/bits/unordered_set.h \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc \
   /mnt/f/test/antlr-runtime/support/Declarations.h \
   /mnt/f/test/antlr-runtime/ANTLRErrorListener.h \
   /mnt/f/test/antlr-runtime/RecognitionException.h \
@@ -37801,6 +39429,7 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/ctime \
+  /usr/include/c++/7/bits/parse_numbers.h \
   /usr/include/c++/7/bits/std_mutex.h \
   /usr/include/c++/7/shared_mutex \
   /usr/include/c++/7/condition_variable \
@@ -37928,13 +39557,153 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp \
   /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenElement.h \
   /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.h \
   /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.h \
+  /mnt/f/test/src/ast/ASTBuilder.h \
+  /usr/include/c++/7/variant \
+  /mnt/f/test/src/ast/AST.h \
+  /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/include/c++/7/functional \
+  /usr/include/c++/7/bits/std_function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
+  /mnt/f/test/src/parser/SysYBaseVisitor.h \
   /mnt/f/test/src/parser/SysYVisitor.h \
   /mnt/f/test/src/parser/SysYParser.h \
-  /mnt/f/test/src/ast/AST.h \
-  /mnt/f/test/src/ast/Type.h \
-  /mnt/f/test/src/parser/SysYLexer.h \
+  /mnt/f/test/src/ast/ASTvisitor.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APInt.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constants.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/ConstantFold.h \
+  /usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h \
+  /usr/lib/llvm-16/include/llvm/IR/Operator.h \
+  /usr/lib/llvm-16/include/llvm/IR/FMF.h \
+  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
+  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
+  /usr/lib/llvm-16/include/llvm/IR/FPEnv.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/IR/Intrinsics.h \
+  /usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc \
+  /usr/lib/llvm-16/include/llvm/IR/Module.h \
+  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
+  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
+  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
+  /usr/lib/llvm-16/include/llvm/IR/Verifier.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
+  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
+  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
+  /usr/lib/llvm-16/include/llvm/Support/Error.h \
+  /usr/lib/llvm-16/include/llvm-c/Error.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
+  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
+  /usr/lib/llvm-16/include/llvm/Support/Format.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
+  /usr/include/c++/7/list \
+  /usr/include/c++/7/bits/stl_list.h \
+  /usr/include/c++/7/bits/list.tcc \
   /mnt/f/test/src/parser/SysYBaseListener.h \
-  /mnt/f/test/src/parser/SysYListener.h
+  /mnt/f/test/src/parser/SysYListener.h \
+  /mnt/f/test/src/parser/SysYLexer.h
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o: /mnt/f/test/src/parser/SysYBaseListener.cpp \
   /mnt/f/test/src/parser/SysYBaseListener.h \
@@ -40488,30 +42257,511 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
   /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.h \
   /mnt/f/test/src/parser/SysYParser.h
 
+CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o: /mnt/f/test/src/semantic/SymbolTable.cpp \
+  /mnt/f/test/src/semantic/SymbolTable.h \
+  /mnt/f/test/src/ast/Type.h \
+  /usr/include/c++/7/iostream \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+  /usr/include/c++/7/ostream \
+  /usr/include/c++/7/ios \
+  /usr/include/c++/7/iosfwd \
+  /usr/include/c++/7/bits/stringfwd.h \
+  /usr/include/c++/7/bits/memoryfwd.h \
+  /usr/include/c++/7/bits/postypes.h \
+  /usr/include/c++/7/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stddef.h \
+  /usr/lib/llvm-16/lib/clang/16/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/7/exception \
+  /usr/include/c++/7/bits/exception.h \
+  /usr/include/c++/7/bits/exception_ptr.h \
+  /usr/include/c++/7/bits/exception_defines.h \
+  /usr/include/c++/7/bits/cxxabi_init_exception.h \
+  /usr/lib/llvm-16/lib/clang/16/include/__stddef_max_align_t.h \
+  /usr/include/c++/7/typeinfo \
+  /usr/include/c++/7/bits/hash_bytes.h \
+  /usr/include/c++/7/new \
+  /usr/include/c++/7/bits/nested_exception.h \
+  /usr/include/c++/7/bits/move.h \
+  /usr/include/c++/7/bits/concept_check.h \
+  /usr/include/c++/7/type_traits \
+  /usr/include/c++/7/bits/char_traits.h \
+  /usr/include/c++/7/bits/stl_algobase.h \
+  /usr/include/c++/7/bits/functexcept.h \
+  /usr/include/c++/7/bits/cpp_type_traits.h \
+  /usr/include/c++/7/ext/type_traits.h \
+  /usr/include/c++/7/ext/numeric_traits.h \
+  /usr/include/c++/7/bits/stl_pair.h \
+  /usr/include/c++/7/bits/stl_iterator_base_types.h \
+  /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/7/debug/assertions.h \
+  /usr/include/c++/7/bits/stl_iterator.h \
+  /usr/include/c++/7/bits/ptr_traits.h \
+  /usr/include/c++/7/debug/debug.h \
+  /usr/include/c++/7/bits/predefined_ops.h \
+  /usr/include/c++/7/cstdint \
+  /usr/lib/llvm-16/lib/clang/16/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/7/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+  /usr/include/c++/7/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/7/cctype \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/c++/7/bits/ios_base.h \
+  /usr/include/c++/7/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+  /usr/include/c++/7/bits/locale_classes.h \
+  /usr/include/c++/7/string \
+  /usr/include/c++/7/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+  /usr/include/c++/7/ext/new_allocator.h \
+  /usr/include/c++/7/bits/ostream_insert.h \
+  /usr/include/c++/7/bits/cxxabi_forced.h \
+  /usr/include/c++/7/bits/stl_function.h \
+  /usr/include/c++/7/backward/binders.h \
+  /usr/include/c++/7/bits/range_access.h \
+  /usr/include/c++/7/initializer_list \
+  /usr/include/c++/7/bits/basic_string.h \
+  /usr/include/c++/7/ext/alloc_traits.h \
+  /usr/include/c++/7/bits/alloc_traits.h \
+  /usr/include/c++/7/string_view \
+  /usr/include/c++/7/limits \
+  /usr/include/c++/7/bits/functional_hash.h \
+  /usr/include/c++/7/bits/string_view.tcc \
+  /usr/include/c++/7/ext/string_conversions.h \
+  /usr/include/c++/7/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/7/bits/std_abs.h \
+  /usr/include/c++/7/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/libio.h \
+  /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/7/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/c++/7/bits/basic_string.tcc \
+  /usr/include/c++/7/bits/locale_classes.tcc \
+  /usr/include/c++/7/system_error \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+  /usr/include/c++/7/stdexcept \
+  /usr/include/c++/7/streambuf \
+  /usr/include/c++/7/bits/streambuf.tcc \
+  /usr/include/c++/7/bits/basic_ios.h \
+  /usr/include/c++/7/bits/locale_facets.h \
+  /usr/include/c++/7/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+  /usr/include/c++/7/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+  /usr/include/c++/7/bits/locale_facets.tcc \
+  /usr/include/c++/7/bits/basic_ios.tcc \
+  /usr/include/c++/7/bits/ostream.tcc \
+  /usr/include/c++/7/istream \
+  /usr/include/c++/7/bits/istream.tcc \
+  /usr/include/c++/7/memory \
+  /usr/include/c++/7/bits/stl_construct.h \
+  /usr/include/c++/7/bits/stl_uninitialized.h \
+  /usr/include/c++/7/utility \
+  /usr/include/c++/7/bits/stl_relops.h \
+  /usr/include/c++/7/bits/stl_tempbuf.h \
+  /usr/include/c++/7/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/7/ext/concurrence.h \
+  /usr/include/c++/7/bits/uses_allocator.h \
+  /usr/include/c++/7/bits/unique_ptr.h \
+  /usr/include/c++/7/tuple \
+  /usr/include/c++/7/array \
+  /usr/include/c++/7/bits/invoke.h \
+  /usr/include/c++/7/bits/shared_ptr.h \
+  /usr/include/c++/7/bits/shared_ptr_base.h \
+  /usr/include/c++/7/bits/allocated_ptr.h \
+  /usr/include/c++/7/bits/refwrap.h \
+  /usr/include/c++/7/ext/aligned_buffer.h \
+  /usr/include/c++/7/bits/shared_ptr_atomic.h \
+  /usr/include/c++/7/bits/atomic_base.h \
+  /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/7/backward/auto_ptr.h \
+  /usr/include/c++/7/vector \
+  /usr/include/c++/7/bits/stl_vector.h \
+  /usr/include/c++/7/bits/stl_bvector.h \
+  /usr/include/c++/7/bits/vector.tcc \
+  /usr/include/llvm-16/llvm/IR/Instructions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Hashing.h \
+  /usr/lib/llvm-16/include/llvm/Support/DataTypes.h \
+  /usr/lib/llvm-16/include/llvm-c/DataTypes.h \
+  /usr/lib/llvm-16/lib/clang/16/include/inttypes.h \
+  /usr/include/inttypes.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compiler.h \
+  /usr/lib/llvm-16/include/llvm/Config/llvm-config.h \
+  /usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h \
+  /usr/lib/llvm-16/include/llvm/ADT/bit.h \
+  /usr/include/c++/7/cstddef \
+  /usr/lib/llvm-16/include/llvm/Support/type_traits.h \
+  /usr/include/c++/7/algorithm \
+  /usr/include/c++/7/bits/stl_algo.h \
+  /usr/include/c++/7/bits/algorithmfwd.h \
+  /usr/include/c++/7/bits/stl_heap.h \
+  /usr/include/c++/7/bits/uniform_int_dist.h \
+  /usr/include/c++/7/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/7/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/7/optional \
+  /usr/include/c++/7/bits/enable_special_members.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallVector.h \
+  /usr/include/c++/7/functional \
+  /usr/include/c++/7/bits/std_function.h \
+  /usr/include/c++/7/unordered_map \
+  /usr/include/c++/7/bits/hashtable.h \
+  /usr/include/c++/7/bits/hashtable_policy.h \
+  /usr/include/c++/7/bits/node_handle.h \
+  /usr/include/c++/7/bits/unordered_map.h \
+  /usr/include/c++/7/iterator \
+  /usr/include/c++/7/bits/stream_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/identity.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/iterator_range.h \
+  /usr/lib/llvm-16/include/llvm/Config/abi-breaking.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Bitfields.h \
+  /usr/include/c++/7/climits \
+  /usr/lib/llvm-16/lib/clang/16/include/limits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/lib/llvm-16/include/llvm/ADT/MapVector.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h \
+  /usr/include/c++/7/variant \
+  /usr/include/c++/7/bits/parse_numbers.h \
+  /usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h \
+  /usr/lib/llvm-16/include/llvm/Support/AlignOf.h \
+  /usr/lib/llvm-16/include/llvm/Support/MathExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemAlloc.h \
+  /usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h \
+  /usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Twine.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/CFG.h \
+  /usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/BasicBlock.h \
+  /usr/lib/llvm-16/include/llvm-c/Types.h \
+  /usr/lib/llvm-16/include/llvm-c/ExternC.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node.h \
+  /usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.h \
+  /usr/lib/llvm-16/include/llvm/IR/DebugLoc.h \
+  /usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.h \
+  /usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h \
+  /usr/lib/llvm-16/include/llvm/Support/Casting.h \
+  /usr/lib/llvm-16/include/llvm/IR/Constant.h \
+  /usr/lib/llvm-16/include/llvm/IR/User.h \
+  /usr/lib/llvm-16/include/llvm/IR/Use.h \
+  /usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.h \
+  /usr/lib/llvm-16/include/llvm/Support/Alignment.h \
+  /usr/lib/llvm-16/include/llvm/IR/Value.def \
+  /usr/lib/llvm-16/include/llvm/IR/LLVMContext.h \
+  /usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h \
+  /usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def \
+  /usr/lib/llvm-16/include/llvm/IR/Metadata.def \
+  /usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h \
+  /usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h \
+  /usr/lib/llvm-16/include/llvm/IR/Instruction.def \
+  /usr/lib/llvm-16/include/llvm/IR/Function.h \
+  /usr/lib/llvm-16/include/llvm/ADT/DenseSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/Argument.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallString.h \
+  /usr/lib/llvm-16/include/llvm/Support/CodeGen.h \
+  /usr/include/c++/7/bitset \
+  /usr/include/c++/7/set \
+  /usr/include/c++/7/bits/stl_tree.h \
+  /usr/include/c++/7/bits/stl_set.h \
+  /usr/include/c++/7/bits/stl_multiset.h \
+  /usr/lib/llvm-16/include/llvm/IR/Attributes.inc \
+  /usr/lib/llvm-16/include/llvm/IR/CallingConv.h \
+  /usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h \
+  /usr/lib/llvm-16/include/llvm/IR/Type.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeSize.h \
+  /usr/lib/llvm-16/include/llvm/Support/raw_ostream.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalObject.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalValue.h \
+  /usr/lib/llvm-16/include/llvm/Support/MD5.h \
+  /usr/lib/llvm-16/include/llvm/Support/Endian.h \
+  /usr/lib/llvm-16/include/llvm/IR/OperandTraits.h \
+  /usr/lib/llvm-16/include/llvm/IR/InstrTypes.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Sequence.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMap.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h \
+  /usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h \
+  /usr/include/c++/7/map \
+  /usr/include/c++/7/bits/stl_map.h \
+  /usr/include/c++/7/bits/stl_multimap.h \
+  /mnt/f/test/src/common/errors.h
+
 
 /mnt/f/test/src/parser/SysYLexer.cpp:
 
 /mnt/f/test/src/parser/SysYBaseListener.cpp:
 
-/mnt/f/test/src/parser/SysYListener.h:
-
 /mnt/f/test/src/parser/SysYBaseListener.h:
 
 /mnt/f/test/src/main.cpp:
 
-/mnt/f/test/src/ast/Type.h:
+/mnt/f/test/src/common/errors.cpp:
 
-/mnt/f/test/src/ast/AST.h:
+/mnt/f/test/src/ast/ASTprinter.cpp:
 
 /mnt/f/test/src/parser/SysYParser.h:
 
 /mnt/f/test/src/parser/SysYBaseVisitor.h:
 
-/usr/include/c++/7/variant:
-
 /mnt/f/test/src/ast/ASTBuilder.h:
 
 /mnt/f/test/src/ast/ASTbuilder.cpp:
+
+/usr/include/c++/7/bits/list.tcc:
+
+/mnt/f/test/src/parser/SysYListener.h:
+
+/usr/include/c++/7/bits/stl_list.h:
+
+/usr/lib/llvm-16/include/llvm/Support/TypeName.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/APSInt.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/StringExtras.h:
+
+/usr/lib/llvm-16/include/llvm-c/Error.h:
+
+/usr/lib/llvm-16/include/llvm/Support/Error.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h:
+
+/usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h:
+
+/usr/lib/llvm-16/include/llvm/IR/ValueHandle.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Comdat.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Module.h:
+
+/usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc:
+
+/usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h:
+
+/usr/lib/llvm-16/include/llvm/IR/FMF.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Operator.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Constants.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/APFloat.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/StringMapEntry.h:
+
+/mnt/f/test/src/common/common.cpp:
+
+/usr/lib/llvm-16/include/llvm/ADT/StringMap.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/Sequence.h:
+
+/usr/lib/llvm-16/include/llvm/IR/OperandTraits.h:
+
+/usr/lib/llvm-16/include/llvm/Support/MD5.h:
+
+/usr/lib/llvm-16/include/llvm/IR/GlobalObject.h:
+
+/usr/lib/llvm-16/include/llvm/IR/CallingConv.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/SmallString.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/BitmaskEnum.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Argument.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Function.h:
+
+/usr/lib/llvm-16/include/llvm/IR/SymbolTableListTraits.h:
+
+/usr/lib/llvm-16/include/llvm/IR/DiagnosticHandler.h:
+
+/usr/lib/llvm-16/include/llvm/IR/LLVMContext.h:
+
+/usr/lib/llvm-16/include/llvm/Support/Alignment.h:
+
+/usr/lib/llvm-16/include/llvm/IR/User.h:
+
+/usr/lib/llvm-16/include/llvm/IR/DebugLoc.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/ilist_iterator.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/ilist_node_base.h:
+
+/usr/lib/llvm-16/include/llvm-c/ExternC.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/PointerIntPair.h:
+
+/usr/lib/llvm-16/include/llvm/IR/BasicBlock.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/GraphTraits.h:
+
+/usr/lib/llvm-16/include/llvm/IR/CFG.h:
+
+/usr/lib/llvm-16/include/llvm/Support/ErrorOr.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/Twine.h:
+
+/usr/lib/llvm-16/include/llvm/Support/PointerLikeTypeTraits.h:
+
+/usr/lib/llvm-16/include/llvm/Support/MemAlloc.h:
+
+/usr/lib/llvm-16/include/llvm/Support/AlignOf.h:
+
+/usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h:
+
+/usr/include/c++/7/variant:
+
+/usr/lib/llvm-16/include/llvm/ADT/DenseMapInfo.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/Bitfields.h:
+
+/usr/lib/llvm-16/include/llvm/Config/abi-breaking.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/iterator.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/identity.h:
+
+/usr/lib/llvm-16/include/llvm/IR/FPEnv.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/STLForwardCompat.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/SmallVector.h:
+
+/usr/lib/llvm-16/include/llvm/Support/type_traits.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/bit.h:
+
+/usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h:
+
+/usr/lib/llvm-16/include/llvm/Support/SwapByteOrder.h:
+
+/usr/lib/llvm-16/include/llvm/Config/llvm-config.h:
+
+/usr/lib/llvm-16/include/llvm/Support/ErrorHandling.h:
+
+/usr/lib/llvm-16/lib/clang/16/include/inttypes.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Instructions.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/ilist_base.h:
+
+/usr/lib/llvm-16/include/llvm-c/DataTypes.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/Hashing.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/ArrayRef.h:
+
+/mnt/f/test/src/ast/Type.h:
+
+/mnt/f/test/src/semantic/SymbolTable.h:
+
+/mnt/f/test/src/ast/AST.h:
+
+/mnt/f/test/src/ast/ASTvisitor.h:
+
+/mnt/f/test/src/ast/AST.cpp:
 
 /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp:
 
@@ -40571,6 +42821,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/atn/ErrorInfo.cpp:
 
+/usr/include/c++/7/list:
+
 /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.h:
 
 /usr/include/c++/7/bits/stl_uninitialized.h:
@@ -40585,13 +42837,19 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/c++/7/tuple:
 
+/usr/lib/llvm-16/include/llvm/IR/IRBuilder.h:
+
 /usr/include/c++/7/bits/unordered_map.h:
 
 /usr/lib/llvm-16/lib/clang/16/include/stdint.h:
 
 /usr/include/c++/7/bits/stl_function.h:
 
+/usr/lib/llvm-16/include/llvm/ADT/ilist_node_options.h:
+
 /usr/include/c++/7/bits/enable_special_members.h:
+
+/usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h:
 
 /usr/include/c++/7/optional:
 
@@ -40619,6 +42877,10 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h:
 
+/usr/lib/llvm-16/include/llvm/Support/Casting.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/MapVector.h:
+
 /mnt/f/test/antlr-runtime/atn/LexerChannelAction.h:
 
 /usr/include/c++/7/bits/ostream.tcc:
@@ -40636,6 +42898,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/assert.h:
 
 /mnt/f/test/antlr-runtime/CommonTokenFactory.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Metadata.def:
 
 /mnt/f/test/antlr-runtime/atn/ATNConfigSet.cpp:
 
@@ -40658,6 +42922,10 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/atn/HashUtils.h:
 
 /mnt/f/test/antlr-runtime/LexerInterpreter.h:
+
+/usr/lib/llvm-16/include/llvm/Support/Endian.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/PointerUnion.h:
 
 /usr/include/c++/7/cerrno:
 
@@ -40687,6 +42955,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/tree/pattern/TokenTagToken.h:
 
+/usr/lib/llvm-16/include/llvm/IR/DerivedTypes.h:
+
 /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h:
 
 /mnt/f/test/antlr-runtime/tree/IterativeParseTreeWalker.cpp:
@@ -40705,6 +42975,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/c++/7/bits/basic_string.tcc:
 
+/usr/lib/llvm-16/include/llvm/IR/Attributes.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
@@ -40719,13 +42991,25 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/c++/7/ext/atomicity.h:
 
+/mnt/f/test/src/semantic/SymbolTable.cpp:
+
+/usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h:
+
 /usr/include/c++/7/clocale:
 
 /usr/include/c++/7/bits/basic_ios.tcc:
 
+/usr/lib/llvm-16/include/llvm/ADT/DenseMap.h:
+
 /mnt/f/test/antlr-runtime/atn/EpsilonTransition.cpp:
 
+/usr/lib/llvm-16/include/llvm/IR/ConstantFold.h:
+
 /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h:
+
+/usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/ilist.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -40745,6 +43029,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/c++/7/cwctype:
 
+/usr/lib/llvm-16/include/llvm/IR/Verifier.h:
+
 /mnt/f/test/antlr-runtime/atn/Transition.h:
 
 /usr/include/c++/7/bits/exception.h:
@@ -40757,6 +43043,10 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/ANTLRErrorStrategy.h:
 
+/usr/lib/llvm-16/include/llvm/IR/InstrTypes.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/ilist_node.h:
+
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
@@ -40765,15 +43055,25 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/tree/pattern/TextChunk.h:
 
+/usr/lib/llvm-16/include/llvm/IR/Instruction.def:
+
 /usr/include/c++/7/bits/locale_facets.tcc:
+
+/usr/lib/llvm-16/include/llvm/ADT/APInt.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/STLExtras.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
+/usr/include/llvm-16/llvm/ADT/APInt.h:
+
 /usr/include/c++/7/bits/stl_vector.h:
 
 /mnt/f/test/antlr-runtime/antlr4-common.h:
+
+/usr/lib/llvm-16/include/llvm/Support/MathExtras.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -40781,7 +43081,13 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/misc/InterpreterDataReader.h:
 
+/usr/lib/llvm-16/include/llvm/IR/PassManager.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Value.def:
+
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/lib/llvm-16/include/llvm/Support/Debug.h:
 
 /usr/include/c++/7/bits/basic_string.h:
 
@@ -40802,6 +43108,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/c++/7/bits/cxxabi_forced.h:
 
 /mnt/f/test/src/parser/SysYParser.cpp:
+
+/usr/lib/llvm-16/include/llvm/IR/Instruction.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -40855,9 +43163,13 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+/usr/lib/llvm-16/include/llvm/IR/TrackingMDRef.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /mnt/f/test/antlr-runtime/dfa/DFASerializer.h:
+
+/usr/lib/llvm-16/include/llvm/Support/ReverseIteration.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -40865,7 +43177,11 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/asm-generic/errno.h:
 
+/usr/lib/llvm-16/include/llvm/IR/Use.h:
+
 /mnt/f/test/antlr-runtime/TokenFactory.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Type.h:
 
 /mnt/f/test/antlr-runtime/atn/RangeTransition.h:
 
@@ -40880,6 +43196,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /mnt/f/test/antlr-runtime/atn/LexerATNConfig.cpp:
+
+/usr/lib/llvm-16/include/llvm/Support/CodeGen.h:
 
 /usr/include/c++/7/bits/fstream.tcc:
 
@@ -40899,6 +43217,10 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/ANTLRFileStream.h:
 
+/usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/EpochTracker.h:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/features.h:
@@ -40914,6 +43236,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/stdio.h:
+
+/mnt/f/test/src/ast/ASTTypeChecker.cpp:
 
 /mnt/f/test/antlr-runtime/atn/LexerMoreAction.h:
 
@@ -40945,6 +43269,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/atn/ContextSensitivityInfo.cpp:
 
+/usr/lib/llvm-16/include/llvm/ADT/StringRef.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/7/bits/exception_defines.h:
@@ -40968,6 +43294,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/c++/7/bits/shared_ptr_base.h:
 
 /mnt/f/test/antlr-runtime/atn/WildcardTransition.h:
+
+/usr/lib/llvm-16/include/llvm/IR/FixedMetadataKinds.def:
 
 /mnt/f/test/antlr-runtime/tree/Trees.cpp:
 
@@ -41025,6 +43353,10 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
+/usr/include/inttypes.h:
+
+/usr/include/llvm-16/llvm/IR/Instructions.h:
+
 /mnt/f/test/antlr-runtime/RecognitionException.cpp:
 
 /usr/include/c++/7/string:
@@ -41060,6 +43392,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/c++/7/bits/std_abs.h:
 
 /usr/include/c++/7/bits/stl_deque.h:
+
+/usr/lib/llvm-16/include/llvm/Support/AllocatorBase.h:
 
 /usr/include/c++/7/bits/memoryfwd.h:
 
@@ -41099,6 +43433,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/c++/7/cstring:
 
+/usr/lib/llvm-16/include/llvm/Support/CBindingWrapping.h:
+
 /mnt/f/test/antlr-runtime/atn/DecisionInfo.cpp:
 
 /usr/include/c++/7/ext/new_allocator.h:
@@ -41112,6 +43448,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/libio.h:
+
+/usr/lib/llvm-16/include/llvm/ADT/simple_ilist.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -41145,7 +43483,11 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /usr/include/c++/7/bits/localefwd.h:
 
+/usr/lib/llvm-16/include/llvm/IR/Attributes.inc:
+
 /mnt/f/test/antlr-runtime/misc/IntervalSet.cpp:
+
+/mnt/f/test/src/common/errors.h:
 
 /usr/include/c++/7/unordered_set:
 
@@ -41154,6 +43496,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/antlr4-runtime.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/mnt/f/test/src/common/commom.h:
 
 /mnt/f/test/antlr-runtime/atn/StarBlockStartState.h:
 
@@ -41193,6 +43537,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/RuleContext.h:
 
+/usr/lib/llvm-16/include/llvm/ADT/Any.h:
+
 /mnt/f/test/antlr-runtime/tree/ParseTree.h:
 
 /mnt/f/test/antlr-runtime/support/Any.h:
@@ -41203,13 +43549,19 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/src/parser/SysYBaseVisitor.cpp:
 
+/usr/lib/llvm-16/include/llvm/ADT/iterator_range.h:
+
 /usr/include/c++/7/bits/atomic_lockfree_defines.h:
 
 /mnt/f/test/antlr-runtime/tree/ParseTreeType.h:
 
+/usr/lib/llvm-16/include/llvm/Support/Format.h:
+
 /mnt/f/test/antlr-runtime/dfa/DFAState.h:
 
 /mnt/f/test/antlr-runtime/atn/PredictionContextCache.cpp:
+
+/usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h:
 
 /mnt/f/test/antlr-runtime/InputMismatchException.h:
 
@@ -41229,13 +43581,19 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/support/Casts.h:
 
+/usr/lib/llvm-16/include/llvm/ADT/STLFunctionalExtras.h:
+
 /mnt/f/test/antlr-runtime/atn/SerializedATNView.h:
 
 /mnt/f/test/antlr-runtime/internal/Synchronization.h:
 
+/usr/lib/llvm-16/include/llvm/IR/Constant.h:
+
 /usr/include/c++/7/mutex:
 
 /usr/include/c++/7/ratio:
+
+/usr/lib/llvm-16/include/llvm-c/Types.h:
 
 /usr/include/c++/7/ctime:
 
@@ -41252,6 +43610,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /usr/include/c++/7/bits/functexcept.h:
 
 /mnt/f/test/antlr-runtime/TokenSource.h:
+
+/usr/lib/llvm-16/include/llvm/Support/TypeSize.h:
 
 /mnt/f/test/antlr-runtime/BailErrorStrategy.h:
 
@@ -41295,6 +43655,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/DefaultErrorStrategy.cpp:
 
+/usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h:
+
 /usr/include/c++/7/climits:
 
 /mnt/f/test/antlr-runtime/NoViableAltException.h:
@@ -41302,6 +43664,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/support/BitSet.h:
 
 /mnt/f/test/antlr-runtime/atn/PredictionContext.h:
+
+/usr/lib/llvm-16/include/llvm/Support/AtomicOrdering.h:
 
 /usr/include/c++/7/bits/vector.tcc:
 
@@ -41329,6 +43693,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/atn/PredictionContextType.h:
 
+/usr/lib/llvm-16/include/llvm/ADT/DenseSet.h:
+
 /mnt/f/test/antlr-runtime/tree/ParseTreeWalker.h:
 
 /mnt/f/test/antlr-runtime/atn/SemanticContextType.h:
@@ -41350,6 +43716,10 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/atn/TransitionType.cpp:
 
 /mnt/f/test/antlr-runtime/FlatHashMap.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Value.h:
+
+/usr/lib/llvm-16/include/llvm/IR/Metadata.h:
 
 /mnt/f/test/antlr-runtime/atn/ATNSimulator.h:
 
@@ -41385,6 +43755,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/atn/PredicateTransition.h:
 
+/usr/lib/llvm-16/include/llvm/Support/raw_ostream.h:
+
 /mnt/f/test/antlr-runtime/InputMismatchException.cpp:
 
 /mnt/f/test/antlr-runtime/support/Declarations.h:
@@ -41397,6 +43769,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/LexerInterpreter.cpp:
 
+/usr/lib/llvm-16/include/llvm/Support/Compiler.h:
+
 /mnt/f/test/antlr-runtime/ListTokenSource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -41404,6 +43778,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/ListTokenSource.h:
 
 /mnt/f/test/src/parser/SysYVisitor.cpp:
+
+/usr/lib/llvm-16/include/llvm/IR/GlobalValue.h:
 
 /mnt/f/test/antlr-runtime/NoViableAltException.cpp:
 
@@ -41509,6 +43885,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/atn/ATN.cpp:
 
+/usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h:
+
 /mnt/f/test/antlr-runtime/atn/LL1Analyzer.h:
 
 /mnt/f/test/antlr-runtime/atn/PlusLoopbackState.h:
@@ -41527,6 +43905,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/atn/BlockStartState.h:
 
+/usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h:
+
 /mnt/f/test/antlr-runtime/atn/StarLoopbackState.h:
 
 /mnt/f/test/antlr-runtime/atn/BlockEndState.h:
@@ -41542,6 +43922,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/atn/LexerSkipAction.h:
 
 /mnt/f/test/antlr-runtime/atn/SingletonPredictionContext.cpp:
+
+/usr/lib/llvm-16/include/llvm/Support/DataTypes.h:
 
 /mnt/f/test/antlr-runtime/atn/LexerTypeAction.h:
 
@@ -41597,6 +43979,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/dfa/DFA.cpp:
 
+/usr/lib/llvm-16/include/llvm/IR/DataLayout.h:
+
 /mnt/f/test/antlr-runtime/dfa/LexerDFASerializer.h:
 
 /mnt/f/test/antlr-runtime/internal/Synchronization.cpp:
@@ -41613,6 +43997,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 
 /mnt/f/test/antlr-runtime/support/Any.cpp:
 
+/usr/include/llvm-16/llvm/IR/Constants.h:
+
 /mnt/f/test/antlr-runtime/support/Arrays.cpp:
 
 /mnt/f/test/src/ast/Type.cpp:
@@ -41624,6 +44010,8 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/pars
 /mnt/f/test/antlr-runtime/InterpreterRuleContext.cpp:
 
 /mnt/f/test/antlr-runtime/tree/ErrorNodeImpl.cpp:
+
+/usr/lib/llvm-16/include/llvm/IR/Intrinsics.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 

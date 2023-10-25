@@ -1,11 +1,17 @@
+#pragma once
+#include <cstdint>
+#include <memory>
 #include <optional>
 #include <string>
 #include <utility>
 #include <variant>
 #include <vector>
 
-#include "parser/SysYBaseVisitor.h"
 #include "AST.h"
+#include "Type.h"
+#include "parser/SysYBaseVisitor.h"
+#include "parser/SysYParser.h"
+#include "semantic/SymbolTable.h"
 
 class ASTBuilder : public SysYBaseVisitor {
 public:
@@ -14,7 +20,42 @@ public:
   ASTBuilder(ASTBuilder &&) = default;
   ASTBuilder &operator=(const ASTBuilder &) = default;
   ASTBuilder &operator=(ASTBuilder &&) = default;
-
+  //cur_func_name
+  std::string cur_func_name;
+  // function-table;
+  FunctionTable *functions;
+  // variable
+  VariableTable *variables;
+  VariableTableScope *cur_func_scope;
+  // 是否存在main函数节点
+  bool is_found_main;
+  // store init - dec type
+  spanti::Type *init_type;
+  // register the function of lib
+  void register_lib_function(std::string name, spanti::Type *re_type,
+                             std::vector<spanti::Type *> params_type);
+  void register_lib_functions();
+  // 生成列表AST
+  std::shared_ptr<ExprAST>
+  parse_const_ast(SysYParser::ConstInitValContext *root,
+                  const std::vector<int32_t> &shape);
+  std::shared_ptr<InitValExprAST>
+  dfs_const_ast(SysYParser::ListConstInitValContext *node,
+                const std::vector<int32_t> &shape);
+  // 处理初始化列表
+  std::vector<int32_t> parse_const_init(SysYParser::ConstInitValContext *root,
+                                        const std::vector<int32_t> dims);
+  std::vector<int32_t>
+  get_array_dims(std::vector<SysYParser::ConstExpContext *> ctxs);
+  void dfs_const_init(SysYParser::ListConstInitValContext *node,
+                      const std::vector<int32_t> &shape,
+                      std::vector<int32_t> &result);
+  std::vector<std::shared_ptr<ExprAST>>
+  parse_var_init(SysYParser::InitValContext *root,
+                 const std::vector<int32_t> dims);
+  void dfs_var_init(SysYParser::ListInitvalContext *node,
+                    const std::vector<int32_t> &shape,
+                    std::vector<std::shared_ptr<ExprAST>> &result);
   std::any visitCompUnit(SysYParser::CompUnitContext *ctx) override;
 
   std::any visitDecl(SysYParser::DeclContext *ctx) override;

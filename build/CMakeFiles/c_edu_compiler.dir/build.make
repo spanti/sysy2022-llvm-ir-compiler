@@ -69,10 +69,38 @@ include CMakeFiles/c_edu_compiler.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/c_edu_compiler.dir/flags.make
 
+CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
+CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o: /mnt/f/test/src/ast/AST.cpp
+CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o -c /mnt/f/test/src/ast/AST.cpp
+
+CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/test/src/ast/AST.cpp > CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.i
+
+CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/ast/AST.cpp -o CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.s
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o: /mnt/f/test/src/ast/ASTTypeChecker.cpp
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o -c /mnt/f/test/src/ast/ASTTypeChecker.cpp
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/test/src/ast/ASTTypeChecker.cpp > CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.i
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/ast/ASTTypeChecker.cpp -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.s
+
 CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: /mnt/f/test/src/ast/ASTbuilder.cpp
 CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o -c /mnt/f/test/src/ast/ASTbuilder.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.i: cmake_force
@@ -83,10 +111,24 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/ast/ASTbuilder.cpp -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.s
 
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: /mnt/f/test/src/ast/ASTprinter.cpp
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o -c /mnt/f/test/src/ast/ASTprinter.cpp
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/test/src/ast/ASTprinter.cpp > CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.i
+
+CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/ast/ASTprinter.cpp -o CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.s
+
 CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o: /mnt/f/test/src/ast/Type.cpp
 CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o -c /mnt/f/test/src/ast/Type.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.i: cmake_force
@@ -97,10 +139,38 @@ CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/ast/Type.cpp -o CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.s
 
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o: /mnt/f/test/src/common/common.cpp
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o -c /mnt/f/test/src/common/common.cpp
+
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/test/src/common/common.cpp > CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.i
+
+CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/common/common.cpp -o CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.s
+
+CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
+CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o: /mnt/f/test/src/common/errors.cpp
+CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o -c /mnt/f/test/src/common/errors.cpp
+
+CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/test/src/common/errors.cpp > CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.i
+
+CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/common/errors.cpp -o CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.s
+
 CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: /mnt/f/test/src/main.cpp
 CMakeFiles/c_edu_compiler.dir/src/main.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/main.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/main.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/main.cpp.o -c /mnt/f/test/src/main.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/main.cpp.i: cmake_force
@@ -114,7 +184,7 @@ CMakeFiles/c_edu_compiler.dir/src/main.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o: /mnt/f/test/src/parser/SysYBaseListener.cpp
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o -c /mnt/f/test/src/parser/SysYBaseListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.i: cmake_force
@@ -128,7 +198,7 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o: /mnt/f/test/src/parser/SysYBaseVisitor.cpp
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o -c /mnt/f/test/src/parser/SysYBaseVisitor.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.i: cmake_force
@@ -142,7 +212,7 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o: /mnt/f/test/src/parser/SysYLexer.cpp
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o -c /mnt/f/test/src/parser/SysYLexer.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.i: cmake_force
@@ -156,7 +226,7 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o: /mnt/f/test/src/parser/SysYListener.cpp
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o -c /mnt/f/test/src/parser/SysYListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.i: cmake_force
@@ -170,7 +240,7 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o: /mnt/f/test/src/parser/SysYParser.cpp
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o -c /mnt/f/test/src/parser/SysYParser.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.i: cmake_force
@@ -184,7 +254,7 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: /mnt/f/test/src/parser/SysYVisitor.cpp
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o -c /mnt/f/test/src/parser/SysYVisitor.cpp
 
 CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.i: cmake_force
@@ -195,10 +265,24 @@ CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/parser/SysYVisitor.cpp -o CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.s
 
+CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
+CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o: /mnt/f/test/src/semantic/SymbolTable.cpp
+CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o -MF CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o -c /mnt/f/test/src/semantic/SymbolTable.cpp
+
+CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/test/src/semantic/SymbolTable.cpp > CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.i
+
+CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/test/src/semantic/SymbolTable.cpp -o CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.s
+
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o: /mnt/f/test/antlr-runtime/ANTLRErrorListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRErrorListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.i: cmake_force
@@ -212,7 +296,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o: /mnt/f/test/antlr-runtime/ANTLRErrorStrategy.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRErrorStrategy.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.i: cmake_force
@@ -226,7 +310,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o: /mnt/f/test/antlr-runtime/ANTLRFileStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRFileStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.i: cmake_force
@@ -240,7 +324,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o: /mnt/f/test/antlr-runtime/ANTLRInputStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.o -c /mnt/f/test/antlr-runtime/ANTLRInputStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.i: cmake_force
@@ -254,7 +338,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRInputStream.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o: /mnt/f/test/antlr-runtime/BailErrorStrategy.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/BailErrorStrategy.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.i: cmake_force
@@ -268,7 +352,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/BailErrorStrategy.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o: /mnt/f/test/antlr-runtime/BaseErrorListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/BaseErrorListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.i: cmake_force
@@ -282,7 +366,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/BaseErrorListener.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o: /mnt/f/test/antlr-runtime/BufferedTokenStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/BufferedTokenStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.i: cmake_force
@@ -296,7 +380,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/BufferedTokenStream.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o: /mnt/f/test/antlr-runtime/CharStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.o -c /mnt/f/test/antlr-runtime/CharStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.i: cmake_force
@@ -310,7 +394,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/CharStream.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o: /mnt/f/test/antlr-runtime/CommonToken.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.o -c /mnt/f/test/antlr-runtime/CommonToken.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.i: cmake_force
@@ -324,7 +408,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonToken.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o: /mnt/f/test/antlr-runtime/CommonTokenFactory.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.o -c /mnt/f/test/antlr-runtime/CommonTokenFactory.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.i: cmake_force
@@ -338,7 +422,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenFactory.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o: /mnt/f/test/antlr-runtime/CommonTokenStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/CommonTokenStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.i: cmake_force
@@ -352,7 +436,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/CommonTokenStream.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o: /mnt/f/test/antlr-runtime/ConsoleErrorListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ConsoleErrorListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.i: cmake_force
@@ -366,7 +450,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ConsoleErrorListener.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o: /mnt/f/test/antlr-runtime/DefaultErrorStrategy.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.o -c /mnt/f/test/antlr-runtime/DefaultErrorStrategy.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.i: cmake_force
@@ -380,7 +464,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/DefaultErrorStrategy.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o: /mnt/f/test/antlr-runtime/DiagnosticErrorListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/DiagnosticErrorListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.i: cmake_force
@@ -394,7 +478,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/DiagnosticErrorListener.cpp.s: cmake
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o: /mnt/f/test/antlr-runtime/Exceptions.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.o -c /mnt/f/test/antlr-runtime/Exceptions.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.i: cmake_force
@@ -408,7 +492,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/Exceptions.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o: /mnt/f/test/antlr-runtime/FailedPredicateException.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.o -c /mnt/f/test/antlr-runtime/FailedPredicateException.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.i: cmake_force
@@ -422,7 +506,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/FailedPredicateException.cpp.s: cmak
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o: /mnt/f/test/antlr-runtime/InputMismatchException.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.o -c /mnt/f/test/antlr-runtime/InputMismatchException.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.i: cmake_force
@@ -436,7 +520,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/InputMismatchException.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o: /mnt/f/test/antlr-runtime/IntStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.o -c /mnt/f/test/antlr-runtime/IntStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.i: cmake_force
@@ -450,7 +534,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/IntStream.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o: /mnt/f/test/antlr-runtime/InterpreterRuleContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.o -c /mnt/f/test/antlr-runtime/InterpreterRuleContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.i: cmake_force
@@ -464,7 +548,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/InterpreterRuleContext.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o: /mnt/f/test/antlr-runtime/Lexer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.o -c /mnt/f/test/antlr-runtime/Lexer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.i: cmake_force
@@ -478,7 +562,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/Lexer.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o: /mnt/f/test/antlr-runtime/LexerInterpreter.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.o -c /mnt/f/test/antlr-runtime/LexerInterpreter.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.i: cmake_force
@@ -492,7 +576,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerInterpreter.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o: /mnt/f/test/antlr-runtime/LexerNoViableAltException.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.o -c /mnt/f/test/antlr-runtime/LexerNoViableAltException.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.i: cmake_force
@@ -506,7 +590,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/LexerNoViableAltException.cpp.s: cma
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o: /mnt/f/test/antlr-runtime/ListTokenSource.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.o -c /mnt/f/test/antlr-runtime/ListTokenSource.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.i: cmake_force
@@ -520,7 +604,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ListTokenSource.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o: /mnt/f/test/antlr-runtime/NoViableAltException.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.o -c /mnt/f/test/antlr-runtime/NoViableAltException.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.i: cmake_force
@@ -534,7 +618,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/NoViableAltException.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o: /mnt/f/test/antlr-runtime/Parser.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.o -c /mnt/f/test/antlr-runtime/Parser.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.i: cmake_force
@@ -548,7 +632,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/Parser.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o: /mnt/f/test/antlr-runtime/ParserInterpreter.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.o -c /mnt/f/test/antlr-runtime/ParserInterpreter.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.i: cmake_force
@@ -562,7 +646,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserInterpreter.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o: /mnt/f/test/antlr-runtime/ParserRuleContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.o -c /mnt/f/test/antlr-runtime/ParserRuleContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.i: cmake_force
@@ -576,7 +660,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ParserRuleContext.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o: /mnt/f/test/antlr-runtime/ProxyErrorListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/ProxyErrorListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.i: cmake_force
@@ -590,7 +674,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/ProxyErrorListener.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o: /mnt/f/test/antlr-runtime/RecognitionException.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.o -c /mnt/f/test/antlr-runtime/RecognitionException.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.i: cmake_force
@@ -604,7 +688,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/RecognitionException.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o: /mnt/f/test/antlr-runtime/Recognizer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.o -c /mnt/f/test/antlr-runtime/Recognizer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.i: cmake_force
@@ -618,7 +702,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/Recognizer.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o: /mnt/f/test/antlr-runtime/RuleContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.o -c /mnt/f/test/antlr-runtime/RuleContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.i: cmake_force
@@ -632,7 +716,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContext.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o: /mnt/f/test/antlr-runtime/RuleContextWithAltNum.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.o -c /mnt/f/test/antlr-runtime/RuleContextWithAltNum.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.i: cmake_force
@@ -646,7 +730,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuleContextWithAltNum.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o: /mnt/f/test/antlr-runtime/RuntimeMetaData.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.o -c /mnt/f/test/antlr-runtime/RuntimeMetaData.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.i: cmake_force
@@ -660,7 +744,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/RuntimeMetaData.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o: /mnt/f/test/antlr-runtime/Token.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.o -c /mnt/f/test/antlr-runtime/Token.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.i: cmake_force
@@ -674,7 +758,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/Token.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o: /mnt/f/test/antlr-runtime/TokenSource.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.o -c /mnt/f/test/antlr-runtime/TokenSource.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.i: cmake_force
@@ -688,7 +772,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenSource.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o: /mnt/f/test/antlr-runtime/TokenStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.o -c /mnt/f/test/antlr-runtime/TokenStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.i: cmake_force
@@ -702,7 +786,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStream.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o: /mnt/f/test/antlr-runtime/TokenStreamRewriter.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.o -c /mnt/f/test/antlr-runtime/TokenStreamRewriter.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.i: cmake_force
@@ -716,7 +800,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/TokenStreamRewriter.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o: /mnt/f/test/antlr-runtime/UnbufferedCharStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.o -c /mnt/f/test/antlr-runtime/UnbufferedCharStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.i: cmake_force
@@ -730,7 +814,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedCharStream.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o: /mnt/f/test/antlr-runtime/UnbufferedTokenStream.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.o -c /mnt/f/test/antlr-runtime/UnbufferedTokenStream.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.i: cmake_force
@@ -744,7 +828,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/UnbufferedTokenStream.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o: /mnt/f/test/antlr-runtime/Vocabulary.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.o -c /mnt/f/test/antlr-runtime/Vocabulary.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.i: cmake_force
@@ -758,7 +842,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/Vocabulary.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o: /mnt/f/test/antlr-runtime/WritableToken.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.o -c /mnt/f/test/antlr-runtime/WritableToken.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.i: cmake_force
@@ -772,7 +856,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/WritableToken.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o: /mnt/f/test/antlr-runtime/atn/ATN.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATN.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.i: cmake_force
@@ -786,7 +870,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATN.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNConfig.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNConfig.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.i: cmake_force
@@ -800,7 +884,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfig.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNConfigSet.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNConfigSet.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.i: cmake_force
@@ -814,7 +898,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNConfigSet.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNDeserializationOptions.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNDeserializationOptions.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.i: cmake_force
@@ -828,7 +912,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializationOptions.cpp.s:
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNDeserializer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNDeserializer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.i: cmake_force
@@ -842,7 +926,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNDeserializer.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNSimulator.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNSimulator.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.i: cmake_force
@@ -856,7 +940,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNSimulator.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNState.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNState.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.i: cmake_force
@@ -870,7 +954,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNState.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o: /mnt/f/test/antlr-runtime/atn/ATNStateType.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.o -c /mnt/f/test/antlr-runtime/atn/ATNStateType.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.i: cmake_force
@@ -884,7 +968,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ATNStateType.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/ActionTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/ActionTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.i: cmake_force
@@ -898,7 +982,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ActionTransition.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/AmbiguityInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/AmbiguityInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.i: cmake_force
@@ -912,7 +996,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AmbiguityInfo.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o: /mnt/f/test/antlr-runtime/atn/ArrayPredictionContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/ArrayPredictionContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.i: cmake_force
@@ -926,7 +1010,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ArrayPredictionContext.cpp.s: cm
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/AtomTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/AtomTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.i: cmake_force
@@ -940,7 +1024,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/AtomTransition.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/ContextSensitivityInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ContextSensitivityInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.i: cmake_force
@@ -954,7 +1038,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ContextSensitivityInfo.cpp.s: cm
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/DecisionEventInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionEventInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.i: cmake_force
@@ -968,7 +1052,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionEventInfo.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/DecisionInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.i: cmake_force
@@ -982,7 +1066,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionInfo.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o: /mnt/f/test/antlr-runtime/atn/DecisionState.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.o -c /mnt/f/test/antlr-runtime/atn/DecisionState.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.i: cmake_force
@@ -996,7 +1080,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/DecisionState.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/EpsilonTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/EpsilonTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.i: cmake_force
@@ -1010,7 +1094,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/EpsilonTransition.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/ErrorInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ErrorInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.i: cmake_force
@@ -1024,7 +1108,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ErrorInfo.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o: /mnt/f/test/antlr-runtime/atn/LL1Analyzer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.o -c /mnt/f/test/antlr-runtime/atn/LL1Analyzer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.i: cmake_force
@@ -1038,7 +1122,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LL1Analyzer.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerATNConfig.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerATNConfig.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.i: cmake_force
@@ -1052,7 +1136,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNConfig.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerATNSimulator.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerATNSimulator.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.i: cmake_force
@@ -1066,7 +1150,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerATNSimulator.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.i: cmake_force
@@ -1080,7 +1164,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerAction.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerActionExecutor.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerActionExecutor.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.i: cmake_force
@@ -1094,7 +1178,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerActionExecutor.cpp.s: cmake
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerChannelAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerChannelAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.i: cmake_force
@@ -1108,7 +1192,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerChannelAction.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerCustomAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerCustomAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.i: cmake_force
@@ -1122,7 +1206,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerCustomAction.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerIndexedCustomAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerIndexedCustomAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.i: cmake_force
@@ -1136,7 +1220,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerIndexedCustomAction.cpp.s: 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerModeAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerModeAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.i: cmake_force
@@ -1150,7 +1234,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerModeAction.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerMoreAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerMoreAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.i: cmake_force
@@ -1164,7 +1248,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerMoreAction.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerPopModeAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerPopModeAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.i: cmake_force
@@ -1178,7 +1262,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPopModeAction.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerPushModeAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerPushModeAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.i: cmake_force
@@ -1192,7 +1276,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerPushModeAction.cpp.s: cmake
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerSkipAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerSkipAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.i: cmake_force
@@ -1206,7 +1290,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerSkipAction.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o: /mnt/f/test/antlr-runtime/atn/LexerTypeAction.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.o -c /mnt/f/test/antlr-runtime/atn/LexerTypeAction.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.i: cmake_force
@@ -1220,7 +1304,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LexerTypeAction.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/LookaheadEventInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/LookaheadEventInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.i: cmake_force
@@ -1234,7 +1318,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/LookaheadEventInfo.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/NotSetTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/NotSetTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.i: cmake_force
@@ -1248,7 +1332,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/NotSetTransition.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o: /mnt/f/test/antlr-runtime/atn/OrderedATNConfigSet.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.o -c /mnt/f/test/antlr-runtime/atn/OrderedATNConfigSet.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.i: cmake_force
@@ -1262,7 +1346,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/OrderedATNConfigSet.cpp.s: cmake
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/ParseInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/ParseInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.i: cmake_force
@@ -1276,7 +1360,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParseInfo.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o: /mnt/f/test/antlr-runtime/atn/ParserATNSimulator.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ParserATNSimulator.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.i: cmake_force
@@ -1290,7 +1374,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ParserATNSimulator.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/PrecedencePredicateTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/PrecedencePredicateTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cpp.i: cmake_force
@@ -1304,7 +1388,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PrecedencePredicateTransition.cp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o: /mnt/f/test/antlr-runtime/atn/PredicateEvalInfo.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredicateEvalInfo.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.i: cmake_force
@@ -1318,7 +1402,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateEvalInfo.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/PredicateTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredicateTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.i: cmake_force
@@ -1332,7 +1416,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredicateTransition.cpp.s: cmake
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o: /mnt/f/test/antlr-runtime/atn/PredictionContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.i: cmake_force
@@ -1346,7 +1430,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContext.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o: /mnt/f/test/antlr-runtime/atn/PredictionContextCache.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContextCache.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.i: cmake_force
@@ -1360,7 +1444,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextCache.cpp.s: cm
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o: /mnt/f/test/antlr-runtime/atn/PredictionContextMergeCache.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionContextMergeCache.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.i: cmake_force
@@ -1374,7 +1458,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionContextMergeCache.cpp.
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o: /mnt/f/test/antlr-runtime/atn/PredictionMode.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.o -c /mnt/f/test/antlr-runtime/atn/PredictionMode.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.i: cmake_force
@@ -1388,7 +1472,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/PredictionMode.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o: /mnt/f/test/antlr-runtime/atn/ProfilingATNSimulator.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.o -c /mnt/f/test/antlr-runtime/atn/ProfilingATNSimulator.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.i: cmake_force
@@ -1402,7 +1486,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/ProfilingATNSimulator.cpp.s: cma
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/RangeTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/RangeTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.i: cmake_force
@@ -1416,7 +1500,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RangeTransition.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/RuleTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/RuleTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.i: cmake_force
@@ -1430,7 +1514,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/RuleTransition.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o: /mnt/f/test/antlr-runtime/atn/SemanticContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/SemanticContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.i: cmake_force
@@ -1444,7 +1528,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SemanticContext.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/SetTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/SetTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.i: cmake_force
@@ -1458,7 +1542,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SetTransition.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o: /mnt/f/test/antlr-runtime/atn/SingletonPredictionContext.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.o -c /mnt/f/test/antlr-runtime/atn/SingletonPredictionContext.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.i: cmake_force
@@ -1472,7 +1556,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/SingletonPredictionContext.cpp.s
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o: /mnt/f/test/antlr-runtime/atn/StarLoopbackState.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.o -c /mnt/f/test/antlr-runtime/atn/StarLoopbackState.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.i: cmake_force
@@ -1486,7 +1570,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/StarLoopbackState.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o: /mnt/f/test/antlr-runtime/atn/Transition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.o -c /mnt/f/test/antlr-runtime/atn/Transition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.i: cmake_force
@@ -1500,7 +1584,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/Transition.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o: /mnt/f/test/antlr-runtime/atn/TransitionType.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.o -c /mnt/f/test/antlr-runtime/atn/TransitionType.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.i: cmake_force
@@ -1514,7 +1598,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/TransitionType.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o: /mnt/f/test/antlr-runtime/atn/WildcardTransition.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.o -c /mnt/f/test/antlr-runtime/atn/WildcardTransition.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.i: cmake_force
@@ -1528,7 +1612,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/atn/WildcardTransition.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o: /mnt/f/test/antlr-runtime/dfa/DFA.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFA.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.i: cmake_force
@@ -1542,7 +1626,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFA.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o: /mnt/f/test/antlr-runtime/dfa/DFASerializer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFASerializer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.i: cmake_force
@@ -1556,7 +1640,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFASerializer.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o: /mnt/f/test/antlr-runtime/dfa/DFAState.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.o -c /mnt/f/test/antlr-runtime/dfa/DFAState.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.i: cmake_force
@@ -1570,7 +1654,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/DFAState.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o: /mnt/f/test/antlr-runtime/dfa/LexerDFASerializer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.o -c /mnt/f/test/antlr-runtime/dfa/LexerDFASerializer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.i: cmake_force
@@ -1584,7 +1668,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/dfa/LexerDFASerializer.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o: /mnt/f/test/antlr-runtime/internal/Synchronization.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.o -c /mnt/f/test/antlr-runtime/internal/Synchronization.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.i: cmake_force
@@ -1598,7 +1682,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/internal/Synchronization.cpp.s: cmak
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o: /mnt/f/test/antlr-runtime/misc/InterpreterDataReader.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.o -c /mnt/f/test/antlr-runtime/misc/InterpreterDataReader.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.i: cmake_force
@@ -1612,7 +1696,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/InterpreterDataReader.cpp.s: cm
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o: /mnt/f/test/antlr-runtime/misc/Interval.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.o -c /mnt/f/test/antlr-runtime/misc/Interval.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.i: cmake_force
@@ -1626,7 +1710,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Interval.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o: /mnt/f/test/antlr-runtime/misc/IntervalSet.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.o -c /mnt/f/test/antlr-runtime/misc/IntervalSet.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.i: cmake_force
@@ -1640,7 +1724,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/IntervalSet.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o: /mnt/f/test/antlr-runtime/misc/MurmurHash.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.o -c /mnt/f/test/antlr-runtime/misc/MurmurHash.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.i: cmake_force
@@ -1654,7 +1738,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/MurmurHash.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o: /mnt/f/test/antlr-runtime/misc/Predicate.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.o -c /mnt/f/test/antlr-runtime/misc/Predicate.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.i: cmake_force
@@ -1668,7 +1752,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/misc/Predicate.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o: /mnt/f/test/antlr-runtime/support/Any.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.o -c /mnt/f/test/antlr-runtime/support/Any.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.i: cmake_force
@@ -1682,7 +1766,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Any.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o: /mnt/f/test/antlr-runtime/support/Arrays.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.o -c /mnt/f/test/antlr-runtime/support/Arrays.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.i: cmake_force
@@ -1696,7 +1780,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Arrays.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o: /mnt/f/test/antlr-runtime/support/CPPUtils.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.o -c /mnt/f/test/antlr-runtime/support/CPPUtils.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.i: cmake_force
@@ -1710,7 +1794,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/CPPUtils.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o: /mnt/f/test/antlr-runtime/support/StringUtils.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.o -c /mnt/f/test/antlr-runtime/support/StringUtils.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.i: cmake_force
@@ -1724,7 +1808,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/StringUtils.cpp.s: cmake_for
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o: /mnt/f/test/antlr-runtime/support/Utf8.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.o -c /mnt/f/test/antlr-runtime/support/Utf8.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.i: cmake_force
@@ -1738,7 +1822,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/support/Utf8.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o: /mnt/f/test/antlr-runtime/tree/ErrorNodeImpl.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.o -c /mnt/f/test/antlr-runtime/tree/ErrorNodeImpl.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.i: cmake_force
@@ -1752,7 +1836,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ErrorNodeImpl.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o: /mnt/f/test/antlr-runtime/tree/IterativeParseTreeWalker.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.o -c /mnt/f/test/antlr-runtime/tree/IterativeParseTreeWalker.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.i: cmake_force
@@ -1766,7 +1850,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/IterativeParseTreeWalker.cpp.s:
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o: /mnt/f/test/antlr-runtime/tree/ParseTree.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTree.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.i: cmake_force
@@ -1780,7 +1864,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTree.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o: /mnt/f/test/antlr-runtime/tree/ParseTreeListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.i: cmake_force
@@ -1794,7 +1878,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeListener.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o: /mnt/f/test/antlr-runtime/tree/ParseTreeVisitor.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeVisitor.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.i: cmake_force
@@ -1808,7 +1892,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeVisitor.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o: /mnt/f/test/antlr-runtime/tree/ParseTreeWalker.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.o -c /mnt/f/test/antlr-runtime/tree/ParseTreeWalker.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.i: cmake_force
@@ -1822,7 +1906,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/ParseTreeWalker.cpp.s: cmake_fo
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o: /mnt/f/test/antlr-runtime/tree/TerminalNodeImpl.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.o -c /mnt/f/test/antlr-runtime/tree/TerminalNodeImpl.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.i: cmake_force
@@ -1836,7 +1920,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/TerminalNodeImpl.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o: /mnt/f/test/antlr-runtime/tree/Trees.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.o -c /mnt/f/test/antlr-runtime/tree/Trees.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.i: cmake_force
@@ -1850,7 +1934,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/Trees.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/Chunk.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/Chunk.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.i: cmake_force
@@ -1864,7 +1948,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/Chunk.cpp.s: cmake_forc
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/ParseTreeMatch.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreeMatch.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.i: cmake_force
@@ -1878,7 +1962,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreeMatch.cpp.s: c
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePattern.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePattern.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.i: cmake_force
@@ -1892,7 +1976,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePattern.cpp.s:
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher.cpp.i: cmake_force
@@ -1906,7 +1990,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/ParseTreePatternMatcher
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/RuleTagToken.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/RuleTagToken.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.i: cmake_force
@@ -1920,7 +2004,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/RuleTagToken.cpp.s: cma
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/TagChunk.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TagChunk.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.i: cmake_force
@@ -1934,7 +2018,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TagChunk.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/TextChunk.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TextChunk.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.i: cmake_force
@@ -1948,7 +2032,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TextChunk.cpp.s: cmake_
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o: /mnt/f/test/antlr-runtime/tree/pattern/TokenTagToken.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.o -c /mnt/f/test/antlr-runtime/tree/pattern/TokenTagToken.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.i: cmake_force
@@ -1962,7 +2046,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/pattern/TokenTagToken.cpp.s: cm
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPath.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPath.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.i: cmake_force
@@ -1976,7 +2060,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPath.cpp.s: cmake_force
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.i: cmake_force
@@ -1990,7 +2074,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathElement.cpp.s: cmake
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathLexer.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathLexer.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.i: cmake_force
@@ -2004,7 +2088,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexer.cpp.s: cmake_f
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.cpp.i: cmake_force
@@ -2018,7 +2102,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathLexerErrorListener.c
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.cpp.i: cmake_force
@@ -2032,7 +2116,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleAnywhereElement.
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathRuleElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.i: cmake_force
@@ -2046,7 +2130,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathRuleElement.cpp.s: c
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement.cpp.i: cmake_force
@@ -2060,7 +2144,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenAnywhereElement
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathTokenElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.i: cmake_force
@@ -2074,7 +2158,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathTokenElement.cpp.s: 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.i: cmake_force
@@ -2088,7 +2172,7 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElem
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o: CMakeFiles/c_edu_compiler.dir/flags.make
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o: /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.cpp
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o: CMakeFiles/c_edu_compiler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o -MF CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o.d -o CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o -c /mnt/f/test/antlr-runtime/tree/xpath/XPathWildcardElement.cpp
 
 CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.i: cmake_force
@@ -2101,8 +2185,13 @@ CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.
 
 # Object files for target c_edu_compiler
 c_edu_compiler_OBJECTS = \
+"CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o" \
+"CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o" \
+"CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o" \
+"CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o" \
+"CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/main.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o" \
@@ -2110,6 +2199,7 @@ c_edu_compiler_OBJECTS = \
 "CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o" \
+"CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o" \
 "CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o" \
@@ -2250,8 +2340,13 @@ c_edu_compiler_OBJECTS = \
 # External object files for target c_edu_compiler
 c_edu_compiler_EXTERNAL_OBJECTS =
 
+c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/ast/AST.cpp.o
+c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/ast/ASTTypeChecker.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/ast/ASTbuilder.cpp.o
+c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/ast/Type.cpp.o
+c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/common/common.cpp.o
+c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/common/errors.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/main.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseListener.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/parser/SysYBaseVisitor.cpp.o
@@ -2259,6 +2354,7 @@ c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/parser/SysYLexer.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/parser/SysYListener.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/parser/SysYParser.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/parser/SysYVisitor.cpp.o
+c_edu_compiler: CMakeFiles/c_edu_compiler.dir/src/semantic/SymbolTable.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorListener.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRErrorStrategy.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/antlr-runtime/ANTLRFileStream.cpp.o
@@ -2411,7 +2507,7 @@ c_edu_compiler: /usr/lib/x86_64-linux-gnu/libz.so
 c_edu_compiler: /usr/lib/x86_64-linux-gnu/libtinfo.so
 c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMDemangle.a
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Linking CXX executable c_edu_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Linking CXX executable c_edu_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/c_edu_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
