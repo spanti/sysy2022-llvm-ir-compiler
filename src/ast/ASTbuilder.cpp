@@ -539,7 +539,7 @@ std::any ASTBuilder::visitBlock(SysYParser::BlockContext *ctx) {
   std::shared_ptr<StmtAST> ast = std::make_shared<BlockStmtAST>(
       sourceLocation{ctx->getStart()->getLine(),
                      ctx->getStart()->getCharPositionInLine()},
-      std::move(blockitems_arr),variables->cur);
+      std::move(blockitems_arr), variables->cur);
   variables->ExitScope();
   return ast;
 }
@@ -595,10 +595,10 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
     auto a_ast = dynamic_cast<ArrayExprAST *>(LHS.get());
     if (a_ast) {
       l_entry = variables->lookUp(a_ast->Name);
-      auto array_type = dynamic_cast<spanti::ArrayType*>(l_entry->var_type);
+      auto array_type = dynamic_cast<spanti::ArrayType *>(l_entry->var_type);
       // a = 5; generate store instruction
       // handle int a[2][2] a[2] = 5 error
-      if(a_ast->elems.size()!= array_type->get_count_dim())
+      if (a_ast->elems.size() != array_type->get_count_dim())
         throw SyntaxError("the number of [] not match");
       if (!l_entry)
         throw UnrecognizedVarName(a_ast->Name);
@@ -617,8 +617,9 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
 // control flow
 std::any ASTBuilder::visitExpStmt(SysYParser::ExpStmtContext *ctx) {
   std::cout << "visit ExpStmt!" << std::endl;
-  std::shared_ptr<ExprAST> ast =
-      std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->exp()));
+  std::shared_ptr<ExprAST> ast = nullptr;
+  if (ctx->exp())
+    ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->exp()));
   std::shared_ptr<StmtAST> stmt = std::make_shared<ExpStmtAST>(
       sourceLocation{ctx->getStart()->getLine(),
                      ctx->getStart()->getCharPositionInLine()},
@@ -735,8 +736,75 @@ std::any ASTBuilder::visitLVal(SysYParser::LValContext *ctx) {
     // not found var
     throw UnrecognizedVarName(id_name);
   }
+  // 当 LVal 表示数组时，方括号个数必须和数组变量的维数相同
+
+  if (!ctx->exp().empty()) {
+    // a[2][3]
+    // a为数组类型，方括号个数必须和数组变量的维数相同
+    if (auto a_type = dynamic_cast<spanti::ArrayType *>(var_type)) {
+
+      // a[3] a is array
+      // unsize = false
+      int cnt = 0;
+      for (auto s : ctx->exp()) {
+        // 获取每个索引的ExprAST
+        auto elem_ctx = visit(s);
+        elem_ast = std::any_cast<std::shared_ptr<ExprAST>>(elem_ctx);
+        elems.push_back(elem_ast);
+        cnt++;
+      }
+      // 当 LVal 表示数组时，方括号个数必须和数组变量的维数相同
+      // 新规则，部分索引时，数组元素AST的类型为数组类型
+      // 这一判定与规则（多维数组的其中一部分可作为函数参数矛盾）
+      if (cnt != a_type->get_count_dim()) {
+        // 数组的一部分
+        // 每个elems索引必须满足数组声明的各维度
+        // EXP无法进行越界检查
+        if (cnt > a_type->get_count_dim())
+          throw SyntaxError("Invalid Array Element");
+        // create new array type
+        auto elems = a_type->get_elements();
+        // 去除元素
+        for (int i = 0; i < cnt; i++)
+          elems.erase(elems.begin());
+        // 创建新的数组类型
+        ae_type = new spanti::ArrayType(a_type->getElementTy(), elems);
+      } else {
+        // 定位到元素
+        ae_type = a_type->getElementTy();
+      }
+      // 构造数组节点 - 类型确定为INT/FLOAT
+      // 设定左值
+      l_ast = std::make_shared<ArrayExprAST>(
+          sourceLocation{ctx->getStart()->getLine(),
+                         ctx->getStart()->getCharPositionInLine()},
+          ae_type, true, id_name, elems);
+    } else {
+      throw SyntaxError("LVal(a[]) a is not a array!");
+    }
+  } else {
+    // a pass IdentifierAST
+    // 为数组类型 ，构造数组索引节点
+    // 否则，构造IdentifierASt 节点
+    if (auto a_type = dynamic_cast<spanti::ArrayType *>(var_type)) {
+      // a 索引 数组 / 不定数组
+      // elems为空
+      l_ast = std::make_shared<ArrayExprAST>(
+          sourceLocation{ctx->getStart()->getLine(),
+                         ctx->getStart()->getCharPositionInLine()},
+          a_type, true, id_name, elems);
+    } else {
+      // 查表，传递类型
+      l_ast = std::make_shared<IdentifierAST>(
+          sourceLocation{ctx->getStart()->getLine(),
+                         ctx->getStart()->getCharPositionInLine()},
+          var_type, true, id_name);
+    }
+  }
+  /*
   if (auto a_type = dynamic_cast<spanti::ArrayType *>(var_type)) {
     // a[3] a is array
+    // unsize = false
     int cnt = 0;
     for (auto s : ctx->exp()) {
       // 获取每个索引的ExprAST
@@ -772,7 +840,9 @@ std::any ASTBuilder::visitLVal(SysYParser::LValContext *ctx) {
                        ctx->getStart()->getCharPositionInLine()},
         ae_type, true, id_name, elems);
   } else {
-    // a is variable
+    // 当 LVal 表示单个变量时，不能出现后面的方括号
+    // 包括
+    //  a is variable
     if (ctx->exp().empty()) {
       // look up the type of identifier
 
@@ -785,7 +855,7 @@ std::any ASTBuilder::visitLVal(SysYParser::LValContext *ctx) {
     } else {
       throw InvalidIndexOperator();
     }
-  }
+  }*/
   return l_ast;
 }
 
@@ -898,6 +968,7 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
         // 若维度数不对应，报错
         auto a_1 =
             dynamic_cast<spanti::ArrayType *>(func_Ty->get_params_type()[i]);
+        // args[i] 对应的类型
         auto a_2 = dynamic_cast<spanti::ArrayType *>(args[i]->getType());
         if (a_1->get_count_dim() != a_2->get_count_dim()) {
           // 数组维度数目不匹配
@@ -905,10 +976,10 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
         } else {
           int a_1_u = 0;
           int a_2_u = 0;
-          //problem : 参数匹配报错
-          if(a_1->get_unsize())
+          // problem : 参数匹配报错
+          if (a_1->get_unsize())
             a_1_u = 1;
-          if(a_2->get_unsize())
+          if (a_2->get_unsize())
             a_2_u = 1;
           // 基于维度数目匹配
           for (int i = 0; i < a_1->get_count_dim(); i++) {
@@ -918,7 +989,8 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
                 continue;
               }
             }
-            if (a_1->get_elements()[i-a_1_u] != a_2->get_elements()[i-a_2_u]) {
+            if (a_1->get_elements()[i - a_1_u] !=
+                a_2->get_elements()[i - a_2_u]) {
               // 各维度大小不匹配
               throw InvalidFuncCallArg("type error on function arguments");
             }
@@ -928,12 +1000,12 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
     }
   }
   // putint() 实参数目为0，形参数目大于0
-  else{
+  else {
     if (func_Ty->get_size() > 0) {
-    throw InvalidFuncCallArg("wrong number of function arguments");
+      throw InvalidFuncCallArg("wrong number of function arguments");
+    }
   }
-  }
-  
+
   // 进行类型推断的时机
   // 形参和实参类型相匹配
   // 设置函数调用的返回值类型
@@ -1436,7 +1508,8 @@ void ASTBuilder::dfs_var_init(SysYParser::ListInitvalContext *node,
   while (cnt < total_size) {
     // 必要时填充节点
     // 填充默认节点
-    result.push_back(std::make_shared<ImplicitValExprAST>(sourceLocation(),init_type));
+    result.push_back(
+        std::make_shared<ImplicitValExprAST>(sourceLocation(), init_type));
     // result.emplace_back();
     ++cnt;
   }

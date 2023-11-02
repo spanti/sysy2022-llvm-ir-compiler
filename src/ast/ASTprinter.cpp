@@ -229,7 +229,8 @@ void ASTPrinter::visit(class ExpStmtAST *ast) {
   // col line
   // traverse the children
   ind++;
-  ast->Expr->accept(this);
+  if(ast->Expr)
+    ast->Expr->accept(this);
   ind--;
 }
 void ASTPrinter::visit(class RetuStmtAST *ast) {

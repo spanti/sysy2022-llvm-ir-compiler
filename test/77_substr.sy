@@ -48,10 +48,10 @@ int main()
     int A[15] = {8, 7, 4, 1, 2, 7, 0, 1, 9, 3, 4, 8, 3, 7, 0};
     int B[13] = {3, 9, 7, 1, 4, 2, 4, 3, 6, 8, 0, 1, 5};
     int An, Bn;
-
+    
     putint(max_sum_nonadjacent(A, 15));
     putch(10);
-
+    
     putint(longest_common_subseq(A, 15, B, 13));
     putch(10);
     return 0;

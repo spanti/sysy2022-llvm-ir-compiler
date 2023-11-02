@@ -15,6 +15,7 @@
 #include "llvm/IR/Verifier.h"
 #include <cstddef>
 #include <fstream>
+#include <llvm-16/llvm/IR/BasicBlock.h>
 #include <llvm-16/llvm/IR/DerivedTypes.h>
 #include <llvm-16/llvm/IR/Type.h>
 #include <llvm-16/llvm/IR/Value.h>
@@ -81,10 +82,19 @@ class ASTIRGenerator : public ASTNodeVisitor {
 private:
   // function-table;
   // a file stream to record the text
+  //模拟继承属性
+  unsigned int cycle = 0;
+  //prepare the memory outside the loop
+  //when cycle = 0
+  BasicBlock* BLoopBB;
+  BasicBlock* IfTBB1;
+  BasicBlock* IfFBB1;
+  BasicBlock* IfTBB2;
+  BasicBlock* IfFBB2;
   std::unique_ptr<LLVMContext> TheContext;
   std::unique_ptr<IRBuilder<>> IRbuilder;
   std::unique_ptr<Module> TheModule;
-  std::string filename = "test.ll";
+  //std::string filename = "test.ll";
   std::error_code EC;
   llvm::raw_fd_ostream irs;
   // 保存visit方法生成的re_vlaue
@@ -99,7 +109,11 @@ private:
   std::stack<BasicBlock *> Bbb;
 
 public:
-  ASTIRGenerator() : irs(filename, EC){};
+  void addcycle(){cycle++;}
+  void subcycle(){cycle--;}
+  void setBLoopBB(BasicBlock* bb);
+  void clearBLoopBB();
+  ASTIRGenerator(std::string filename) : irs(filename, EC){};
   void Initialize();
   void setSymbolTables(FunctionTable *functions, VariableTable *variables);
   void register_libs_to_module();
@@ -115,6 +129,8 @@ public:
   std::vector<llvm::Value *> getZRefArrayFromType(int child_size);
   llvm::Constant * getConstantArray(std::vector<int32_t> &const_init,std::vector<uint64_t>& dims);
   llvm::Constant * getConstantArray(std::vector<std::shared_ptr<ExprAST>> &const_init,std::vector<uint64_t>& dims);
+  void localArrayInitialization(VariableTableEntry* entry,class VarDecAST *ast);
+  void storeValueArray(std::vector<Value*>& VAS,Value* gepR,Type *e_type );
   void getDimsFromType(llvm::ArrayType *a_type, std::vector<uint64_t> &dims);
   void visit(class BinaryExprAST *ast) override;
   void visit(class UnaryExprAST *ast) override;

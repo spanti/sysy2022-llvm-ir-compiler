@@ -2,18 +2,100 @@
 #include "ASTvisitor.h"
 #include "Type.h"
 #include "errors.h"
+#include <cassert>
 #include <llvm-16/llvm/ADT/APInt.h>
 #include <llvm-16/llvm/IR/BasicBlock.h>
 #include <llvm-16/llvm/IR/Constant.h>
 #include <llvm-16/llvm/IR/Constants.h>
+#include <llvm-16/llvm/IR/DebugInfo.h>
 #include <llvm-16/llvm/IR/DerivedTypes.h>
 #include <llvm-16/llvm/IR/Function.h>
 #include <llvm-16/llvm/IR/GlobalVariable.h>
 #include <llvm-16/llvm/IR/Instructions.h>
+#include <llvm-16/llvm/IR/Intrinsics.h>
 #include <llvm-16/llvm/IR/Type.h>
+#include <llvm-16/llvm/IR/Verifier.h>
 #include <llvm-16/llvm/Support/Casting.h>
 #include <memory>
 #include <vector>
+void ASTIRGenerator::setBLoopBB(BasicBlock *bb) {
+  assert(cycle == 0);
+  BLoopBB = bb;
+}
+void ASTIRGenerator::clearBLoopBB() {
+  assert(cycle == 0);
+  BLoopBB = nullptr;
+}
+void ASTIRGenerator::storeValueArray(std::vector<Value *> &VAS, Value *gepR,
+                                     Type *e_type) {
+  // gepR 一维数组指针
+  // gepFR 索引指针
+  Value *gepFR = gepR;
+  for (int i = 0; i < VAS.size(); i++) {
+    // generate paor <GEP,STORE>
+    //  pair GEP - Store
+    //  若Value的值为nullptr，停止生成
+    Value *SV = VAS[i];
+    if (SV) {
+      if (i != 0) {
+        // update gepFR - Value:OFFSET
+        gepFR = IRbuilder->CreateGEP(
+            e_type, gepR,
+            ConstantInt::get(Type::getInt32Ty(*TheContext), i, "geptmp"));
+      }
+      IRbuilder->CreateStore(SV, gepFR);
+    }
+  }
+}
+void ASTIRGenerator::localArrayInitialization(VariableTableEntry *entry,
+                                              class VarDecAST *ast) {
+  // generate code for local array initial
+  // 简化目标
+  Type *e_type;
+  std::vector<Value *> vp_array;
+  std::vector<uint64_t> dims;
+  // handle InitvalExpr
+  // int a[2][2] = {{1},2,3}
+  // 多维数组指针 -> 一维数组指针
+  Value *gepR = getArrayBasePtr(entry);
+  spanti::ArrayType *sp_type =
+      dynamic_cast<spanti::ArrayType *>(entry->var_type);
+  e_type = mapToLLVMType(sp_type->getElementTy());
+  // 使用基地址+偏移方式 处理初始值问题
+  // 为各个初始化值生成getelementptr - store对
+  // 基于常量及非常累声明采用不同策略
+  // 自定义初始化器 局部常量数组
+  if (entry->var_type->get_const()) {
+    // 常量，使用数组常量化器
+    auto CAS = entry->const_init;
+    std::vector<Value *> VAS;
+    // transfrom it to Constant
+    // 存储初始值
+    for (int i = 0; i < CAS.size(); i++) {
+      Value *SV =
+          ConstantInt::get(Type::getInt32Ty(*TheContext), entry->const_init[i]);
+      VAS.push_back(SV);
+    }
+    // transform int32_t to Value*
+    // input: std::vector<Value *> VAS;PTR gepR
+    // 两个for循环设置为函数
+    storeValueArray(VAS, gepR, e_type);
+  } else {
+    // 局部变量数组
+    // 使用数组initial - ExprAST
+    // void localArrayInitialization(entry)
+    std::vector<Value *> VAS;
+    // GET vector<Value*> from InitialExprAST
+    auto i_ast = dynamic_cast<InitValExprAST *>(ast->initval.get());
+    for (auto e_ast : i_ast->Inits) {
+      e_ast->accept(this);
+      VAS.push_back(get_value());
+    }
+    // 存储初始值
+    // input: std::vector<Value *> VAS;PTR gepR
+    storeValueArray(VAS, gepR, e_type);
+  }
+}
 llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
                                              class ArrayExprAST *ast) {
   Type *e_type;
@@ -25,7 +107,8 @@ llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
   } else {
     gepR = entry->inst_memory;
   }
-
+  if (!gepR)
+    throw UnrecognizedVarName(ast->Name);
   if (llvm_type->isArrayTy()) {
     // ArrayType - ArrayType;
     ArrayType *a_type = dyn_cast<ArrayType>(llvm_type);
@@ -49,8 +132,8 @@ llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
         throw SyntaxError("Unknown Array Elems!");
       refArray.push_back(e_value);
       // refArray:{0，Indexi}
-      gepR = IRbuilder->CreateGEP(a_type, gepR, refArray);
-      gepR->print(outs()); // test
+      gepR = IRbuilder->CreateGEP(a_type, gepR, refArray, "geptmp");
+      // gepR->print(outs()); // test
       e_type = a_type->getElementType();
       a_type = dyn_cast<ArrayType>(e_type);
     }
@@ -61,17 +144,22 @@ llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
     // POINTER-TYPE - ARRAYTYPE
     // 默认维度数为1
     // Load加载数组指针
+
     PointerType *p_type = dyn_cast<PointerType>(llvm_type);
-    gepR = IRbuilder->CreateLoad(llvm_type, gepR);
+    gepR = IRbuilder->CreateLoad(llvm_type, gepR, ast->Name);
     ArrayType *a_type;
     Type *elem_type = p_type->getNonOpaquePointerElementType();
+    // 索引为空 - 直接返回gepR
+    if (ast->elems.empty()) {
+      return gepR; // problem! a a unsize - array
+    }
     if (elem_type->isIntegerTy()) {
       // 元素为整数 - 一维不定数组
       // p[1] = ?
       // 直接索引1
       ast->elems[0]->accept(this);
       Value *e_value = get_value();
-      gepR = IRbuilder->CreateGEP(elem_type, gepR, {e_value});
+      gepR = IRbuilder->CreateGEP(elem_type, gepR, {e_value}, "geptmp");
       return gepR;
     } else if (elem_type->isArrayTy()) {
       // 生成数组的指针
@@ -101,47 +189,18 @@ llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
         throw SyntaxError("Unknown Array Elems!");
       refArray.push_back(e_value);
     }
-    gepR->print(outs());
-    e_type->print(outs());
-    gepR = IRbuilder->CreateGEP(e_type, gepR, refArray);
-    gepR->print(outs()); // test
-    /*
-    for (int i = 0; i < index_size; i++) {
-      std::vector<Value *> refArray;
-      // first -     %20 = getelementptr [3 x i32], [3 x i32]* %18, i32 0
-      refArray.push_back(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
-      // get Value from ast->elems[i]
-      //this code change gepR
-      ast->elems[i]->accept(this);
-      Value *e_value = get_value();
-      if (!e_value)
-        throw SyntaxError("Unknown Array Elems!");
-      refArray.push_back(e_value);
-      // refArray:{0，Indexi}
-      gepR->print(outs());
-      e_type->print(outs());
-      //构造需要 元素类型，对应类型的指针，及索引
-      //e_type 可能为数组类型或基本类型
-      //e_type 每次更新
-      gepR = IRbuilder->CreateGEP(e_type, gepR, refArray);
-      gepR->print(outs()); // test
-
-      c_type = a_type->getElementType();
-      if(c_type->isArrayTy()){
-        a_type = dyn_cast<ArrayType>(c_type);
-        e_type = c_type;
-      }else if(c_type->isIntegerTy()){
-        e_type = c_type;
-      }
-
-    }*/
+    // gepR->print(outs());
+    // e_type->print(outs());
+    gepR = IRbuilder->CreateGEP(e_type, gepR, refArray, "geptmp");
+    // gepR->print(outs()); // test
   } else {
     throw SyntaxError("can't get PTR from no array");
   }
 
   return gepR;
 }
-llvm::Value *ASTIRGenerator::getArrayBasePtr(VariableTableEntry *entry) {
+llvm::Value *
+ASTIRGenerator::getArrayBasePtr(VariableTableEntry *entry) { // 默认为局部
   Type *e_type;
   Value *gepR;
   std::vector<uint64_t> dims;
@@ -152,10 +211,10 @@ llvm::Value *ASTIRGenerator::getArrayBasePtr(VariableTableEntry *entry) {
     // 数组各维度信息
     getDimsFromType(a_type, dims);
     int array_size = dims.size();
-    auto refArray = getZRefArrayFromType(array_size);
+    auto refArray = getZRefArrayFromType(2);
     for (int i = 0; i < array_size; i++) {
-      gepR = IRbuilder->CreateGEP(a_type, gepR, refArray);
-      gepR->print(outs()); // test
+      gepR = IRbuilder->CreateGEP(a_type, gepR, refArray, "geptmp");
+      // gepR->print(outs()); // test
       e_type = a_type->getElementType();
       a_type = dyn_cast<ArrayType>(e_type);
       // update a_type
@@ -339,10 +398,91 @@ void ASTIRGenerator::setSymbolTables(FunctionTable *functions,
 void ASTIRGenerator::visit(class BinaryExprAST *ast) {
   // 默认 re_value = nullptr
   re_value = nullptr;
+  // 短路求值部分
+  if (ast->Op == BinaryExprAST::OpKind::And) {
+    // And &&
+    // icmp ne %L,0
+    //  create blocks for then,else and marge cases
+    //  create edges between basic blocks
+    // handle a && b
+    // need pass MergeBB?
+
+    BasicBlock *EntryBB = IRbuilder->GetInsertBlock(); // a
+    Function *TheFunction = EntryBB->getParent();
+    // Blocks for if-else
+    BasicBlock *ThenBB =
+        BasicBlock::Create(*TheContext, "then", TheFunction); // b
+    // 传递继承属性
+    IfTBB1 = ThenBB;
+    // set insert block -> entry
+    ast->LHS->accept(this);
+    // set L jump command
+    Value *L = get_value(); // a
+    // icmp ne %L,0
+    re_value = IRbuilder->CreateICmpNE(
+        L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+
+    // Create Cond Br - newlabel(),IfFBB
+    // B1.true = newlabel() <B2.true,B2.false> = <B.true,B.false>
+    re_value = IRbuilder->CreateCondBr(re_value, ThenBB, IfFBB1);
+    // set insert block -> then
+    IRbuilder->SetInsertPoint(ThenBB);
+
+    ast->RHS->accept(this);
+    // set R jump command and generate code
+    Value *R = get_value(); // b
+    re_value = IRbuilder->CreateICmpNE(
+        R, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
+    // Create Cond Br -
+    // IRbuilder->CreateCondBr(re_value,IfTBB,IfFBB);
+    // Add new merge block to end of function  blockset
+    return;
+  } else if (ast->Op == BinaryExprAST::OpKind::Or) {
+    // Or ||
+    // 与And 指令 相同 icmp eq %L,0
+
+    BasicBlock *EntryBB = IRbuilder->GetInsertBlock(); // a
+    Function *TheFunction = EntryBB->getParent();
+    // Blocks for if-else
+    BasicBlock *ThenBB =
+        BasicBlock::Create(*TheContext, "then", TheFunction); // b
+    // 传递一次继承属性
+    IfFBB1 = ThenBB;
+    // set insert block -> entry
+    ast->LHS->accept(this);
+    // set L jump command
+
+    Value *L = get_value(); // a
+    // L->print(outs());
+    //  icmp ne %L,0
+    re_value = IRbuilder->CreateICmpNE(
+        L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    // Create Cond Br - newlabel(),IfFBB
+    re_value = IRbuilder->CreateCondBr(re_value, IfTBB1, ThenBB);
+    // set insert block -> then
+    IRbuilder->SetInsertPoint(ThenBB);
+    // 传递继承属性
+
+    ast->RHS->accept(this);
+    // set R jump command and generate code
+    Value *R = get_value(); // b
+    re_value = IRbuilder->CreateICmpNE(
+        R, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
+    // Create Cond Br -
+    // IRbuilder->CreateCondBr(re_value,IfTBB,IfFBB);
+    // Add new merge block to end of function  blockset
+    return;
+  }
+  // 确保下列代码仅执行一次
   ast->LHS->accept(this);
   Value *L = get_value();
   ast->RHS->accept(this);
   Value *R = get_value();
+  // 提前化对操作符&&及||的实现
   if (!L || !R) {
     return;
   }
@@ -369,30 +509,52 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
   // 比较符层次
   case BinaryExprAST::OpKind::Gt:
     // 第三个参数为指令指定名称
-    re_value = IRbuilder->CreateICmpSGT(L, R);
+    re_value = IRbuilder->CreateICmpSGT(L, R, "icmptmp");
+    // 数值转换为32位
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
   case BinaryExprAST::OpKind::Lt:
-    re_value = IRbuilder->CreateICmpSLT(L, R);
+    re_value = IRbuilder->CreateICmpSLT(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
   case BinaryExprAST::OpKind::Ge:
-    re_value = IRbuilder->CreateICmpSGE(L, R);
+    re_value = IRbuilder->CreateICmpSGE(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
   case BinaryExprAST::OpKind::Le:
-    re_value = IRbuilder->CreateICmpSLE(L, R);
+    re_value = IRbuilder->CreateICmpSLE(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
   case BinaryExprAST::OpKind::Eq:
-    re_value = IRbuilder->CreateICmpEQ(L, R);
+    re_value = IRbuilder->CreateICmpEQ(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
   case BinaryExprAST::OpKind::Ne:
-    re_value = IRbuilder->CreateICmpNE(L, R);
+    re_value = IRbuilder->CreateICmpNE(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
+  // 未正确实现短路求值
+  //  使用控制流法，将逻辑表达式转化为控制流结构
+  // 注释掉的原有处理逻辑
+  /*
   case BinaryExprAST::OpKind::And:
-    re_value = IRbuilder->CreateAnd(L, R);
+    re_value = IRbuilder->CreateAnd(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     break;
   case BinaryExprAST::OpKind::Or:
-    re_value = IRbuilder->CreateOr(L, R);
-    break;
+    re_value = IRbuilder->CreateOr(L, R, "icmptmp");
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
+    break;*/
   default:
+    throw SyntaxError("unexpect binary op");
     break;
   }
 }
@@ -411,14 +573,22 @@ void ASTIRGenerator::visit(class UnaryExprAST *ast) {
     break;
   case UnaryExprAST::UpKind::Neg:
     // 取负
-    re_value = IRbuilder->CreateNeg(U);
+    re_value = IRbuilder->CreateNeg(U, "iutmp");
     break;
   case UnaryExprAST::UpKind::Not:
     // 仅用于条件表达式，！0 = 1，！1 = 0
-    re_value = IRbuilder->CreateNot(U);
+    // CreateICmpEQ(value, llvm::ConstantInt::get(int32Type, 0), "result");
+    // re_value = IRbuilder->CreateNot(U,"iutmp");
+    re_value = IRbuilder->CreateICmpEQ(
+        U, llvm::ConstantInt::get(IntegerType::get(*TheContext, 32), 0),
+        "iutmp");
+    // transfrom i1 to i32
+    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                     "zextmp");
     // OpStr = "!";
     break;
   default:
+    throw SyntaxError("unexpect unary op");
     break;
   }
 }
@@ -447,7 +617,7 @@ void ASTIRGenerator::visit(class IdentifierAST *ast) {
       // 转换常数
       // problem:无法解析a+1为常数
       Constant *GlobalVarConstant = G->getInitializer();
-      GlobalVarConstant->print(outs());
+      // GlobalVarConstant->print(outs());
       re_value = GlobalVarConstant;
     } else {
       // 当前作用域为局部，load
@@ -467,7 +637,7 @@ void ASTIRGenerator::visit(class IdentifierAST *ast) {
       // Global handle
       auto G = A_G->global_var;
       Constant *GlobalVarConstant = G->getInitializer();
-      GlobalVarConstant->print(outs());
+      // GlobalVarConstant->print(outs());
       re_value = GlobalVarConstant;
     } else {
       // 变量引用，创建对应的load指令
@@ -486,77 +656,24 @@ void ASTIRGenerator::visit(class ArrayExprAST *ast) {
   auto llvm_type = mapToLLVMType(entry->var_type);
   if (!entry)
     throw UnrecognizedVarName(ast->Name);
-  if (entry->is_global) {
-    // 全局变量声明
-    // GEP + LOAD
-    // get GlobalVariable addres
-    // load command
-    auto G = entry->global_var;
-    if (!G)
-      throw UnrecognizedVarName(ast->Name);
-    // 处理局部作用域
-    // 对全局声明的处理
-    // 当前作用域为全局 不使用load
-    // problem：应当传递ConstantInt::get
-    // 转换常数
-    // problem:无法解析a+1为常数
-
-    std::vector<uint64_t> dims;
-    Value *gepR = G;
-    ArrayType *a_type = dyn_cast<ArrayType>(llvm_type);
-    // 获取数组信息
-    getDimsFromType(a_type, dims);
-    int array_size = dims.size();
-    // 元素类型
-    Type *e_type;
-    // 获取数组指定偏移的指针
-    for (int i = 0; i < array_size; i++) {
-      std::vector<Value *> refArray;
-      // 填充0
-      refArray.push_back(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
-      // get Value from ast->elems[i]
-      ast->elems[i]->accept(this);
-      Value *e_value = get_value();
-      if (!e_value)
-        throw SyntaxError("Unknown Array Elems!");
-      refArray.push_back(e_value);
-      gepR = IRbuilder->CreateGEP(a_type, gepR, refArray);
-      gepR->print(outs()); // test
-      e_type = a_type->getElementType();
-      a_type = dyn_cast<ArrayType>(e_type);
-    }
-    // gepFR 数组索引指针
-    Value *gepFR = gepR;
+  std::vector<uint64_t> dims;
+  Type *e_type;
+  // get dim info from symboltable
+  Value *gepR = getArrayElemPtr(entry, ast);
+  spanti::ArrayType *sp_type =
+      dynamic_cast<spanti::ArrayType *>(entry->var_type);
+  e_type = mapToLLVMType(sp_type->getElementTy());
+  int array_size = sp_type->get_count_dim();
+  int index_size = ast->elems.size();
+  // 获取数组指定偏移的指针
+  if (array_size == index_size) {
     // gepFR为一个一维数组指针
-    re_value = IRbuilder->CreateLoad(e_type, gepFR, ast->Name);
-    // Load;
+    // 读取该数组元素
+    // gepR->print(outs());
+    re_value = IRbuilder->CreateLoad(e_type, gepR, ast->Name);
   } else {
-    std::vector<uint64_t> dims;
-    Type *e_type;
-    // get dim info from symboltable
-    Value *gepR = getArrayElemPtr(entry, ast);
-    spanti::ArrayType *sp_type =
-        dynamic_cast<spanti::ArrayType *>(entry->var_type);
-    e_type = mapToLLVMType(sp_type->getElementTy());
-    int array_size = sp_type->get_count_dim();
-    int index_size = ast->elems.size();
-    // 获取数组指定偏移的指针
-    // 若数组的声明为int a[3][4]
-    // 只能处理int a[1][1]的情况
-    // 如何处理 a[0]的情形
-    // gepFR 数组索引指针
-    // gepFR为一个一维数组指针
-    if (array_size == index_size) {
-      // gepFR为一个一维数组指针
-      // 读取该数组元素
-      gepR->print(outs());
-      re_value = IRbuilder->CreateLoad(e_type, gepR, ast->Name);
-    } else {
-      // 直接返回
-      re_value = gepR;
-    }
-
-    // Load;
+    // 直接返回
+    re_value = gepR;
   }
 }
 void ASTIRGenerator::visit(class CallExprAST *ast) {
@@ -606,11 +723,16 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     if (!entry)
       throw UnrecognizedVarName(l_ast->getName());
     // find alloca_inst
-    auto A = entry->inst_memory;
-    if (!A)
+    Value *gepR;
+    if (entry->is_global) {
+      gepR = entry->global_var;
+    } else {
+      gepR = entry->inst_memory;
+    }
+    if (!gepR)
       throw UnrecognizedVarName(l_ast->getName());
     // generate instructions
-    IRbuilder->CreateStore(r_value, A);
+    IRbuilder->CreateStore(r_value, gepR);
     // 传递返回值
     re_value = r_value;
   } else {
@@ -623,9 +745,6 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     if (!entry)
       throw UnrecognizedVarName(a_ast->Name);
     // find alloca_inst
-    auto A = entry->inst_memory;
-    if (!A)
-      throw UnrecognizedVarName(a_ast->Name);
     std::vector<uint64_t> dims;
     Type *e_type;
     // 需要在内存中加载指针
@@ -651,6 +770,120 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
   // else 可能为 bullptr
   // if-then-else 与 if-then
   re_value = nullptr;
+  // pass code
+  //  if()
+  //   create blocks for then,else and marge cases
+  //   create edges between basic blocks
+  Function *TheFunction = IRbuilder->GetInsertBlock()->getParent();
+  // insert BB to function
+  BasicBlock *ThenBB = BasicBlock::Create(*TheContext, "then", TheFunction);
+  // not inseet BB to funciton
+  BasicBlock *ElseBB = BasicBlock::Create(*TheContext, "else");
+  BasicBlock *MergeBB = BasicBlock::Create(*TheContext, "ifcont");
+
+  // 继承属性传递 IF_F
+  // 规定B.True B.false
+  if (ast->Else) {
+    IfFBB1 = ElseBB;
+    IfTBB1 = ThenBB;
+  } else {
+    IfFBB1 = MergeBB;
+    IfTBB1 = ThenBB;
+  }
+
+  // 如何处理表达式的短路求值问题
+  // 调用Cond节点时，将传回ThenBB 和 ElseBB的引用
+  ast->Cond->accept(this);
+  Value *CondV = get_value();
+  if (!CondV)
+    return;
+  // ThenBB可能改变 - problem
+  // ThenBB = IfTBB;
+  // CondV 不为cmp类型指令时，创建一层cmp指令
+  // transfrom i32 - i1
+  // 这个代码会使示例3报错，因为类型不匹配
+  // CreateICmpEQ:i1 , +123:i32
+  if (CondV->getType() == IRbuilder->getInt32Ty()) {
+    CondV = IRbuilder->CreateICmpSGT(CondV, IRbuilder->getInt32(0), "ifcond");
+  }
+
+  if (ast->Else) {
+    // CondV的类型必须为i1
+    // 生成对应的比较指令
+    // 若表达式为&& 类型，则不需要生成多余的跳转指令
+    IRbuilder->CreateCondBr(CondV, ThenBB, ElseBB);
+    // Emit then value
+    IRbuilder->SetInsertPoint(ThenBB);
+    ast->Then->accept(this);
+    // create br(uncond)
+    IRbuilder->CreateBr(MergeBB);
+    // ThenBB在调用Then—>accept时刻可能改变，update
+    ThenBB = IRbuilder->GetInsertBlock();
+    // Add Else block to Function
+    TheFunction->insert(TheFunction->end(), ElseBB);
+    // emit else bb
+    IRbuilder->SetInsertPoint(ElseBB);
+    ast->Else->accept(this);
+    Value *ElseV = get_value();
+    if (!ElseV)
+      return;
+    // create br(uncond)
+    IRbuilder->CreateBr(MergeBB);
+    // ElseV在调用Else—>accept时刻可能改变，update
+    ElseBB = IRbuilder->GetInsertBlock();
+    // CONNECT BLOCKS
+    // Add merge blockset
+    TheFunction->insert(TheFunction->end(), MergeBB);
+    // emit merge block
+    IRbuilder->SetInsertPoint(MergeBB);
+
+    // phi - 一定添加PHI?
+    // 使用内存存储变量，PHI不必要，内存可以不为SSA形式
+    // 目前不考虑PHI
+    // PHINode *PN =
+    // IRbuilder->CreatePHI(Type::getInt32Ty(*TheContext),2,"iftmp"); income
+    // values PN->addIncoming(ThenV,ThenBB); PN->addIncoming(ElseV,ElseBB);
+    //  return a value - not se't
+    // re_value = PN;
+  } else {
+    // if-then
+    IRbuilder->CreateCondBr(CondV, ThenBB, MergeBB);
+    // Emit then value
+    IRbuilder->SetInsertPoint(ThenBB);
+    ast->Then->accept(this);
+    Value *ThenV = get_value();
+    /*
+    if (!ThenV)
+      return;*/
+    // create br(uncond)
+    IRbuilder->CreateBr(MergeBB);
+    // ThenBB在调用Then—>accept时刻可能改变，update
+    ThenBB = IRbuilder->GetInsertBlock();
+
+    // CONNECT BLOCKS
+    // Add merge blockset
+    TheFunction->insert(TheFunction->end(), MergeBB);
+    // emit merge block
+    IRbuilder->SetInsertPoint(MergeBB);
+    // phi - 一定添加PHI?
+    // 使用内存存储变量，PHI不必要，内存可以不为SSA形式
+    // 目前不考虑PHI
+    // PHINode *PN =
+    // IRbuilder->CreatePHI(Type::getInt32Ty(*TheContext),2,"iftmp"); income
+    // values PN->addIncoming(ThenV,ThenBB); PN->addIncoming(ElseV,ElseBB);
+    //  return a value - not se't
+    // re_value = PN;
+  }
+  // crate br(cond)
+}
+/*void ASTIRGenerator::visit(class IfStmtAST *ast) {
+  // else 可能为 bullptr
+  // if-then-else 与 if-then
+  re_value = nullptr;
+  //pass code
+
+  // 如何处理表达式的短路求值问题
+  //调用Cond节点时，将传回ThenBB 和 ElseBB的引用
   ast->Cond->accept(this);
   Value *CondV = get_value();
   if (!CondV)
@@ -660,9 +893,8 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
   // 这个代码会使示例3报错，因为类型不匹配
   // CreateICmpEQ:i1 , +123:i32
   if (CondV->getType() == IRbuilder->getInt32Ty()) {
-    CondV = IRbuilder->CreateICmpEQ(CondV, IRbuilder->getInt32(1), "ifcond");
+    CondV = IRbuilder->CreateICmpSGT(CondV, IRbuilder->getInt32(0), "ifcond");
   }
-
   // if()
   //  create blocks for then,else and marge cases
   //  create edges between basic blocks
@@ -741,27 +973,40 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
     // re_value = PN;
   }
   // crate br(cond)
-}
+}*/
+// while-cycle的设计错误
 void ASTIRGenerator::visit(class WhileStmtAST *ast) {
   // some br instruction
 
   // 基于比较值，生成条件跳转
   //  while(){}
   //   create blocks for then,else and marge cases
-  //   create edges between basic blocks
+  //   create edges between basic
   Function *TheFunction = IRbuilder->GetInsertBlock()->getParent();
+  BasicBlock *PreLoopBB = IRbuilder->GetInsertBlock();
+  if (cycle == 0)
+    setBLoopBB(PreLoopBB);
+  addcycle();
+  // begin
   BasicBlock *PreheaderBB =
       BasicBlock::Create(*TheContext, "looppre", TheFunction);
+  // b.true
   BasicBlock *BodyBB = BasicBlock::Create(*TheContext, "loop");
   // jump goal? // 针对break/continue指令，跳转指令可能位置，跳转位置在之后填充
+  // b.false <- S.next;
   BasicBlock *AfterBB = BasicBlock::Create(*TheContext, "loopend");
+  // 设置 布尔表达式的继承属性
+  IfFBB1 = AfterBB;
+  IfTBB1 = BodyBB;
   // save
   Cbb.push(PreheaderBB);
   Bbb.push(AfterBB);
   // Body
+  // create alloca before it
   // create br
-  IRbuilder->CreateBr(PreheaderBB);
+  // IRbuilder->CreateBr(PreheaderBB);
   //  Emit then value
+  // Block:
   IRbuilder->SetInsertPoint(PreheaderBB);
   // condition - expression
   ast->Cond->accept(this);
@@ -773,9 +1018,9 @@ void ASTIRGenerator::visit(class WhileStmtAST *ast) {
   // 这个代码会使示例3报错，因为类型不匹配
   // CreateICmpEQ:i1 , +123:i32
   if (CondV->getType() == IRbuilder->getInt32Ty()) {
-    CondV = IRbuilder->CreateICmpEQ(CondV, IRbuilder->getInt32(1), "ifcond");
+    CondV = IRbuilder->CreateICmpSGT(CondV, IRbuilder->getInt32(0), "ifcond");
   }
-  // CreateBr
+  // CreateBr B.true = BodyBB B.false = S.next
   IRbuilder->CreateCondBr(CondV, BodyBB, AfterBB);
 
   TheFunction->insert(TheFunction->end(), BodyBB);
@@ -789,11 +1034,20 @@ void ASTIRGenerator::visit(class WhileStmtAST *ast) {
   // create br
   IRbuilder->CreateBr(PreheaderBB);
 
-  // insert code to AfterBB
-  // icmp.../br...
-  // AfterBB不再为不完整类型
+  // AfterBb 不需要二维创建
+  //  insert code to AfterBB
+  //  icmp.../br...
+  //  AfterBB不再为不完整类型
   TheFunction->insert(TheFunction->end(), AfterBB);
   IRbuilder->SetInsertPoint(AfterBB);
+
+  // 在创建完声明后 创建分支代码
+  IRbuilder->SetInsertPoint(PreLoopBB);
+  IRbuilder->CreateBr(PreheaderBB);
+  IRbuilder->SetInsertPoint(AfterBB);
+  subcycle();
+  if (cycle == 0)
+    clearBLoopBB();
   // 对应之前的push
   Cbb.pop();
   Bbb.pop();
@@ -807,10 +1061,10 @@ void ASTIRGenerator::visit(class BreakStmtAST *ast) {
   // 无名称BB以处理跳转目标未知
   Function *TheFunction = IRbuilder->GetInsertBlock()->getParent();
   BasicBlock *bB = BasicBlock::Create(
-      *TheContext, "",
+      *TheContext, "bb",
       TheFunction); // 指令创建于当前块，problem:跳转目标不可不确定
   BasicBlock *bnB = BasicBlock::Create(
-      *TheContext, "",
+      *TheContext, "bnb",
       TheFunction); // 指令创建于当前块，problem:跳转目标不可不确定
   // bB保存break 对应 跳转指令
   re_value = IRbuilder->CreateBr(bB);
@@ -824,9 +1078,9 @@ void ASTIRGenerator::visit(class ContinueStmtAST *ast) {
   // br>
   // jump to Loop.next
   Function *TheFunction = IRbuilder->GetInsertBlock()->getParent();
-  BasicBlock *cB = BasicBlock::Create(*TheContext, "", TheFunction);
+  BasicBlock *cB = BasicBlock::Create(*TheContext, "cb", TheFunction);
   BasicBlock *cnB = BasicBlock::Create(
-      *TheContext, "",
+      *TheContext, "cnb",
       TheFunction); // 指令创建于当前块，problem:跳转目标不可不确定
   re_value = IRbuilder->CreateBr(cB);
   IRbuilder->SetInsertPoint(cB);
@@ -853,7 +1107,8 @@ void ASTIRGenerator::visit(class BlockStmtAST *ast) {
 }
 void ASTIRGenerator::visit(class ExpStmtAST *ast) {
   // Expr
-  ast->Expr->accept(this);
+  if (ast->Expr)
+    ast->Expr->accept(this);
   re_value = get_value();
 }
 void ASTIRGenerator::visit(class RetuStmtAST *ast) {
@@ -863,6 +1118,7 @@ void ASTIRGenerator::visit(class RetuStmtAST *ast) {
     re_value = IRbuilder->CreateRet(get_value());
   } else {
     // return;
+    re_value = IRbuilder->CreateRetVoid();
   }
 }
 void ASTIRGenerator::visit(class ConstDecAST *ast) { re_value = nullptr; }
@@ -879,29 +1135,31 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
   if (entry->is_global) {
     // 全局变量的声明有错误
     //  创建全局变量
-    global_var =
-        new GlobalVariable(*TheModule, llvm_type, entry->var_type->get_const(),
-                           GlobalValue::ExternalLinkage, 0, ast->getName());
+    global_var = new GlobalVariable(
+        *TheModule, llvm_type, entry->var_type->get_const(),
+        GlobalValue::LinkageTypes::ExternalLinkage, 0, ast->getName());
+    global_var->setDSOLocal(true);
     // 存储全局变量？
     entry->global_var = global_var;
-    // 设置全局属性
-    entry->is_global = true;
     // 全局 int 类型变量/常量的初值必须是编译时可求值的常量表达式。
     // 初始化值
+    if (llvm_type->isArrayTy()) {
+      // 设置数组初始化器 - 全部置为0
+      global_var->setInitializer(ConstantAggregateZero::get(llvm_type));
+    } else {
+      global_var->setInitializer(llvm::ConstantInt::get(llvm_type, 0));
+    }
     if (ast->initval) {
-      Value *r_value;
-      Constant *result;
+
       if (llvm_type->isArrayTy()) {
         // 获取数组元素的类型
         ArrayType *a_type = dyn_cast<ArrayType>(llvm_type);
-        Type *e_type = a_type->getElementType();
-        std::vector<Constant *> Varray;
         // 获取数组的各维度大小
         std::vector<uint64_t> dims;
+        Constant *result;
         getDimsFromType(a_type, dims);
         // 基于常数和非常数声明分类设计，生成对应的ConstantArray
         // 基于维度，嵌套构造ConstantArray
-        Constant *goal;
         if (entry->var_type->get_const()) {
           result = getConstantArray(entry->const_init, dims);
         } else {
@@ -913,7 +1171,7 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
       } else {
         ast->initval->accept(this);
         // 右侧值必须为常量值
-        r_value = get_value();
+        Value *r_value = get_value();
         // test
         // create_store
         if (!r_value)
@@ -923,7 +1181,6 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
         if (r_Constant) {
           // 使用 myConstant，它现在是一个不可变的常量
           global_var->setInitializer(r_Constant);
-          global_var->print(outs());
         } else {
           // 处理转换失败的情况
           throw SyntaxError(
@@ -931,92 +1188,68 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
         }
         // 初始值的类型与全局变量类型匹配
       }
-
-    } else {
-      // 初始化值为0/0.0
-      // 未做好数组对应的匹配
-      if (llvm_type->isArrayTy()) {
-        // 设置数组初始化器 - 全部置为0
-        global_var->setInitializer(ConstantAggregateZero::get(llvm_type));
-      } else {
-        global_var->setInitializer(llvm::ConstantInt::get(llvm_type, 0));
-      }
     }
   } else {
     // 若为非全局变量
     // 使用allova为数组分配内存位置
-    auto alloca_inst =
-        IRbuilder->CreateAlloca(llvm_type, nullptr, ast->getName());
-    alloca_inst->print(outs());
-    // 若为数组，另设情况讨论
-    // 存储内存位置
+    // 若声明位于循环内部，需将alloca 提取到循环外部 以避免多次的alloca
+    // 一个循环计数器，两个设置标志位的方法，一个指针记录循环外的节点
+    // set insert point outside of the loop
+    BasicBlock *sB = IRbuilder->GetInsertBlock();
+    AllocaInst *alloca_inst;
+    if (cycle > 0) {
+      IRbuilder->SetInsertPoint(BLoopBB);
+      alloca_inst = IRbuilder->CreateAlloca(llvm_type, nullptr, ast->getName());
+      // set back the insert point
+      IRbuilder->SetInsertPoint(sB);
+    } else {
+      alloca_inst = IRbuilder->CreateAlloca(llvm_type, nullptr, ast->getName());
+    }
+
+    // alloca_inst->print(outs());
+    //  若为数组，另设情况讨论
+    //  存储内存位置
     entry->inst_memory = alloca_inst;
+    // local array : memset
+    // get params
+    std::vector<Value *> ArgsV;
+    if (llvm_type->isArrayTy()) {
+      spanti::ArrayType* a_type = dynamic_cast<spanti::ArrayType*>(entry->var_type);
+      int array_size = 1;
+      for(int i=0;i<a_type->get_count_dim();i++){
+        array_size *= a_type->get_elements()[i];
+      }
+      
+      // get Type
+      std::vector<llvm::Type *> params;
+      //Tys 复写 可重载函数（同名函数，不同的参数类型）
+      // 重载 (PTR,I32,I8,I1) -> (I32*,I8,I64,I1)
+      params.push_back(llvm::Type::getInt32PtrTy(*TheContext));
+      params.push_back(llvm::Type::getInt64Ty(*TheContext));
+      // set ArgsV
+      //  base ptr of array
+      ArgsV.push_back(alloca_inst);
+      // 0
+      ArgsV.push_back(ConstantInt::get(Type::getInt8Ty(*TheContext), 0));
+      // size and sizeof 4*
+      ArgsV.push_back(
+          ConstantInt::get(Type::getInt64Ty(*TheContext), array_size * 4)),
+          // false
+          ArgsV.push_back(ConstantInt::getFalse(*TheContext));
+      // 当参数为重载类型，Tys不为空 error?
+      // memset is overload function
+      Function *InstF =
+          Intrinsic::getDeclaration(TheModule.get(), llvm::Intrinsic::memset,
+                                    params);
+      InstF->print(outs());
+      IRbuilder->CreateCall(InstF, ArgsV);
+    }
     // 返回合格
     // 若存在初始值，处理对应情况(generate load/store instruction)
     // 基于llvm type判断
     if (ast->initval) {
       if (llvm_type->isArrayTy()) {
-        Type *e_type;
-        std::vector<Value *> vp_array;
-        std::vector<uint64_t> dims;
-        // handle InitvalExpr
-        // int a[2][2] = {{1},2,3}
-        // 多维数组指针 -> 一维数组指针
-        Value *gepR = getArrayBasePtr(entry);
-        spanti::ArrayType *sp_type =
-            dynamic_cast<spanti::ArrayType *>(entry->var_type);
-        e_type = mapToLLVMType(sp_type->getElementTy());
-        // 处理initial
-        // 使用基地址+偏移方式 处理初始值问题
-        ////为各个初始化值生成getelementptr - store对
-        // 基于常量及非常累声明采用不同策略
-        // 常量声明
-        Value *gepFR = gepR;
-        if (entry->var_type->get_const()) {
-          // 常量，使用数组常量化器
-          auto CAS = entry->const_init;
-          // transfrom it to Constant
-          for (int i = 0; i < CAS.size(); i++) {
-            // pair GEP - Store
-            if (i != 0) {
-              // update gepFR - Value:OFFSET
-              gepFR = IRbuilder->CreateGEP(
-                  e_type, gepR,
-                  ConstantInt::get(Type::getInt32Ty(*TheContext), i));
-            }
-            // get Store VALUE
-            Value *SV = ConstantInt::get(Type::getInt32Ty(*TheContext),
-                                         entry->const_init[i]);
-            // Create Store
-            IRbuilder->CreateStore(SV, gepFR);
-          }
-        } else {
-          // 使用数组initial - ExprAST
-          std::vector<Value *> VAS;
-          // GET vector<Value*> from InitialExprAST
-          auto i_ast = dynamic_cast<InitValExprAST *>(ast->initval.get());
-          for (auto e_ast : i_ast->Inits) {
-            e_ast->accept(this);
-            VAS.push_back(get_value());
-          }
-
-          for (int i = 0; i < VAS.size(); i++) {
-            // generate paor <GEP,STORE>
-            //  pair GEP - Store
-            //  若Value的值为nullptr，停止生成
-            Value *SV = VAS[i];
-            if (SV) {
-              if (i != 0) {
-                // update gepFR - Value:OFFSET
-                gepFR = IRbuilder->CreateGEP(
-                    e_type, gepR,
-                    ConstantInt::get(Type::getInt32Ty(*TheContext), i));
-              }
-              IRbuilder->CreateStore(SV, gepFR);
-            }
-          }
-        }
-
+        localArrayInitialization(entry, ast);
       } else {
 
         // Initial value -> -IntergarExprAST
@@ -1190,8 +1423,18 @@ void ASTIRGenerator::visit(class FuncDecAST *ast) {
   auto value = get_value();
 
   verifyFunction(*F);
-  F->print(outs());
+  // F->viewCFG();
+  // F->print(outs());
   re_value = F;
+  // 生成默认返回指令
+  // 创建一条ret void指令
+  Type *fr_type = IRbuilder->getCurrentFunctionReturnType();
+  if (fr_type->isVoidTy()) {
+    IRbuilder->CreateRetVoid();
+  } else if (fr_type->isIntegerTy()) {
+    // 未创建返回语句
+    IRbuilder->CreateRet(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
+  }
   /*
   if (Value *RetVal = get_value()) {
     // 使用返回的RetVal创建返回指令
@@ -1213,6 +1456,16 @@ void ASTIRGenerator::visit(class ProgramAST *ast) {
   for (auto decl : ast->decls) {
     decl->accept(this);
   }
+  // examine error
+  /*
+  if (verifyModule(*TheModule, &errs())) {
+    errs() << "Error in module" << "\n";
+    // 验证失败，处理错误信息
+  } else {
+    errs() << "Module is valid.\n";
+    // 验证成功
+  }*/
+
   // M.print write .ll file
   TheModule->print(irs, nullptr);
   // 向文件中写入必要内容

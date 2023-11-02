@@ -61,6 +61,9 @@ VariableTableEntry *VariableTableScope::lookUp(std::string name) {
   if (it == mapping.end()) {
     return nullptr;
   } else {
+    //goal name exist in the current scope
+    // analysis name location is in entry's lifetime
+    //if not,return nullptr
     return it->second.get();
   }
 }
