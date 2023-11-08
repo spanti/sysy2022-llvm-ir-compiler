@@ -7,6 +7,10 @@ At present, a compiler has been implemented to translate the SysY2022 language i
 # QuickStart
 git clone https://github.com/spanti/sysy2022-llvm-ir-compiler.git
 
+cd sysy2022-llvm-ir-compiler
+
+mkdir build
+
 cd build
 
 cmake ..
