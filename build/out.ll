@@ -9,25 +9,91 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.3 = private unnamed_addr constant [4 x i8] c" %d\00", align 1
 @.str.4 = private unnamed_addr constant [2 x i8] c"\0A\00", align 1
 
-define i32 @func1() {
-entry:
-  ret i32 555
-}
-
-define i32 @func2() {
-entry:
-  ret i32 111
-}
-
 define i32 @main() {
 entry:
   %a = alloca i32, align 4
-  %calltmp = call i32 @func1()
-  store i32 %calltmp, ptr %a, align 4
-  %a1 = load i32, ptr %a, align 4
-  %calltmp2 = call i32 @func2()
-  %subtmp = sub i32 %a1, %calltmp2
-  call void @putint(i32 %subtmp)
+  %b = alloca i32, align 4
+  %c = alloca i32, align 4
+  %d = alloca i32, align 4
+  %result = alloca i32, align 4
+  store i32 5, ptr %a, align 4
+  store i32 5, ptr %b, align 4
+  store i32 1, ptr %c, align 4
+  store i32 -2, ptr %d, align 4
+  store i32 2, ptr %result, align 4
+  %d2 = load i32, ptr %d, align 4
+  %multmp = mul i32 %d2, 1
+  %divtmp = sdiv i32 %multmp, 2
+  %icmptmp = icmp slt i32 %divtmp, 0
+  %zextmp = zext i1 %icmptmp to i32
+  %icmptmp3 = icmp ne i32 %zextmp, 0
+  br i1 %icmptmp3, label %then, label %then1
+
+then:                                             ; preds = %then4, %entry
+  %result17 = load i32, ptr %result, align 4
+  call void @putint(i32 %result17)
+  br label %ifcont
+
+then1:                                            ; preds = %then1, %entry
+  %a5 = load i32, ptr %a, align 4
+  %b6 = load i32, ptr %b, align 4
+  %subtmp = sub i32 %a5, %b6
+  %icmptmp7 = icmp ne i32 %subtmp, 0
+  %zextmp8 = zext i1 %icmptmp7 to i32
+  %icmptmp9 = icmp ne i32 %zextmp8, 0
+  br i1 %icmptmp9, label %then4, label %then1
+
+then4:                                            ; preds = %then1
+  %c10 = load i32, ptr %c, align 4
+  %addtmp = add i32 %c10, 3
+  %sremtmp = srem i32 %addtmp, 2
+  %icmptmp11 = icmp ne i32 %sremtmp, 0
+  %zextmp12 = zext i1 %icmptmp11 to i32
+  %icmptmp13 = icmp ne i32 %zextmp12, 0
+  %zextmp14 = zext i1 %icmptmp13 to i32
+  %icmptmp15 = icmp ne i32 %zextmp14, 0
+  %zextmp16 = zext i1 %icmptmp15 to i32
+  %ifcond = icmp sgt i32 %zextmp16, 0
+  br i1 %ifcond, label %then, label %ifcont
+
+ifcont:                                           ; preds = %then4, %then
+  %d20 = load i32, ptr %d, align 4
+  %sremtmp21 = srem i32 %d20, 2
+  %addtmp22 = add i32 %sremtmp21, 67
+  %icmptmp23 = icmp slt i32 %addtmp22, 0
+  %zextmp24 = zext i1 %icmptmp23 to i32
+  %icmptmp25 = icmp ne i32 %zextmp24, 0
+  br i1 %icmptmp25, label %then18, label %then19
+
+then18:                                           ; preds = %then26, %ifcont
+  store i32 4, ptr %result, align 4
+  %result43 = load i32, ptr %result, align 4
+  call void @putint(i32 %result43)
+  br label %ifcont44
+
+then19:                                           ; preds = %then19, %ifcont
+  %a27 = load i32, ptr %a, align 4
+  %b28 = load i32, ptr %b, align 4
+  %subtmp29 = sub i32 %a27, %b28
+  %icmptmp30 = icmp ne i32 %subtmp29, 0
+  %zextmp31 = zext i1 %icmptmp30 to i32
+  %icmptmp32 = icmp ne i32 %zextmp31, 0
+  br i1 %icmptmp32, label %then26, label %then19
+
+then26:                                           ; preds = %then19
+  %c33 = load i32, ptr %c, align 4
+  %addtmp34 = add i32 %c33, 2
+  %sremtmp35 = srem i32 %addtmp34, 2
+  %icmptmp36 = icmp ne i32 %sremtmp35, 0
+  %zextmp37 = zext i1 %icmptmp36 to i32
+  %icmptmp38 = icmp ne i32 %zextmp37, 0
+  %zextmp39 = zext i1 %icmptmp38 to i32
+  %icmptmp40 = icmp ne i32 %zextmp39, 0
+  %zextmp41 = zext i1 %icmptmp40 to i32
+  %ifcond42 = icmp sgt i32 %zextmp41, 0
+  br i1 %ifcond42, label %then18, label %ifcont44
+
+ifcont44:                                         ; preds = %then26, %then18
   ret i32 0
 }
 

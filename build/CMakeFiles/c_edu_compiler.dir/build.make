@@ -2492,20 +2492,7 @@ c_edu_compiler: CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathToke
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/antlr-runtime/tree/xpath/XPathWildcardElement.cpp.o
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/build.make
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMSupport.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMCore.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMIRReader.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMAsmParser.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMBitReader.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMCore.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMBinaryFormat.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMRemarks.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMTargetParser.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMBitstreamReader.a
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMSupport.a
-c_edu_compiler: /usr/lib/x86_64-linux-gnu/libz.so
-c_edu_compiler: /usr/lib/x86_64-linux-gnu/libtinfo.so
-c_edu_compiler: /usr/lib/llvm-16/lib/libLLVMDemangle.a
+c_edu_compiler: /usr/lib/llvm-16/lib/libLLVM-16.so.1
 c_edu_compiler: CMakeFiles/c_edu_compiler.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Linking CXX executable c_edu_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/c_edu_compiler.dir/link.txt --verbose=$(VERBOSE)

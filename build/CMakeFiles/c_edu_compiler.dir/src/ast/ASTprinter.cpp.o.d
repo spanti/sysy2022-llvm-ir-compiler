@@ -312,11 +312,163 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_multimap.h \
-  /mnt/f/test/src/ast/ASTvisitor.h \
-  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
+  /usr/include/llvm-16/llvm/IR/BasicBlock.h \
+  /mnt/f/test/src/ast/ASTvisitor.h /mnt/f/test/src/jit/SysY2022JIT.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/JITSymbol.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
+  /usr/lib/llvm-16/include/llvm/Support/Error.h \
+  /usr/lib/llvm-16/include/llvm-c/Error.h \
+  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
+  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
   /usr/lib/llvm-16/include/llvm/ADT/APInt.h \
-  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
+  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
+  /usr/lib/llvm-16/include/llvm/Support/Format.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/CompileUtils.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/IRCompileLayer.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Layer.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Core.h \
+  /usr/lib/llvm-16/include/llvm/ADT/IntrusiveRefCntPtr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/atomic \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/JITLink/JITLinkDylib.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/ExecutorProcessControl.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Triple.h \
+  /usr/lib/llvm-16/include/llvm/TargetParser/Triple.h \
+  /usr/lib/llvm-16/include/llvm/Support/VersionTuple.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/JITLink/JITLinkMemoryManager.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/AllocationActions.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/ExecutorAddress.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/SimplePackedSerialization.h \
+  /usr/lib/llvm-16/include/llvm/Support/FormatVariadic.h \
+  /usr/lib/llvm-16/include/llvm/Support/FormatCommon.h \
+  /usr/lib/llvm-16/include/llvm/Support/FormatVariadicDetails.h \
+  /usr/lib/llvm-16/include/llvm/Support/FormatProviders.h \
   /usr/lib/llvm-16/include/llvm/ADT/StringSwitch.h \
+  /usr/lib/llvm-16/include/llvm/Support/NativeFormatting.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/WrapperFunctionUtils.h \
+  /usr/lib/llvm-16/include/llvm/Support/Memory.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/MemoryFlags.h \
+  /usr/lib/llvm-16/include/llvm/Support/Allocator.h \
+  /usr/lib/llvm-16/include/llvm/Support/MSVCErrorWorkarounds.h \
+  /usr/lib/llvm-16/include/llvm/Support/RecyclingAllocator.h \
+  /usr/lib/llvm-16/include/llvm/Support/Recycler.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/future \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/mutex \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/chrono \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ratio \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ctime \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/std_mutex.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/thread \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/condition_variable \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/atomic_futex.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/TargetProcessControlTypes.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/SymbolStringPool.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/TaskDispatch.h \
+  /usr/lib/llvm-16/include/llvm/Support/ExtensibleRTTI.h \
+  /usr/lib/llvm-16/include/llvm/Support/DynamicLibrary.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Mangling.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/ThreadSafeModule.h \
+  /usr/lib/llvm-16/include/llvm/IR/Module.h \
+  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
+  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
+  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
+  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
+  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemoryBuffer.h \
+  /usr/lib/llvm-16/include/llvm/Support/MemoryBufferRef.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h \
+  /usr/lib/llvm-16/include/llvm/MC/SubtargetFeature.h \
+  /usr/lib/llvm-16/include/llvm/Target/TargetMachine.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
+  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
+  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
+  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
+  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/list \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_list.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/list.tcc \
+  /usr/lib/llvm-16/include/llvm/Support/PGOOptions.h \
+  /usr/lib/llvm-16/include/llvm/Target/CGPassBuilderOption.h \
+  /usr/lib/llvm-16/include/llvm/Target/TargetOptions.h \
+  /usr/lib/llvm-16/include/llvm/ADT/FloatingPointMode.h \
+  /usr/lib/llvm-16/include/llvm/MC/MCTargetOptions.h \
+  /usr/lib/llvm-16/include/llvm/Support/Compression.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/ExecutionUtils.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/ObjectLinkingLayer.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/JITLink/JITLink.h \
+  /usr/lib/llvm-16/include/llvm/Support/BinaryStreamReader.h \
+  /usr/lib/llvm-16/include/llvm/Support/BinaryStreamArray.h \
+  /usr/lib/llvm-16/include/llvm/Support/BinaryStreamRef.h \
+  /usr/lib/llvm-16/include/llvm/Support/BinaryStream.h \
+  /usr/lib/llvm-16/include/llvm/Support/BinaryStreamError.h \
+  /usr/lib/llvm-16/include/llvm/Support/ConvertUTF.h \
+  /usr/lib/llvm-16/include/llvm/Support/BinaryStreamWriter.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/Shared/OrcError.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/RuntimeDyld.h \
+  /usr/lib/llvm-16/include/llvm/DebugInfo/DIContext.h \
+  /usr/lib/llvm-16/include/llvm/Object/ObjectFile.h \
+  /usr/lib/llvm-16/include/llvm/BinaryFormat/Magic.h \
+  /usr/lib/llvm-16/include/llvm/BinaryFormat/Swift.h \
+  /usr/lib/llvm-16/include/llvm/BinaryFormat/Swift.def \
+  /usr/lib/llvm-16/include/llvm/Object/Binary.h \
+  /usr/lib/llvm-16/include/llvm/Object/Error.h \
+  /usr/lib/llvm-16/include/llvm/Object/SymbolicFile.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/cinttypes \
+  /usr/lib/llvm-16/include/llvm/Support/WithColor.h \
+  /usr/lib/llvm-16/include/llvm/BinaryFormat/Dwarf.def \
+  /usr/lib/llvm-16/include/llvm/Object/Archive.h \
+  /usr/lib/llvm-16/include/llvm/ADT/fallible_iterator.h \
+  /usr/lib/llvm-16/include/llvm/Support/Chrono.h \
+  /usr/lib/llvm-16/include/llvm/Support/FileSystem.h \
+  /usr/lib/llvm-16/include/llvm/Support/FileSystem/UniqueID.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/stack \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/deque.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_stack.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/JITEventListener.h \
+  /usr/lib/llvm-16/include/llvm-c/ExecutionEngine.h \
+  /usr/lib/llvm-16/include/llvm-c/Target.h \
+  /usr/lib/llvm-16/include/llvm/Config/Targets.def \
+  /usr/lib/llvm-16/include/llvm/Config/AsmPrinters.def \
+  /usr/lib/llvm-16/include/llvm/Config/AsmParsers.def \
+  /usr/lib/llvm-16/include/llvm/Config/Disassemblers.def \
+  /usr/lib/llvm-16/include/llvm-c/TargetMachine.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/SectionMemoryManager.h \
+  /usr/lib/llvm-16/include/llvm/ExecutionEngine/RTDyldMemoryManager.h \
+  /usr/lib/llvm-16/include/llvm/Passes/StandardInstrumentations.h \
+  /usr/lib/llvm-16/include/llvm/IR/OptBisect.h \
+  /usr/lib/llvm-16/include/llvm/IR/PassTimingInfo.h \
+  /usr/lib/llvm-16/include/llvm/Support/Timer.h \
+  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
+  /usr/lib/llvm-16/include/llvm/Support/CommandLine.h \
+  /usr/lib/llvm-16/include/llvm/Support/ManagedStatic.h \
+  /usr/lib/llvm-16/include/llvm/Support/StringSaver.h \
+  /usr/lib/llvm-16/include/llvm/Transforms/IPO/SampleProfileProbe.h \
+  /usr/lib/llvm-16/include/llvm/Analysis/LazyCallGraph.h \
+  /usr/lib/llvm-16/include/llvm/ADT/SetVector.h \
+  /usr/lib/llvm-16/include/llvm/Analysis/TargetLibraryInfo.h \
+  /usr/lib/llvm-16/include/llvm/ADT/BitVector.h \
+  /usr/lib/llvm-16/include/llvm/Pass.h \
+  /usr/lib/llvm-16/include/llvm/PassAnalysisSupport.h \
+  /usr/lib/llvm-16/include/llvm/PassSupport.h \
+  /usr/lib/llvm-16/include/llvm/PassInfo.h \
+  /usr/lib/llvm-16/include/llvm/PassRegistry.h \
+  /usr/lib/llvm-16/include/llvm/Support/RWMutex.h \
+  /usr/lib/llvm-16/include/llvm/Support/Threading.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/ciso646 \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/shared_mutex \
+  /usr/lib/llvm-16/include/llvm/Analysis/TargetLibraryInfo.def \
+  /usr/lib/llvm-16/include/llvm/ProfileData/SampleProf.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/sstream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/sstream.tcc \
+  /usr/lib/llvm-16/include/llvm/ADT/APFloat.h \
   /usr/lib/llvm-16/include/llvm/IR/Constants.h \
   /usr/lib/llvm-16/include/llvm/IR/IRBuilder.h \
   /usr/lib/llvm-16/include/llvm/IR/ConstantFolder.h \
@@ -324,39 +476,11 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: \
   /usr/lib/llvm-16/include/llvm/IR/IRBuilderFolder.h \
   /usr/lib/llvm-16/include/llvm/IR/Operator.h \
   /usr/lib/llvm-16/include/llvm/IR/FMF.h \
-  /usr/lib/llvm-16/include/llvm/IR/DataLayout.h \
-  /usr/lib/llvm-16/include/llvm/Support/TrailingObjects.h \
   /usr/lib/llvm-16/include/llvm/IR/FPEnv.h \
-  /usr/lib/llvm-16/include/llvm/IR/GlobalVariable.h \
   /usr/lib/llvm-16/include/llvm/IR/Instructions.h \
   /usr/lib/llvm-16/include/llvm/IR/Intrinsics.h \
   /usr/lib/llvm-16/include/llvm/IR/IntrinsicEnums.inc \
-  /usr/lib/llvm-16/include/llvm/IR/Module.h \
-  /usr/lib/llvm-16/include/llvm/IR/Comdat.h \
-  /usr/lib/llvm-16/include/llvm/ADT/SmallPtrSet.h \
-  /usr/lib/llvm-16/include/llvm/IR/GlobalAlias.h \
-  /usr/lib/llvm-16/include/llvm/IR/GlobalIFunc.h \
-  /usr/lib/llvm-16/include/llvm/IR/ProfileSummary.h \
-  /usr/lib/llvm-16/include/llvm/IR/ValueHandle.h \
   /usr/lib/llvm-16/include/llvm/IR/Verifier.h \
-  /usr/lib/llvm-16/include/llvm/IR/PassManager.h \
-  /usr/lib/llvm-16/include/llvm/ADT/TinyPtrVector.h \
-  /usr/lib/llvm-16/include/llvm/IR/PassInstrumentation.h \
-  /usr/lib/llvm-16/include/llvm/ADT/Any.h \
-  /usr/lib/llvm-16/include/llvm/ADT/FunctionExtras.h \
-  /usr/lib/llvm-16/include/llvm/IR/PassManagerInternal.h \
-  /usr/lib/llvm-16/include/llvm/Support/TimeProfiler.h \
-  /usr/lib/llvm-16/include/llvm/Support/Error.h \
-  /usr/lib/llvm-16/include/llvm-c/Error.h \
-  /usr/lib/llvm-16/include/llvm/ADT/StringExtras.h \
-  /usr/lib/llvm-16/include/llvm/ADT/APSInt.h \
-  /usr/lib/llvm-16/include/llvm/Support/Debug.h \
-  /usr/lib/llvm-16/include/llvm/Support/ErrorOr.h \
-  /usr/lib/llvm-16/include/llvm/Support/Format.h \
-  /usr/lib/llvm-16/include/llvm/Support/TypeName.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/list \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_list.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/list.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/fstream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/codecvt.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/x86_64-linux-gnu/c++/7/bits/basic_file.h \
@@ -365,9 +489,4 @@ CMakeFiles/c_edu_compiler.dir/src/ast/ASTprinter.cpp.o: \
   /usr/include/llvm-16/llvm/IR/DerivedTypes.h \
   /usr/include/llvm-16/llvm/IR/Type.h \
   /usr/include/llvm-16/llvm/IR/Value.h \
-  /usr/include/llvm-16/llvm/Support/raw_ostream.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/stack \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/deque.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/7/../../../../include/c++/7/bits/stl_stack.h
+  /usr/include/llvm-16/llvm/Support/raw_ostream.h
