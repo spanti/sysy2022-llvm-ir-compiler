@@ -20,6 +20,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 # find LLVM library
 find_package(LLVM REQUIRED CONFIG)
+find_package(Threads REQUIRED)
 
 message(STATUS "This is BINARY dir " ${PROJECT_BINARY_DIR})
 message(STATUS "This is SOURCE dir " ${PROJECT_SOURCE_DIR})
@@ -35,6 +36,7 @@ include_directories(src)
 include_directories(src/ast)
 include_directories(src/semantic)
 include_directories(src/common)
+include_directories(src/jit)
 include_directories(antlr-runtime)
 separate_arguments(LLVM_DEFINITIONS_LIST NATIVE_COMMAND ${LLVM_DEFINITIONS})
 add_definitions(${LLVM_DEFINITIONS})
@@ -44,9 +46,11 @@ add_executable(c_edu_compiler ${DIR_SRC} ${DIR_LIB})
 #add_executable(${PROJECT_NAME} test.cpp)
 # Find the libraries that correspond to the LLVM components
 # that we wish to use
-llvm_map_components_to_libnames(llvm_libs support core irreader)
+# use llvm-config --components to list all name support core irreader passes orcjit
+#llvm_map_components_to_libnames(llvm_libs support core irreader passes orcjit native target codegen)
+set(llvm_libs LLVM)
 # Link against LLVM libraries - 链接库
-target_link_libraries(c_edu_compiler ${llvm_libs})
+target_link_libraries(c_edu_compiler ${llvm_libs} Threads::Threads)
 # The last two lines enable CMake’s test runner to discover the tests included in the binary, using the GoogleTest CMake module
 #include(GoogleTest)
 #gtest_discover_tests(c_edu_compiler)

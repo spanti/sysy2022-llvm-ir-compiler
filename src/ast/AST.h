@@ -2,6 +2,7 @@
 #include "SymbolTable.h"
 #include "Type.h"
 #include <cstdint>
+#include <llvm-16/llvm/IR/BasicBlock.h>
 #include <map>
 #include <memory>
 #include <utility>
@@ -44,7 +45,9 @@ public:
   // example : virtual void accept(class ASTNodeVisitor*) = 0;
 public:
   sourceLocation loc;
-
+  //替代代码
+  llvm::BasicBlock* TBB;
+  llvm::BasicBlock* FBB;
   // kind yield : store some type information
 };
 // some class inherit from the base ast node

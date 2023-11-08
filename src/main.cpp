@@ -62,8 +62,9 @@ int main(int argc, const char *argv[]) {
   // std::cout << "===== CST TEXT =====" << std::endl;
   // std::cout << tree->toStringTree(&parser) << std::endl;
   std::cout << "===== AST TEXT =====" << std::endl;
-  printer->visit(result.get());
+  //printer->visit(result.get());
   std::cout << "===== GENERATE LLVM IR =====" << std::endl;
+  //use for JIT initialization
   // type checker prepare
   generator->Initialize();
   generator->setSymbolTables(builder.functions, builder.variables);

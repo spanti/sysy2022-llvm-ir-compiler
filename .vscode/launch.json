@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "debug",
             "program": "${workspaceFolder}/build/c_edu_compiler",
-            "args": ["test/77_substr.sy","test.ll"],
+            "args": ["test/52_scope.sy","test.ll"],
             "cwd": "${workspaceFolder}",
             //"miDebuggerPath": "/usr/bin/gdb"
         }

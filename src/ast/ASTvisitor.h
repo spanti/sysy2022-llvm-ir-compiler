@@ -2,6 +2,8 @@
 #include "AST.h"
 #include "SymbolTable.h"
 #include "Type.h"
+#include "jit/SysY2022JIT.h"
+#include "llvm/Passes/StandardInstrumentations.h"
 #include "llvm/ADT/APFloat.h"
 #include "llvm/ADT/STLExtras.h"
 #include "llvm/IR/BasicBlock.h"
@@ -84,13 +86,23 @@ private:
   // a file stream to record the text
   //模拟继承属性
   unsigned int cycle = 0;
+  ExitOnError ExitOnErr;
+  //pass,jit and optimization
+  std::unique_ptr<llvm::orc::SysY2022JIT> TheJIT;
+  std::unique_ptr<FunctionPassManager> TheFPM;
+  std::unique_ptr<FunctionAnalysisManager> TheFAM;
+  std::unique_ptr<ModuleAnalysisManager> TheMAM;
+  std::unique_ptr<PassInstrumentationCallbacks> ThePIC;
+  std::unique_ptr<StandardInstrumentations> TheSI;
+  //Target Machine
+  TargetMachine* TheTargetMachine;
   //prepare the memory outside the loop
   //when cycle = 0
+  //全局变量方式模拟继承及综合属性，可能引入复杂性及未知错误
+  //废弃，改为节点方法
   BasicBlock* BLoopBB;
-  BasicBlock* IfTBB1;
-  BasicBlock* IfFBB1;
-  BasicBlock* IfTBB2;
-  BasicBlock* IfFBB2;
+  //BasicBlock* IfTBB1;
+  //BasicBlock* IfFBB1;
   std::unique_ptr<LLVMContext> TheContext;
   std::unique_ptr<IRBuilder<>> IRbuilder;
   std::unique_ptr<Module> TheModule;

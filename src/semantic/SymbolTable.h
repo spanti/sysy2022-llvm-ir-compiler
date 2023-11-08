@@ -4,11 +4,12 @@
 #include <llvm-16/llvm/IR/Instructions.h>
 #include <map>
 #include <memory>
-// 建立多个编译器符号表
-// design FunctionTable and VariableTable
-
+// 建立多个编译器符号表 - design FunctionTable and VariableTable
+// variable info record 
 class VariableTableEntry {
 public:
+  //manage life-cycle
+  int def_line;//line where declare , variable scope
   spanti::Type *var_type;
   std::vector<int32_t> const_init;  // empty when !type.is_const
   llvm::AllocaInst* inst_memory; //store the memory location of variable - local-var
@@ -27,9 +28,13 @@ public:
   // register
   // scope is global?
   bool global;
+  //重构函数 insertt(name,record)
+  void insert(const std::string &name,VariableTableEntry* entry);
   void insert(const std::string &name, spanti::Type *var_type); // decl
   void insert(const std::string &name, spanti::Type *var_type,std::vector<int32_t> init);
   VariableTableEntry *lookUp(std::string name);                 // search
+    //引入变量作用域后的查询
+  VariableTableEntry *lookUp(const std::string &name,int cur_line);
   bool is_global();
 };
 class VariableTable {
@@ -42,6 +47,7 @@ public:
   void EntryScope(VariableTableScope *goal);
   void ExitScope();
   VariableTable();
+  void insert(const std::string &name,VariableTableEntry* entry);
   //register var
   void insert(std::string name, spanti::Type *var_type);
   //register const
@@ -49,6 +55,10 @@ public:
   VariableTableEntry *lookUp(const std::string &name);
   VariableTableEntry *lookUp(const std::string &name,
                              VariableTableScope *cur_scope);
+  //引入变量作用域后的查询
+  VariableTableEntry *lookUp(const std::string &name,
+                             VariableTableScope *cur_scope,int cur_line);
+  VariableTableEntry *lookUp(const std::string &name,int cur_line);
 };
 class FunctionTableEntry {
 public:

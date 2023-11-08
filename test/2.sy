@@ -1,9 +1,0 @@
-int gcd(int a,int b){
-    int c;
-    c = 2 + 5;
-    return 2;
-}
-int main(){
-    const int d[5] = {1,2,3,4,5};
-    return d[5] + 1;
-}

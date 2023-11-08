@@ -1,7 +1,26 @@
 #include "AST.h"
 #include "ASTvisitor.h"
+#include "SysY2022JIT.h"
 #include "Type.h"
 #include "errors.h"
+#include "llvm/Analysis/AssumptionCache.h"
+#include "llvm/Analysis/BasicAliasAnalysis.h"
+#include "llvm/Analysis/LoopInfo.h"
+#include "llvm/Analysis/MemoryDependenceAnalysis.h"
+#include "llvm/Analysis/MemorySSA.h"
+#include "llvm/Analysis/OptimizationRemarkEmitter.h"
+#include "llvm/Analysis/ProfileSummaryInfo.h"
+#include "llvm/Analysis/TargetTransformInfo.h"
+#include "llvm/IR/LegacyPassManager.h"
+#include "llvm/IR/PassManager.h"
+#include "llvm/MC/TargetRegistry.h"
+#include "llvm/Support/Error.h"
+#include "llvm/Support/TargetSelect.h"
+#include "llvm/Target/TargetMachine.h"
+#include "llvm/Transforms/InstCombine/InstCombine.h"
+#include "llvm/Transforms/Scalar/GVN.h"
+#include "llvm/Transforms/Scalar/Reassociate.h"
+#include "llvm/Transforms/Scalar/SimplifyCFG.h"
 #include <cassert>
 #include <llvm-16/llvm/ADT/APInt.h>
 #include <llvm-16/llvm/IR/BasicBlock.h>
@@ -16,7 +35,9 @@
 #include <llvm-16/llvm/IR/Type.h>
 #include <llvm-16/llvm/IR/Verifier.h>
 #include <llvm-16/llvm/Support/Casting.h>
+#include <llvm-16/llvm/Support/Error.h>
 #include <memory>
+#include <unistd.h>
 #include <vector>
 void ASTIRGenerator::setBLoopBB(BasicBlock *bb) {
   assert(cycle == 0);
@@ -377,6 +398,9 @@ llvm::Type *ASTIRGenerator::mapToLLVMType(spanti::Type *sym_type) {
 }
 // 包含一系列LLVM IR文件
 void ASTIRGenerator::Initialize() {
+
+  // initialize the JIT!
+  // TheJIT = ExitOnErr(orc::SysY2022JIT::Create());
   // 构造函数
   // Context* 上下文
   TheContext = std::make_unique<LLVMContext>();
@@ -386,6 +410,42 @@ void ASTIRGenerator::Initialize() {
   TheModule = std::make_unique<Module>("test jit", *TheContext);
   // IRBuilder = a file pointer when reading/writing a file
   IRbuilder = std::make_unique<IRBuilder<>>(*TheContext);
+  // Create new pass and analysis manager
+  TheFPM = std::make_unique<FunctionPassManager>();
+  TheFAM = std::make_unique<FunctionAnalysisManager>();
+  TheMAM = std::make_unique<ModuleAnalysisManager>();
+  ThePIC = std::make_unique<PassInstrumentationCallbacks>();
+  TheSI = std::make_unique<StandardInstrumentations>(*TheContext,
+                                                     /*DebugLogging*/ true);
+  TheSI->registerCallbacks(*ThePIC, TheFAM.get());
+  // Add transform passes.
+  // Do simple "peephole" optimizations and bit-twiddling optzns.
+  TheFPM->addPass(InstCombinePass());
+  // Reassociate expressions.
+  TheFPM->addPass(ReassociatePass());
+  // Eliminate Common SubExpressions.
+  TheFPM->addPass(GVNPass());
+  // Simplify the control flow graph (deleting unreachable blocks, etc).
+  TheFPM->addPass(SimplifyCFGPass());
+  // Register analysis passes used in these transform passes.
+
+  TheFAM->registerPass([&] { return AAManager(); });
+  TheFAM->registerPass([&] { return AssumptionAnalysis(); });
+  TheFAM->registerPass([&] { return DominatorTreeAnalysis(); });
+  TheFAM->registerPass([&] { return LoopAnalysis(); });
+  TheFAM->registerPass([&] { return MemoryDependenceAnalysis(); });
+  TheFAM->registerPass([&] { return MemorySSAAnalysis(); });
+  TheFAM->registerPass([&] { return OptimizationRemarkEmitterAnalysis(); });
+  TheFAM->registerPass([&] {
+    return OuterAnalysisManagerProxy<ModuleAnalysisManager, Function>(*TheMAM);
+  });
+  TheFAM->registerPass(
+      [&] { return PassInstrumentationAnalysis(ThePIC.get()); });
+  TheFAM->registerPass([&] { return TargetIRAnalysis(); });
+  TheFAM->registerPass([&] { return TargetLibraryAnalysis(); });
+
+  TheMAM->registerPass([&] { return ProfileSummaryAnalysis(); });
+
   // 初始化库函数声明
   register_libs_to_module();
 }
@@ -412,9 +472,13 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     // Blocks for if-else
     BasicBlock *ThenBB =
         BasicBlock::Create(*TheContext, "then", TheFunction); // b
-    // 传递继承属性
-    IfTBB1 = ThenBB;
-    // set insert block -> entry
+    // 传递继承属性 节点属性 -> 子节点属性
+    // 为全局变量可能会引入复杂性和潜在的错误
+    // LHS 属性传递
+    ast->LHS.get()->TBB = ThenBB;
+    ast->LHS.get()->FBB = ast->FBB;
+    // IfTBB1 = ThenBB;
+    //  set insert block -> entry
     ast->LHS->accept(this);
     // set L jump command
     Value *L = get_value(); // a
@@ -424,10 +488,13 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
 
     // Create Cond Br - newlabel(),IfFBB
     // B1.true = newlabel() <B2.true,B2.false> = <B.true,B.false>
-    re_value = IRbuilder->CreateCondBr(re_value, ThenBB, IfFBB1);
-    // set insert block -> then
+    re_value = IRbuilder->CreateCondBr(re_value, ThenBB, ast->FBB);
+    // re_value = IRbuilder->CreateCondBr(re_value, ThenBB, IfFBB1);
+    //  set insert block -> then
     IRbuilder->SetInsertPoint(ThenBB);
-
+    // RHS属性传递
+    ast->RHS.get()->TBB = ast->TBB;
+    ast->RHS.get()->FBB = ast->FBB;
     ast->RHS->accept(this);
     // set R jump command and generate code
     Value *R = get_value(); // b
@@ -449,8 +516,10 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     BasicBlock *ThenBB =
         BasicBlock::Create(*TheContext, "then", TheFunction); // b
     // 传递一次继承属性
-    IfFBB1 = ThenBB;
-    // set insert block -> entry
+    ast->LHS.get()->TBB = ast->TBB;
+    ast->LHS.get()->FBB = ThenBB;
+    // IfFBB1 = ThenBB;
+    //  set insert block -> entry
     ast->LHS->accept(this);
     // set L jump command
 
@@ -460,11 +529,13 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     re_value = IRbuilder->CreateICmpNE(
         L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
     // Create Cond Br - newlabel(),IfFBB
-    re_value = IRbuilder->CreateCondBr(re_value, IfTBB1, ThenBB);
+    re_value = IRbuilder->CreateCondBr(re_value, ast->TBB, ThenBB);
     // set insert block -> then
     IRbuilder->SetInsertPoint(ThenBB);
     // 传递继承属性
-
+    // RHS属性传递
+    ast->RHS.get()->TBB = ast->TBB;
+    ast->RHS.get()->FBB = ast->FBB;
     ast->RHS->accept(this);
     // set R jump command and generate code
     Value *R = get_value(); // b
@@ -600,7 +671,7 @@ void ASTIRGenerator::visit(class FloatExprAST *ast) {
 }
 void ASTIRGenerator::visit(class IdentifierAST *ast) {
   // 在访问前处理好exprast问题
-  auto entry = variables->lookUp(ast->getName());
+  auto entry = variables->lookUp(ast->getName(),ast->loc.Line);
   // int a;
   // 查询符号表
   if (!entry)
@@ -631,7 +702,7 @@ void ASTIRGenerator::visit(class IdentifierAST *ast) {
     // if A = NULL,that mean A is uninitialize
     if (!A) {
       // find a global variable which has the same name
-      auto A_G = variables->lookUp(ast->getName(), variables->head);
+      auto A_G = variables->lookUp(ast->getName(), variables->head,ast->loc.Line);
       if (!A_G)
         throw UnrecognizedVarName(ast->getName());
       // Global handle
@@ -652,7 +723,7 @@ void ASTIRGenerator::visit(class ArrayExprAST *ast) {
   // loop up memory location
   // GEP series - get ptr to Value
   // 目前处理局部情形
-  auto entry = variables->lookUp(ast->Name);
+  auto entry = variables->lookUp(ast->Name,ast->loc.Line);
   auto llvm_type = mapToLLVMType(entry->var_type);
   if (!entry)
     throw UnrecognizedVarName(ast->Name);
@@ -718,7 +789,7 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     auto r_value = get_value();
     if (!r_value)
       return;
-    auto entry = variables->lookUp(l_ast->getName());
+    auto entry = variables->lookUp(l_ast->getName(),l_ast->loc.Line);
     // a = 5; generate store instruction
     if (!entry)
       throw UnrecognizedVarName(l_ast->getName());
@@ -740,7 +811,7 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     // a[4]
     auto a_ast = dynamic_cast<ArrayExprAST *>(ast->LHS.get());
     // 手动处理a_ast
-    auto entry = variables->lookUp(a_ast->Name);
+    auto entry = variables->lookUp(a_ast->Name,a_ast->loc.Line);
     // a = 5; generate store instruction
     if (!entry)
       throw UnrecognizedVarName(a_ast->Name);
@@ -784,15 +855,20 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
   // 继承属性传递 IF_F
   // 规定B.True B.false
   if (ast->Else) {
-    IfFBB1 = ElseBB;
-    IfTBB1 = ThenBB;
+    ast->Cond.get()->TBB = ThenBB;
+    ast->Cond.get()->FBB = ElseBB;
+    // IfFBB1 = ElseBB;
+    // IfTBB1 = ThenBB;
   } else {
-    IfFBB1 = MergeBB;
-    IfTBB1 = ThenBB;
+    ast->Cond.get()->TBB = ThenBB;
+    ast->Cond.get()->FBB = MergeBB;
+    // IfFBB1 = MergeBB;
+    // IfTBB1 = ThenBB;
   }
 
   // 如何处理表达式的短路求值问题
   // 调用Cond节点时，将传回ThenBB 和 ElseBB的引用
+  //传递Cond属性
   ast->Cond->accept(this);
   Value *CondV = get_value();
   if (!CondV)
@@ -816,9 +892,12 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
     IRbuilder->SetInsertPoint(ThenBB);
     ast->Then->accept(this);
     // create br(uncond)
-    IRbuilder->CreateBr(MergeBB);
     // ThenBB在调用Then—>accept时刻可能改变，update
     ThenBB = IRbuilder->GetInsertBlock();
+    // 在CreateBr前确定插入点是否存在分支指令(ret void)
+    if (!ThenBB->getTerminator()) {
+      IRbuilder->CreateBr(MergeBB);
+    }
     // Add Else block to Function
     TheFunction->insert(TheFunction->end(), ElseBB);
     // emit else bb
@@ -827,10 +906,12 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
     Value *ElseV = get_value();
     if (!ElseV)
       return;
-    // create br(uncond)
-    IRbuilder->CreateBr(MergeBB);
     // ElseV在调用Else—>accept时刻可能改变，update
     ElseBB = IRbuilder->GetInsertBlock();
+    // create br(uncond)
+    if (!ElseBB->getTerminator()) {
+      IRbuilder->CreateBr(MergeBB);
+    }
     // CONNECT BLOCKS
     // Add merge blockset
     TheFunction->insert(TheFunction->end(), MergeBB);
@@ -852,14 +933,13 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
     IRbuilder->SetInsertPoint(ThenBB);
     ast->Then->accept(this);
     Value *ThenV = get_value();
-    /*
-    if (!ThenV)
-      return;*/
     // create br(uncond)
-    IRbuilder->CreateBr(MergeBB);
     // ThenBB在调用Then—>accept时刻可能改变，update
     ThenBB = IRbuilder->GetInsertBlock();
-
+    // 已存在终结指令，不再创建跳转
+    if (!ThenBB->getTerminator()) {
+      IRbuilder->CreateBr(MergeBB);
+    }
     // CONNECT BLOCKS
     // Add merge blockset
     TheFunction->insert(TheFunction->end(), MergeBB);
@@ -996,8 +1076,10 @@ void ASTIRGenerator::visit(class WhileStmtAST *ast) {
   // b.false <- S.next;
   BasicBlock *AfterBB = BasicBlock::Create(*TheContext, "loopend");
   // 设置 布尔表达式的继承属性
-  IfFBB1 = AfterBB;
-  IfTBB1 = BodyBB;
+  ast->Cond.get()->TBB = BodyBB;
+  ast->Cond.get()->FBB = AfterBB;
+  //IfFBB1 = AfterBB;
+  //IfTBB1 = BodyBB;
   // save
   Cbb.push(PreheaderBB);
   Bbb.push(AfterBB);
@@ -1123,7 +1205,7 @@ void ASTIRGenerator::visit(class RetuStmtAST *ast) {
 }
 void ASTIRGenerator::visit(class ConstDecAST *ast) { re_value = nullptr; }
 void ASTIRGenerator::visit(class VarDecAST *ast) {
-  auto entry = variables->lookUp(ast->getName());
+  auto entry = variables->lookUp(ast->getName(),ast->loc.Line);
   // int a;
   // 查询符号表
   if (!entry)
@@ -1214,16 +1296,17 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
     // get params
     std::vector<Value *> ArgsV;
     if (llvm_type->isArrayTy()) {
-      spanti::ArrayType* a_type = dynamic_cast<spanti::ArrayType*>(entry->var_type);
+      spanti::ArrayType *a_type =
+          dynamic_cast<spanti::ArrayType *>(entry->var_type);
       int array_size = 1;
-      for(int i=0;i<a_type->get_count_dim();i++){
+      for (int i = 0; i < a_type->get_count_dim(); i++) {
         array_size *= a_type->get_elements()[i];
       }
-      
+
       // get Type
       std::vector<llvm::Type *> params;
-      //Tys 复写 可重载函数（同名函数，不同的参数类型）
-      // 重载 (PTR,I32,I8,I1) -> (I32*,I8,I64,I1)
+      // Tys 复写 可重载函数（同名函数，不同的参数类型）
+      //  重载 (PTR,I32,I8,I1) -> (I32*,I8,I64,I1)
       params.push_back(llvm::Type::getInt32PtrTy(*TheContext));
       params.push_back(llvm::Type::getInt64Ty(*TheContext));
       // set ArgsV
@@ -1238,9 +1321,8 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
           ArgsV.push_back(ConstantInt::getFalse(*TheContext));
       // 当参数为重载类型，Tys不为空 error?
       // memset is overload function
-      Function *InstF =
-          Intrinsic::getDeclaration(TheModule.get(), llvm::Intrinsic::memset,
-                                    params);
+      Function *InstF = Intrinsic::getDeclaration(
+          TheModule.get(), llvm::Intrinsic::memset, params);
       InstF->print(outs());
       IRbuilder->CreateCall(InstF, ArgsV);
     }
@@ -1416,43 +1498,32 @@ void ASTIRGenerator::visit(class FuncDecAST *ast) {
   }
   // exit scope
   variables->ExitScope();
-
+  Type *fr_type = IRbuilder->getCurrentFunctionReturnType();
   // handle body right
   ast->Body->accept(this);
   // the value of body
   auto value = get_value();
-
   verifyFunction(*F);
-  // F->viewCFG();
+  // Optimizie the function
+  // TheFPM->run(*F, *TheFAM);
   // F->print(outs());
   re_value = F;
-  // 生成默认返回指令
   // 创建一条ret void指令
-  Type *fr_type = IRbuilder->getCurrentFunctionReturnType();
-  if (fr_type->isVoidTy()) {
-    IRbuilder->CreateRetVoid();
-  } else if (fr_type->isIntegerTy()) {
-    // 未创建返回语句
-    IRbuilder->CreateRet(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
+  // 确保所有分支的re指令满足条件
+  // 插入点不能为分支指令
+  auto CurBB = IRbuilder->GetInsertBlock();
+  // create br(uncond)
+  if (!CurBB->getTerminator()) {
+    if (fr_type->isVoidTy()) {
+      IRbuilder->CreateRetVoid();
+    } else if (fr_type->isIntegerTy()) {
+      // 未创建返回语句
+      IRbuilder->CreateRet(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
+    }
   }
-  /*
-  if (Value *RetVal = get_value()) {
-    // 使用返回的RetVal创建返回指令
-    // Finish off the function.
-    IRbuilder->CreateRet(RetVal);
-
-    // Validate the generated code, checking for consistency.
-    verifyFunction(*F);
-
-    re_value = F;
-  } else {
-    // Error reading body, remove function.
-    F->print(outs());
-    F->eraseFromParent();
-    re_value = nullptr;
-  }*/
 }
 void ASTIRGenerator::visit(class ProgramAST *ast) {
+
   for (auto decl : ast->decls) {
     decl->accept(this);
   }
@@ -1468,7 +1539,69 @@ void ASTIRGenerator::visit(class ProgramAST *ast) {
 
   // M.print write .ll file
   TheModule->print(irs, nullptr);
+  /*
+  auto RT = TheJIT->getMainJITDylib().createResourceTracker();
+
+  auto TSM =  llvm::orc::ThreadSafeModule(std::move(TheModule),
+  std::move(TheContext)); ExitOnErr(TheJIT->addModule(std::move(TSM), RT)); auto
+  ExprSymbol = ExitOnErr(TheJIT->lookup("main"));*/
+
+  // Get the symbol's address and cast it to the right type (takes no
+  // arguments, returns a double) so we can call it as a native function.
+  // int (*FP)() = ExprSymbol.getAddress().toPtr<int (*)()>();
+  // fprintf(stderr, "Return %d\n", FP());
+
   // 向文件中写入必要内容
+
   irs.flush();
+  // Initialize the target registry etc.
+  InitializeAllTargetInfos();
+  InitializeNativeTarget();
+  InitializeAllTargetMCs();
+  InitializeNativeTargetAsmPrinter();
+  InitializeNativeTargetAsmParser();
+  // specify and set the architecture
+  auto TargetTriple = LLVMGetDefaultTargetTriple();
+  TheModule->setTargetTriple(TargetTriple);
+
+  std::string Error;
+  auto Target = TargetRegistry::lookupTarget(TargetTriple, Error);
+
+  // Print an error and exit if we couldn't find the requested target.
+  // This generally occurs if we've forgotten to initialise the
+  // TargetRegistry or we have a bogus target triple.
+  if (!Target) {
+    throw SyntaxError(std::move(Error));
+  }
+
+  // TargetMachine
+  auto CPU = "generic";
+  auto Features = "";
+
+  TargetOptions opt;
+  auto RM = std::optional<Reloc::Model>();
+  TheTargetMachine =
+      Target->createTargetMachine(TargetTriple, CPU, Features, opt, RM);
+  TheModule->setDataLayout(TheTargetMachine->createDataLayout());
+  // emit object code
+  auto Filename = "output.o";
+  std::error_code EC;
+  raw_fd_ostream dest(Filename, EC, sys::fs::OF_None);
+
+  if (EC) {
+    throw SyntaxError("Could not open file: " + EC.message());
+  }
+  // define a pass that emits object code, then we run that pass
+  legacy::PassManager pass;
+  auto FileType = CodeGenFileType::CGFT_ObjectFile;
+
+  if (TheTargetMachine->addPassesToEmitFile(pass, dest, nullptr, FileType)) {
+    throw SyntaxError("TheTargetMachine can't emit a file of this type");
+  }
+
+  pass.run(*TheModule);
+  dest.flush();
+
+  outs() << "Wrote " << Filename << "\n";
   re_value = nullptr;
 }

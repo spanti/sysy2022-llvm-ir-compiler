@@ -63,7 +63,7 @@ std::any ASTBuilder::visitCompUnit(SysYParser::CompUnitContext *ctx) {
   functions = new FunctionTable();
   register_lib_functions();
   // analysis stage
-  std::cout << "visit CompUnit!" << std::endl;
+  ////std::cout << "visit CompUnit!" << std::endl;
   for (auto declCtx : ctx->decl()) {
     auto decl = visit(declCtx);
     auto d_ast = std::any_cast<std::vector<std::shared_ptr<DecAST>>>(decl);
@@ -88,7 +88,7 @@ std::any ASTBuilder::visitCompUnit(SysYParser::CompUnitContext *ctx) {
 }
 
 std::any ASTBuilder::visitDecl(SysYParser::DeclContext *ctx) {
-  std::cout << "visit Decl!" << std::endl;
+  // std::cout << "visit Decl!" << std::endl;
   return visitChildren(ctx);
 }
 
@@ -96,7 +96,7 @@ std::any ASTBuilder::visitConstDecl(SysYParser::ConstDeclContext *ctx) {
   // 与符号表相关，存储对应的变量信息
   // 与VarDecl相类似,但需存储常量信息于类型中
   // 一系列constDef
-  std::cout << "visit ConstDecl!" << std::endl;
+  // std::cout << "visit ConstDecl!" << std::endl;
   spanti::Type *v_type;
   spanti::Type *c_type;
   std::shared_ptr<DecAST> var_ast;
@@ -135,7 +135,12 @@ std::any ASTBuilder::visitConstDecl(SysYParser::ConstDeclContext *ctx) {
       // 初始化值必须为常量
       init_array = parse_const_init(varDefCtx->constInitVal(), {1});
       v_type->set_const();
-      variables->insert(var_name, v_type, init_array);
+      VariableTableEntry *entry = new VariableTableEntry();
+      entry->const_init = init_array;
+      entry->var_type = v_type;
+      //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+      variables->insert(var_name, entry);
       var_ast = std::make_shared<VarDecAST>(
           sourceLocation{ctx->getStart()->getLine(),
                          ctx->getStart()->getCharPositionInLine()},
@@ -151,7 +156,12 @@ std::any ASTBuilder::visitConstDecl(SysYParser::ConstDeclContext *ctx) {
       // 常量表插入初始化值
       // ConstInitVal中的值必须为
       c_type->set_const();
-      variables->insert(var_name, c_type, init_array);
+      VariableTableEntry *entry = new VariableTableEntry();
+      entry->const_init = init_array;
+      entry->var_type = c_type;
+      //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+      variables->insert(var_name, entry);
       var_ast = std::make_shared<VarDecAST>(
           sourceLocation{ctx->getStart()->getLine(),
                          ctx->getStart()->getCharPositionInLine()},
@@ -164,8 +174,8 @@ std::any ASTBuilder::visitConstDecl(SysYParser::ConstDeclContext *ctx) {
 }
 
 std::any ASTBuilder::visitBType(SysYParser::BTypeContext *ctx) {
-  std::cout << "visit BType!";
-  // 简单的类型判定 trasform btype to spanti::type -> need to build VarDecAST
+  // std::cout << "visit BType!";
+  //  简单的类型判定 trasform btype to spanti::type -> need to build VarDecAST
   if (ctx->Int()) {
     std::cout << "btype:int" << std::endl;
   } else if (ctx->Float()) {
@@ -181,7 +191,7 @@ std::any ASTBuilder::visitConstDef(SysYParser::ConstDefContext *ctx) {
   //  uint64_t n = 0;
   //   build array-type info
   std::string idname = ctx->Identifier()->getText();
-  std::cout << "visit ConstDef! IDNAME:" << idname << std::endl;
+  // std::cout << "visit ConstDef! IDNAME:" << idname << std::endl;
   auto init_ast =
       std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->constInitVal()));
   // send message
@@ -191,8 +201,8 @@ std::any ASTBuilder::visitConstDef(SysYParser::ConstDefContext *ctx) {
 
 std::any ASTBuilder::visitScalarConstInitVal(
     SysYParser::ScalarConstInitValContext *ctx) {
-  std::cout << "visit ScalarConstInitVal!" << std::endl;
-  // constExp
+  // std::cout << "visit ScalarConstInitVal!" << std::endl;
+  //  constExp
   return visitChildren(ctx);
 }
 
@@ -211,7 +221,7 @@ ASTBuilder::visitListConstInitVal(SysYParser::ListConstInitValContext *ctx) {
   spanti::Type *c_type;
   spanti::Type *v_type;
   // array_type
-  std::cout << "visit ListConstInitVal!" << std::endl;
+  // std::cout << "visit ListConstInitVal!" << std::endl;
   for (auto c : ctx->constInitVal()) {
     auto init_exp = std::any_cast<std::shared_ptr<ExprAST>>(visit(c));
     inits.push_back(init_exp);
@@ -230,7 +240,7 @@ ASTBuilder::visitListConstInitVal(SysYParser::ListConstInitValContext *ctx) {
 
 std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
 
-  std::cout << "visit VarDecl!" << std::endl;
+  // std::cout << "visit VarDecl!" << std::endl;
   spanti::Type *v_type;
   spanti::Type *c_type;
   std::shared_ptr<DecAST> var_ast;
@@ -255,7 +265,11 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
       // 不存在初始值 initval = nullptr
       if (uninit->constExp().empty()) {
         // 无数组 int a;
-        variables->insert(var_name, v_type);
+        VariableTableEntry *entry = new VariableTableEntry();
+        entry->var_type = v_type;
+        //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+        variables->insert(var_name, entry);
         var_ast = std::make_shared<VarDecAST>(
             sourceLocation{ctx->getStart()->getLine(),
                            ctx->getStart()->getCharPositionInLine()},
@@ -267,7 +281,11 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
         // 设计一个转化函数
         c_type = new spanti::ArrayType(v_type, dims_array);
         // 同步符号表信息
-        variables->insert(var_name, c_type);
+        VariableTableEntry *entry = new VariableTableEntry();
+        entry->var_type = c_type;
+        //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+        variables->insert(var_name, entry);
         var_ast = std::make_shared<VarDecAST>(
             sourceLocation{ctx->getStart()->getLine(),
                            ctx->getStart()->getCharPositionInLine()},
@@ -280,7 +298,11 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
       // 必定存在初始值
       if (init->constExp().empty()) {
         // 无数组 int a=3;
-        variables->insert(var_name, v_type);
+        VariableTableEntry *entry = new VariableTableEntry();
+        entry->var_type = v_type;
+        //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+        variables->insert(var_name, entry);
         // 列表
         // 全局及局部
         // 目前 :检测全局变量声明中的初值表达式 未完成
@@ -295,7 +317,11 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
         // 可引用变量，变量必须在符号表中
         c_type = new spanti::ArrayType(v_type, dims_array);
         // 同步符号表信息
-        variables->insert(var_name, c_type);
+        VariableTableEntry *entry = new VariableTableEntry();
+        entry->var_type = c_type;
+        //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+        variables->insert(var_name, entry);
         // 列表
         auto init_vector = parse_var_init(init->initVal(), dims_array);
         // 构造InitValExpr 后 用其构造VarDecAST
@@ -325,9 +351,9 @@ std::any ASTBuilder::visitUninitVarDef(SysYParser::UninitVarDefContext *ctx) {
   // uint64_t n = 0;
   //  build array-type info
   std::string idname = ctx->Identifier()->getText();
-  std::cout << "visit UninitVarDef!" << idname << std::endl;
-  // send message
-  // pass array-type info
+  // std::cout << "visit UninitVarDef!" << idname << std::endl;
+  //  send message
+  //  pass array-type info
   return nullptr;
 }
 
@@ -340,8 +366,8 @@ std::any ASTBuilder::visitInitVarDef(SysYParser::InitVarDefContext *ctx) {
   //  uint64_t n = 0;
   //   build array-type info
   std::string idname = ctx->Identifier()->getText();
-  std::cout << "visit InitVarDef!" << idname << std::endl;
-  // get initval
+  // std::cout << "visit InitVarDef!" << idname << std::endl;
+  //  get initval
   auto init_ast =
       std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->initVal()));
   // send message
@@ -354,7 +380,7 @@ std::any ASTBuilder::visitInitVarDef(SysYParser::InitVarDefContext *ctx) {
 std::any ASTBuilder::visitScalarInitVal(SysYParser::ScalarInitValContext *ctx) {
   // return std::shared_ptr<ExprAST>
   // pass node
-  std::cout << "visit ScalarInitVal!" << std::endl;
+  // std::cout << "visit ScalarInitVal!" << std::endl;
   return visitChildren(ctx);
 }
 
@@ -369,7 +395,7 @@ std::any ASTBuilder::visitListInitval(SysYParser::ListInitvalContext *ctx) {
   spanti::Type *c_type;
   spanti::Type *v_type;
   // array_type
-  std::cout << "visit ListInitVal!" << std::endl;
+  // std::cout << "visit ListInitVal!" << std::endl;
   for (auto c : ctx->initVal()) {
     auto init_exp = std::any_cast<std::shared_ptr<ExprAST>>(visit(c));
     inits.push_back(init_exp);
@@ -388,8 +414,8 @@ std::any ASTBuilder::visitListInitval(SysYParser::ListInitvalContext *ctx) {
 }
 
 std::any ASTBuilder::visitFuncDef(SysYParser::FuncDefContext *ctx) {
-  std::cout << "visit FuncDef! "
-            << "function-name:" << ctx->Identifier()->getText() << std::endl;
+  // std::cout << "visit FuncDef! " << "function-name:" <<
+  // ctx->Identifier()->getText() << std::endl;
   std::vector<spanti::Type *> params_type;
   spanti::Type *re_type;
   std::string re_str = ctx->funcType()->getText();
@@ -420,7 +446,11 @@ std::any ASTBuilder::visitFuncDef(SysYParser::FuncDefContext *ctx) {
       // type
       params_type.push_back(id_type);
       // 变量表更新
-      variables->insert(id_name, id_type);
+      VariableTableEntry* entry = new VariableTableEntry();
+      entry->var_type = id_type;
+      //变量声明的行
+      entry->def_line = ctx->getStart()->getLine();
+      variables->insert(id_name, entry);
       // DecAST
       Params.push_back(p_ast);
     }
@@ -458,19 +488,19 @@ std::any ASTBuilder::visitFuncDef(SysYParser::FuncDefContext *ctx) {
 }
 
 std::any ASTBuilder::visitFuncType(SysYParser::FuncTypeContext *ctx) {
-  std::cout << "visit FuncType!" << std::endl;
-  // not handle now
+  // std::cout << "visit FuncType!" << std::endl;
+  //  not handle now
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitFuncFParams(SysYParser::FuncFParamsContext *ctx) {
-  std::cout << "visit FuncFParams!" << std::endl;
+  // std::cout << "visit FuncFParams!" << std::endl;
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitFuncFParam(SysYParser::FuncFParamContext *ctx) {
-  std::cout << "visit FuncFParam!" << std::endl;
-  // return DecAST
+  // std::cout << "visit FuncFParam!" << std::endl;
+  //  return DecAST
   std::shared_ptr<VarDecAST> param_ast;
   spanti::Type *b_type;
   auto b_text = ctx->bType()->getText();
@@ -518,8 +548,8 @@ std::any ASTBuilder::visitBlock(SysYParser::BlockContext *ctx) {
   // store stmts
   std::vector<std::shared_ptr<ASTNode>> blockitems_arr;
   std::vector<std::shared_ptr<ASTNode>> blockitems;
-  std::cout << "visit Block!" << std::endl;
-  // entryscope
+  // std::cout << "visit Block!" << std::endl;
+  //  entryscope
   if (cur_func_scope != nullptr) {
     variables->EntryScope(cur_func_scope);
     cur_func_scope = nullptr;
@@ -545,7 +575,7 @@ std::any ASTBuilder::visitBlock(SysYParser::BlockContext *ctx) {
 }
 
 std::any ASTBuilder::visitBlockItem(SysYParser::BlockItemContext *ctx) {
-  std::cout << "visit BlockItem!" << std::endl;
+  // std::cout << "visit BlockItem!" << std::endl;
   std::vector<std::shared_ptr<ASTNode>> blockitems;
   std::vector<std::shared_ptr<DecAST>> decls;
   std::shared_ptr<StmtAST> stmt_ast;
@@ -571,7 +601,7 @@ std::any ASTBuilder::visitBlockItem(SysYParser::BlockItemContext *ctx) {
 }
 
 std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
-  std::cout << "visit Assignment!" << std::endl;
+  // std::cout << "visit Assignment!" << std::endl;
   VariableTableEntry *l_entry;
   // 构造对应节点
   auto lval = visit(ctx->lVal());
@@ -584,7 +614,7 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
   // 左侧类型与右侧类型必须满足某一定则
   // 左侧为常量时，抛出错误
   if (auto l_ast = dynamic_cast<IdentifierAST *>(LHS.get())) {
-    l_entry = variables->lookUp(l_ast->getName());
+    l_entry = variables->lookUp(l_ast->getName(),l_ast->loc.Line);
     // a = 5; generate store instruction
     if (!l_entry)
       throw UnrecognizedVarName(l_ast->getName());
@@ -594,7 +624,7 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
   } else {
     auto a_ast = dynamic_cast<ArrayExprAST *>(LHS.get());
     if (a_ast) {
-      l_entry = variables->lookUp(a_ast->Name);
+      l_entry = variables->lookUp(a_ast->Name,a_ast->loc.Line);
       auto array_type = dynamic_cast<spanti::ArrayType *>(l_entry->var_type);
       // a = 5; generate store instruction
       // handle int a[2][2] a[2] = 5 error
@@ -616,7 +646,7 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
 }
 // control flow
 std::any ASTBuilder::visitExpStmt(SysYParser::ExpStmtContext *ctx) {
-  std::cout << "visit ExpStmt!" << std::endl;
+  // std::cout << "visit ExpStmt!" << std::endl;
   std::shared_ptr<ExprAST> ast = nullptr;
   if (ctx->exp())
     ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->exp()));
@@ -629,13 +659,13 @@ std::any ASTBuilder::visitExpStmt(SysYParser::ExpStmtContext *ctx) {
 }
 
 std::any ASTBuilder::visitBlockStmt(SysYParser::BlockStmtContext *ctx) {
-  std::cout << "visit BlockStmt!" << std::endl;
-  // passing upward
+  // std::cout << "visit BlockStmt!" << std::endl;
+  //  passing upward
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitIfStmt1(SysYParser::IfStmt1Context *ctx) {
-  std::cout << "visit IfStmt1!" << std::endl;
+  // std::cout << "visit IfStmt1!" << std::endl;
   auto Cond = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->cond()));
   auto Then = std::any_cast<std::shared_ptr<StmtAST>>(visit(ctx->stmt()));
 
@@ -649,7 +679,7 @@ std::any ASTBuilder::visitIfStmt1(SysYParser::IfStmt1Context *ctx) {
 }
 
 std::any ASTBuilder::visitIfStmt2(SysYParser::IfStmt2Context *ctx) {
-  std::cout << "visit IfStmt2!" << std::endl;
+  // std::cout << "visit IfStmt2!" << std::endl;
   auto Cond = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->cond()));
   auto Then = std::any_cast<std::shared_ptr<StmtAST>>(visit((ctx->stmt())[0]));
   auto Else = std::any_cast<std::shared_ptr<StmtAST>>(visit((ctx->stmt())[1]));
@@ -663,8 +693,8 @@ std::any ASTBuilder::visitIfStmt2(SysYParser::IfStmt2Context *ctx) {
 }
 
 std::any ASTBuilder::visitWhileStmt(SysYParser::WhileStmtContext *ctx) {
-  std::cout << "visit WhileStmt!" << std::endl;
-  // Cond,Else
+  // std::cout << "visit WhileStmt!" << std::endl;
+  //  Cond,Else
   auto Cond = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->cond()));
   auto Body = std::any_cast<std::shared_ptr<StmtAST>>(visit((ctx->stmt())));
   // Cond,Then,Elses
@@ -677,14 +707,14 @@ std::any ASTBuilder::visitWhileStmt(SysYParser::WhileStmtContext *ctx) {
 }
 
 std::any ASTBuilder::visitBreakStmt(SysYParser::BreakStmtContext *ctx) {
-  std::cout << "visit BreakStmt!" << std::endl;
+  // std::cout << "visit BreakStmt!" << std::endl;
   std::shared_ptr<StmtAST> ast = std::make_shared<BreakStmtAST>(sourceLocation{
       ctx->getStart()->getLine(), ctx->getStart()->getCharPositionInLine()});
   return ast;
 }
 
 std::any ASTBuilder::visitContinueStmt(SysYParser::ContinueStmtContext *ctx) {
-  std::cout << "visit ContinueStmt!" << std::endl;
+  // std::cout << "visit ContinueStmt!" << std::endl;
   std::shared_ptr<StmtAST> ast = std::make_shared<ContinueStmtAST>(
       sourceLocation{ctx->getStart()->getLine(),
                      ctx->getStart()->getCharPositionInLine()});
@@ -692,7 +722,7 @@ std::any ASTBuilder::visitContinueStmt(SysYParser::ContinueStmtContext *ctx) {
 }
 
 std::any ASTBuilder::visitReturnStmt(SysYParser::ReturnStmtContext *ctx) {
-  std::cout << "visit ReturnStmt!" << std::endl;
+  // std::cout << "visit ReturnStmt!" << std::endl;
   std::shared_ptr<ExprAST> ast = nullptr;
   if (ctx->exp()) {
     // return;
@@ -709,26 +739,26 @@ std::any ASTBuilder::visitReturnStmt(SysYParser::ReturnStmtContext *ctx) {
 }
 
 std::any ASTBuilder::visitExp(SysYParser::ExpContext *ctx) {
-  std::cout << "visit Exp!" << std::endl;
+  // std::cout << "visit Exp!" << std::endl;
   auto addexp = visit(ctx->addExp());
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(addexp);
   return ast;
 }
 
 std::any ASTBuilder::visitCond(SysYParser::CondContext *ctx) {
-  std::cout << "visit Cond!" << std::endl;
+  // std::cout << "visit Cond!" << std::endl;
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitLVal(SysYParser::LValContext *ctx) {
-  std::cout << "visit LVal!" << std::endl;
+  // std::cout << "visit LVal!" << std::endl;
   std::shared_ptr<ExprAST> l_ast;
   std::shared_ptr<ExprAST> elem_ast;
   std::vector<std::shared_ptr<ExprAST>> elems;
   std::string id_name = ctx->Identifier()->getText();
   spanti::Type *ae_type;
   // 1.a
-  auto v_entry = variables->lookUp(id_name);
+  auto v_entry = variables->lookUp(id_name,ctx->getStart()->getLine());
   spanti::Type *var_type;
   if (v_entry) {
     var_type = v_entry->var_type;
@@ -860,9 +890,9 @@ std::any ASTBuilder::visitLVal(SysYParser::LValContext *ctx) {
 }
 
 std::any ASTBuilder::visitPrimaryExp1(SysYParser::PrimaryExp1Context *ctx) {
-  std::cout << "visit PrimaryExp1!" << std::endl;
-  // pass node:忽略
-  // return visitChildren(ctx);
+  // std::cout << "visit PrimaryExp1!" << std::endl;
+  //  pass node:忽略
+  //  return visitChildren(ctx);
   auto addexp = visit(ctx->exp());
   std::shared_ptr<ExprAST> ast =
       std::any_cast<std::shared_ptr<ExprAST>>(addexp);
@@ -870,13 +900,13 @@ std::any ASTBuilder::visitPrimaryExp1(SysYParser::PrimaryExp1Context *ctx) {
 }
 
 std::any ASTBuilder::visitPrimaryExp2(SysYParser::PrimaryExp2Context *ctx) {
-  std::cout << "visit PrimaryExp2!" << std::endl;
-  // pass node:忽略
+  // std::cout << "visit PrimaryExp2!" << std::endl;
+  //  pass node:忽略
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitPrimaryExp3(SysYParser::PrimaryExp3Context *ctx) {
-  std::cout << "visit PrimaryExp3!" << std::endl;
+  // std::cout << "visit PrimaryExp3!" << std::endl;
   auto num = visit(ctx->number());
   auto n_ast = std::any_cast<std::shared_ptr<ExprAST>>(num);
   return n_ast;
@@ -903,14 +933,13 @@ std::any ASTBuilder::visitNumber(SysYParser::NumberContext *ctx) {
     // float value - store it in Val;
     // not decide how to handle it
   }
-  std::cout << "visit Number! "
-            << " number:" << num << std::endl;
+  // std::cout << "visit Number! " << " number:" << num << std::endl;
   return num_ast;
   // return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitUnary1(SysYParser::Unary1Context *ctx) {
-  std::cout << "visit Unary1!" << std::endl;
+  // std::cout << "visit Unary1!" << std::endl;
   auto primary = visit(ctx->primaryExp());
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(primary);
   return ast;
@@ -918,7 +947,7 @@ std::any ASTBuilder::visitUnary1(SysYParser::Unary1Context *ctx) {
 
 std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
   // build function-call node - a(5,6)
-  std::cout << "visit Unary2!" << std::endl;
+  // std::cout << "visit Unary2!" << std::endl;
   std::string func_name = ctx->Identifier()->getText();
   // build call node - 调用函数已声明或为库函数
   auto func_entry = functions->lookUp(func_name);
@@ -1020,7 +1049,7 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
 
 std::any ASTBuilder::visitUnary3(SysYParser::Unary3Context *ctx) {
   // 节点嵌套 - 构造一元表达式节点
-  std::cout << "visit Unary3!" << std::endl;
+  // std::cout << "visit Unary3!" << std::endl;
   UnaryExprAST::UpKind upkind;
   // get upkind
   if (ctx->unaryOp()->Addition()) {
@@ -1039,30 +1068,30 @@ std::any ASTBuilder::visitUnary3(SysYParser::Unary3Context *ctx) {
 }
 
 std::any ASTBuilder::visitUnaryOp(SysYParser::UnaryOpContext *ctx) {
-  std::cout << "visit UnaryOp!" << std::endl;
+  // std::cout << "visit UnaryOp!" << std::endl;
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitFuncRParams(SysYParser::FuncRParamsContext *ctx) {
-  std::cout << "visit FuncRParams!" << std::endl;
+  // std::cout << "visit FuncRParams!" << std::endl;
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitExpAsRParam(SysYParser::ExpAsRParamContext *ctx) {
   // 处理为exp
-  std::cout << "visit ExpAsRParam!" << std::endl;
+  // std::cout << "visit ExpAsRParam!" << std::endl;
   return visitChildren(ctx);
 }
 
 std::any
 ASTBuilder::visitStringAsRParam(SysYParser::StringAsRParamContext *ctx) {
   // 处理为STRING
-  std::cout << "visit StringAsRParam!" << std::endl;
+  // std::cout << "visit StringAsRParam!" << std::endl;
   return visitChildren(ctx);
 }
 
 std::any ASTBuilder::visitMul2(SysYParser::Mul2Context *ctx) {
-  std::cout << "visit Mul2!" << std::endl;
+  // std::cout << "visit Mul2!" << std::endl;
   spanti::Type *b_type;
   BinaryExprAST::OpKind opkind;
   if (ctx->Division()) {
@@ -1099,13 +1128,13 @@ std::any ASTBuilder::visitMul2(SysYParser::Mul2Context *ctx) {
 }
 
 std::any ASTBuilder::visitMul1(SysYParser::Mul1Context *ctx) {
-  std::cout << "visit Mul1!" << std::endl;
+  // std::cout << "visit Mul1!" << std::endl;
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->unaryExp()));
   return ast;
 }
 
 std::any ASTBuilder::visitAdd2(SysYParser::Add2Context *ctx) {
-  std::cout << "visit Add2!" << std::endl;
+  // std::cout << "visit Add2!" << std::endl;
   spanti::Type *b_type;
   BinaryExprAST::OpKind opkind;
   if (ctx->Addition()) {
@@ -1146,14 +1175,14 @@ std::any ASTBuilder::visitAdd2(SysYParser::Add2Context *ctx) {
 }
 
 std::any ASTBuilder::visitAdd1(SysYParser::Add1Context *ctx) {
-  std::cout << "visit Add1!" << std::endl;
+  // std::cout << "visit Add1!" << std::endl;
   auto mulexp = visit(ctx->mulExp());
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(mulexp);
   return ast;
 }
 
 std::any ASTBuilder::visitRel2(SysYParser::Rel2Context *ctx) {
-  std::cout << "visit Rel2!" << std::endl;
+  // std::cout << "visit Rel2!" << std::endl;
   spanti::Type *b_type;
   BinaryExprAST::OpKind opkind;
   if (ctx->GE()) {
@@ -1190,19 +1219,19 @@ std::any ASTBuilder::visitRel2(SysYParser::Rel2Context *ctx) {
 }
 
 std::any ASTBuilder::visitRel1(SysYParser::Rel1Context *ctx) {
-  std::cout << "visit Rel1!" << std::endl;
+  // std::cout << "visit Rel1!" << std::endl;
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->addExp()));
   return ast;
 }
 
 std::any ASTBuilder::visitEq1(SysYParser::Eq1Context *ctx) {
-  std::cout << "visit Eq1!" << std::endl;
+  // std::cout << "visit Eq1!" << std::endl;
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->relExp()));
   return ast;
 }
 
 std::any ASTBuilder::visitEq2(SysYParser::Eq2Context *ctx) {
-  std::cout << "visit Eq2!" << std::endl;
+  // std::cout << "visit Eq2!" << std::endl;
   spanti::Type *b_type;
   BinaryExprAST::OpKind opkind;
   if (ctx->EQ()) {
@@ -1234,7 +1263,7 @@ std::any ASTBuilder::visitEq2(SysYParser::Eq2Context *ctx) {
 }
 
 std::any ASTBuilder::visitLAnd2(SysYParser::LAnd2Context *ctx) {
-  std::cout << "visit LAnd2!" << std::endl;
+  // std::cout << "visit LAnd2!" << std::endl;
   spanti::Type *b_type;
   BinaryExprAST::OpKind opkind;
   opkind = BinaryExprAST::OpKind::And;
@@ -1261,19 +1290,19 @@ std::any ASTBuilder::visitLAnd2(SysYParser::LAnd2Context *ctx) {
 }
 
 std::any ASTBuilder::visitLAnd1(SysYParser::LAnd1Context *ctx) {
-  std::cout << "visit LAnd1!" << std::endl;
+  // std::cout << "visit LAnd1!" << std::endl;
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->eqExp()));
   return ast;
 }
 
 std::any ASTBuilder::visitLOr1(SysYParser::LOr1Context *ctx) {
-  std::cout << "visit LOr1!" << std::endl;
+  // std::cout << "visit LOr1!" << std::endl;
   auto ast = std::any_cast<std::shared_ptr<ExprAST>>(visit(ctx->lAndExp()));
   return ast;
 }
 
 std::any ASTBuilder::visitLOr2(SysYParser::LOr2Context *ctx) {
-  std::cout << "visit LOr2!" << std::endl;
+  // std::cout << "visit LOr2!" << std::endl;
   spanti::Type *b_type;
   BinaryExprAST::OpKind opkind;
   opkind = BinaryExprAST::OpKind::Or;
@@ -1302,7 +1331,7 @@ std::any ASTBuilder::visitLOr2(SysYParser::LOr2Context *ctx) {
 std::any ASTBuilder::visitConstExp(SysYParser::ConstExpContext *ctx) {
   // similar to exp,but const
   // 向上传递addExp
-  std::cout << "visit ConstExp!" << std::endl;
+  // std::cout << "visit ConstExp!" << std::endl;
   return visitChildren(ctx);
 }
 
