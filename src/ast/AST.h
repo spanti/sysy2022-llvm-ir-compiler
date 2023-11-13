@@ -212,7 +212,7 @@ public:
 // 12.5
 class FloatExprAST : public ExprAST {
 public:
-  FloatExprAST(sourceLocation loc, bool LValue, std::string value, int32_t num)
+  FloatExprAST(sourceLocation loc, bool LValue, std::string value, float num)
       : ExprAST(loc, new spanti::FloatType(true), LValue), text(value),
         value(num) {}
   // the accept() method of element

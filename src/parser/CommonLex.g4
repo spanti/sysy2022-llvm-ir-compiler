@@ -1,92 +1,88 @@
 lexer grammar CommonLex;
-
-// keyword
-Int : 'int';
-Float : 'float';
+// antlr4 -Dlanguage=Cpp -visitor SysY.g4 keyword
+Int: 'int';
+Float: 'float';
 Void: 'void';
 Const: 'const';
-Return : 'return';
-If : 'if';
-Else : 'else';
-For : 'for';
-While : 'while';
-Do : 'do';
-Break : 'break';
-Continue : 'continue'; 
+Return: 'return';
+If: 'if';
+Else: 'else';
+For: 'for';
+While: 'while';
+Do: 'do';
+Break: 'break';
+Continue: 'continue';
 
 // operator
-Lparen : '(' ;
-Rparen : ')' ;
-Lbrkt : '[' ;
-Rbrkt : ']' ;
-Lbrace : '{' ;
-Rbrace : '}' ;
-Comma : ',' ;
-Semicolon : ';';
-Question : '?';
-Colon : ':';
+Lparen: '(';
+Rparen: ')';
+Lbrkt: '[';
+Rbrkt: ']';
+Lbrace: '{';
+Rbrace: '}';
+Comma: ',';
+Semicolon: ';';
+Question: '?';
+Colon: ':';
 
-Minus : '-';
-Exclamation : '!';
-Tilde : '~';
-Addition : '+';
-Multiplication : '*';
-Division : '/';
-Modulo : '%';
-LAND : '&&';
-LOR : '||';
-EQ : '==';
-NEQ : '!=';
-LT : '<';
-LE : '<=';
-GT : '>';
-GE : '>=';
+Minus: '-';
+Exclamation: '!';
+Tilde: '~';
+Addition: '+';
+Multiplication: '*';
+Division: '/';
+Modulo: '%';
+LAND: '&&';
+LOR: '||';
+EQ: '==';
+NEQ: '!=';
+LT: '<';
+LE: '<=';
+GT: '>';
+GE: '>=';
 
-
-// integer
-IntLiteral
-    : [0-9]+ 
-    | '0x' [0-9a-fA-F]+ 
-    | '0X' [0-9a-fA-F]+ 
-    ;
+Identifier: [a-zA-Z_][a-zA-Z_0-9]*;
+// integer - 识别造成干扰
+IntLiteral: [0-9]+ | '0x' [0-9a-fA-F]+ | '0X' [0-9a-fA-F]+;
 
 // float
-HexadecimalDigits
-    : '0x' [0-9a-fA-F]+ 
-    | '0X' [0-9a-fA-F]+
+HexadecimalDigits: '0x' [0-9a-fA-F]+ | '0X' [0-9a-fA-F]+;
+
+ExponentPart: [eE] [+-]? [0-9]+;
+
+BinaryExponentPart: [pP] [+-]? [0-9]+;
+
+//problem Hexad part
+fragment HexadecimalFloatingConstant
+    : '0' [xX] HexDigits? '.' HexDigits BinaryExponentPart
+    | '0' [xX] HexDigits BinaryExponentPart
     ;
 
-
-ExponentPart
-    : [eE] [+-] [0-9]+
+fragment HexDigits
+    : HexDigit+
     ;
 
-fragment
-FractionPart
-    : [0-9]+ '.' [0-9]* (ExponentPart)?
-    | '.' [0-9]+ (ExponentPart)?
-    | [0-9]+ ExponentPart
+fragment HexDigit
+    : [0-9a-fA-F]
     ;
 
-FloatLiteral
-    : FractionPart 
-    | (HexadecimalDigits)? '.' HexadecimalDigits 
-    | HexadecimalDigits '.'
-    ;
+fragment DecimalFloatingConstant:
+	[0-9]+ '.' [0-9]* (ExponentPart)?
+	| '.' [0-9]+ (ExponentPart)?
+	| [0-9]+ ExponentPart;
+
+FloatLiteral:
+	DecimalFloatingConstant
+	| HexadecimalFloatingConstant;
 
 //identifier
-Identifier
-    : [a-zA-Z_][a-zA-Z_0-9]*
-    ;
+//Identifier: [a-zA-Z_][a-zA-Z_0-9]*;
 
-STRING : '"'(ESC|.)*?'"';
+STRING: '"' (ESC | .)*? '"';
 
-fragment
-ESC : '\\"'|'\\\\';
+fragment ESC: '\\"' | '\\\\';
 
-WS : 
-    [ \t\r\n] -> skip
-    ;
+WS: [ \t\r\n] -> skip;
 
-LINE_COMMENT : '//' .*? '\r'? '\n' -> skip;
-COMMENT      :'/*'.*?'*/'-> skip ;
+LINE_COMMENT: '//' .*? '\r'? '\n' -> skip;
+COMMENT: '/*' .*? '*/' -> skip;

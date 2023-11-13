@@ -54,12 +54,13 @@ target_link_libraries(c_edu_compiler ${llvm_libs} Threads::Threads)
 # The last two lines enable CMake’s test runner to discover the tests included in the binary, using the GoogleTest CMake module
 #include(GoogleTest)
 #gtest_discover_tests(c_edu_compiler)
-
+enable_testing()
 #可执行测试构建
 #将测试文件链接为可执行文件
 add_executable(
   hello_test
   src/google_test/hello_test.cc
+  src/common/common.cpp
 )
 #GTest::gtest_main defines a suitable entry point
 target_link_libraries(
@@ -69,4 +70,4 @@ target_link_libraries(
 
 include(GoogleTest)
 gtest_discover_tests(hello_test)
-enable_testing()
+

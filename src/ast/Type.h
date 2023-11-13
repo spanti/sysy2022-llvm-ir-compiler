@@ -92,4 +92,5 @@ private:
   Type *re_type;
   std::vector<Type *> params_type;
 };
+bool TypeMatch(Type *s_t, Type *g_t);
 } // namespace spanti

@@ -20,7 +20,7 @@ int EightWhile() {
         while(d < 20){
           d = d + 3;
           while(e > 1){
-            e = e - 1;
+            e = e-1;
             while(f > 2){
               f = f -2;
               while(g < 3){

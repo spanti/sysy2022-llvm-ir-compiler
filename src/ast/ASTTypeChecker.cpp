@@ -47,6 +47,37 @@ void ASTIRGenerator::clearBLoopBB() {
   assert(cycle == 0);
   BLoopBB = nullptr;
 }
+Value *ASTIRGenerator::ITConvert(Value *goal, Type *g_type) {
+  Value *result = goal;
+  if (goal->getType()->isIntegerTy() && g_type->isFloatTy()) {
+    result = IRbuilder->CreateSIToFP(goal, g_type, "fp");
+  }
+  if (goal->getType()->isFloatTy() && g_type->isIntegerTy()) {
+    result = IRbuilder->CreateFPToSI(goal, g_type, "fp");
+  }
+  return result;
+}
+Constant *ASTIRGenerator::ITGlobalConvert(Constant *goal, Type *g_type) {
+  Constant *result = goal;
+  if (g_type->isIntegerTy() && goal->getType()->isFloatTy()) {
+    // 声明为INT FLOAT->INT
+    auto f_p = cast<llvm::ConstantFP>(goal)->getValue();
+    auto f_num = f_p.convertToFloat();
+    // C FLOAT->INT
+    int i_num = (int)(f_num);
+    // transfrom APFloat->APInt
+    result = ConstantInt::get(g_type, i_num);
+  } else if (g_type->isFloatTy() && goal->getType()->isIntegerTy()) {
+    // 声明为Float INT->FLOAT
+    auto i_p = cast<llvm::ConstantInt>(goal)->getValue();
+    auto i_num = i_p.getSExtValue();
+    // C FLOAT->INT
+    float f_num = (float)(i_num);
+    // transfrom APFloat->APInt
+    result = ConstantFP::get(g_type, f_num);
+  }
+  return result;
+}
 void ASTIRGenerator::storeValueArray(std::vector<Value *> &VAS, Value *gepR,
                                      Type *e_type) {
   // gepR 一维数组指针
@@ -145,6 +176,7 @@ llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
     for (int i = 0; i < index_size; i++) {
       std::vector<Value *> refArray;
       // 填充0
+      // ConstantFP
       refArray.push_back(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
       // get Value from ast->elems[i]
       ast->elems[i]->accept(this);
@@ -174,7 +206,7 @@ llvm::Value *ASTIRGenerator::getArrayElemPtr(VariableTableEntry *entry,
     if (ast->elems.empty()) {
       return gepR; // problem! a a unsize - array
     }
-    if (elem_type->isIntegerTy()) {
+    if (elem_type->isIntegerTy() || elem_type->isFloatTy()) {
       // 元素为整数 - 一维不定数组
       // p[1] = ?
       // 直接索引1
@@ -300,6 +332,16 @@ void ASTIRGenerator::register_libs_to_module() {
       "putarray", new spanti::VoidType(),
       {new spanti::IntType(),
        new spanti::ArrayType(new spanti::IntType(), true, {})}); // int,int[]
+  register_lib_to_module("putfloat", new spanti::VoidType(),
+                         {new spanti::FloatType()});
+  register_lib_to_module(
+      "putfarray", new spanti::VoidType(),
+      {new spanti::IntType(),
+       new spanti::ArrayType(new spanti::FloatType(), true, {})});
+  register_lib_to_module("getfloat", new spanti::FloatType(), {});
+  register_lib_to_module(
+      "getfarray", new spanti::IntType(),
+      {new spanti::ArrayType(new spanti::FloatType(), true, {})});
 }
 // transform function type
 llvm::FunctionType *
@@ -483,9 +525,13 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     // set L jump command
     Value *L = get_value(); // a
     // icmp ne %L,0
-    re_value = IRbuilder->CreateICmpNE(
-        L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
-
+    if (L->getType()->isIntegerTy()) {
+      re_value = IRbuilder->CreateICmpNE(
+          L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    } else if (L->getType()->isFloatTy()) {
+      re_value = IRbuilder->CreateFCmpONE(
+          L, ConstantFP::get(*TheContext, APFloat(0.0)), "icmptmp");
+    }
     // Create Cond Br - newlabel(),IfFBB
     // B1.true = newlabel() <B2.true,B2.false> = <B.true,B.false>
     re_value = IRbuilder->CreateCondBr(re_value, ThenBB, ast->FBB);
@@ -498,8 +544,15 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     ast->RHS->accept(this);
     // set R jump command and generate code
     Value *R = get_value(); // b
-    re_value = IRbuilder->CreateICmpNE(
-        R, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    // R的类型 INT/FLOAT
+    if (R->getType()->isIntegerTy()) {
+      re_value = IRbuilder->CreateICmpNE(
+          R, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    } else if (R->getType()->isFloatTy()) {
+      re_value = IRbuilder->CreateFCmpONE(
+          R, ConstantFP::get(*TheContext, APFloat(0.0)), "icmptmp");
+    }
+
     re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
                                      "zextmp");
     // Create Cond Br -
@@ -526,8 +579,13 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     Value *L = get_value(); // a
     // L->print(outs());
     //  icmp ne %L,0
-    re_value = IRbuilder->CreateICmpNE(
-        L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    if (L->getType()->isIntegerTy()) {
+      re_value = IRbuilder->CreateICmpNE(
+          L, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    } else if (L->getType()->isFloatTy()) {
+      re_value = IRbuilder->CreateFCmpONE(
+          L, ConstantFP::get(*TheContext, APFloat(0.0)), "icmptmp");
+    }
     // Create Cond Br - newlabel(),IfFBB
     re_value = IRbuilder->CreateCondBr(re_value, ast->TBB, ThenBB);
     // set insert block -> then
@@ -539,8 +597,14 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
     ast->RHS->accept(this);
     // set R jump command and generate code
     Value *R = get_value(); // b
-    re_value = IRbuilder->CreateICmpNE(
-        R, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    if (R->getType()->isIntegerTy()) {
+      re_value = IRbuilder->CreateICmpNE(
+          R, ConstantInt::get(Type::getInt32Ty(*TheContext), 0), "icmptmp");
+    } else if (R->getType()->isFloatTy()) {
+      re_value = IRbuilder->CreateFCmpONE(
+          R, ConstantFP::get(*TheContext, APFloat(0.0)), "icmptmp");
+    }
+
     re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
                                      "zextmp");
     // Create Cond Br -
@@ -561,72 +625,149 @@ void ASTIRGenerator::visit(class BinaryExprAST *ast) {
   // 调用一系列Create__ method
   // 左右操作数的节点类型必须相同
   // 情形 float/int Op float/int
-  switch (ast->Op) {
-  case BinaryExprAST::OpKind::Mul:
-    re_value = IRbuilder->CreateMul(L, R, "multmp");
-    break;
-  case BinaryExprAST::OpKind::Div:
-    re_value = IRbuilder->CreateSDiv(L, R, "divtmp");
-    break;
-  case BinaryExprAST::OpKind::Add:
-    re_value = IRbuilder->CreateAdd(L, R, "addtmp");
-    break;
-  case BinaryExprAST::OpKind::Sub:
-    re_value = IRbuilder->CreateSub(L, R, "subtmp");
-    break;
-  case BinaryExprAST::OpKind::Mod:
-    re_value = IRbuilder->CreateSRem(L, R, "sremtmp");
-    break;
-  // 比较符层次
-  case BinaryExprAST::OpKind::Gt:
-    // 第三个参数为指令指定名称
-    re_value = IRbuilder->CreateICmpSGT(L, R, "icmptmp");
-    // 数值转换为32位
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  case BinaryExprAST::OpKind::Lt:
-    re_value = IRbuilder->CreateICmpSLT(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  case BinaryExprAST::OpKind::Ge:
-    re_value = IRbuilder->CreateICmpSGE(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  case BinaryExprAST::OpKind::Le:
-    re_value = IRbuilder->CreateICmpSLE(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  case BinaryExprAST::OpKind::Eq:
-    re_value = IRbuilder->CreateICmpEQ(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  case BinaryExprAST::OpKind::Ne:
-    re_value = IRbuilder->CreateICmpNE(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  // 未正确实现短路求值
-  //  使用控制流法，将逻辑表达式转化为控制流结构
-  // 注释掉的原有处理逻辑
-  /*
-  case BinaryExprAST::OpKind::And:
-    re_value = IRbuilder->CreateAnd(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;
-  case BinaryExprAST::OpKind::Or:
-    re_value = IRbuilder->CreateOr(L, R, "icmptmp");
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
-    break;*/
-  default:
-    throw SyntaxError("unexpect binary op");
-    break;
+  // INT情形
+  if (L->getType()->isIntegerTy() && R->getType()->isIntegerTy()) {
+    switch (ast->Op) {
+    case BinaryExprAST::OpKind::Mul:
+      re_value = IRbuilder->CreateMul(L, R, "multmp");
+      break;
+    case BinaryExprAST::OpKind::Div:
+      re_value = IRbuilder->CreateSDiv(L, R, "divtmp");
+      break;
+    case BinaryExprAST::OpKind::Add:
+      re_value = IRbuilder->CreateAdd(L, R, "addtmp");
+      break;
+    case BinaryExprAST::OpKind::Sub:
+      re_value = IRbuilder->CreateSub(L, R, "subtmp");
+      break;
+    case BinaryExprAST::OpKind::Mod:
+      re_value = IRbuilder->CreateSRem(L, R, "sremtmp");
+      break;
+    // 比较符层次
+    case BinaryExprAST::OpKind::Gt:
+      // 第三个参数为指令指定名称
+      re_value = IRbuilder->CreateICmpSGT(L, R, "icmptmp");
+      // 数值转换为32位
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Lt:
+      re_value = IRbuilder->CreateICmpSLT(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Ge:
+      re_value = IRbuilder->CreateICmpSGE(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Le:
+      re_value = IRbuilder->CreateICmpSLE(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Eq:
+      re_value = IRbuilder->CreateICmpEQ(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Ne:
+      re_value = IRbuilder->CreateICmpNE(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    // 未正确实现短路求值
+    //  使用控制流法，将逻辑表达式转化为控制流结构
+    // 注释掉的原有处理逻辑
+    /*
+    case BinaryExprAST::OpKind::And:
+      re_value = IRbuilder->CreateAnd(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Or:
+      re_value = IRbuilder->CreateOr(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;*/
+    default:
+      throw SyntaxError("unexpect binary op");
+      break;
+    }
+  } else {
+    if (L->getType()->isIntegerTy()) {
+      L = IRbuilder->CreateSIToFP(L, Type::getFloatTy(*TheContext), "fp");
+    }
+    if (R->getType()->isIntegerTy()) {
+      R = IRbuilder->CreateSIToFP(R, Type::getFloatTy(*TheContext), "fp");
+    }
+    switch (ast->Op) {
+    case BinaryExprAST::OpKind::Mul:
+      re_value = IRbuilder->CreateFMul(L, R, "fmultmp");
+      break;
+    case BinaryExprAST::OpKind::Div:
+      re_value = IRbuilder->CreateFDiv(L, R, "fdivtmp");
+      break;
+    case BinaryExprAST::OpKind::Add:
+      re_value = IRbuilder->CreateFAdd(L, R, "faddtmp");
+      break;
+    case BinaryExprAST::OpKind::Sub:
+      re_value = IRbuilder->CreateFSub(L, R, "fsubtmp");
+      break;
+    case BinaryExprAST::OpKind::Mod:
+      re_value = IRbuilder->CreateFRem(L, R, "fremtmp");
+      break;
+    // 比较符层次
+    case BinaryExprAST::OpKind::Gt:
+      // 第三个参数为指令指定名称
+      re_value = IRbuilder->CreateFCmpOGT(L, R, "fcmptmp");
+      // 数值转换为32位
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Lt:
+      re_value = IRbuilder->CreateFCmpOLT(L, R, "fcmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Ge:
+      re_value = IRbuilder->CreateFCmpOGE(L, R, "fcmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Le:
+      re_value = IRbuilder->CreateFCmpOLE(L, R, "fcmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Eq:
+      re_value = IRbuilder->CreateFCmpOEQ(L, R, "fcmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Ne:
+      re_value = IRbuilder->CreateFCmpONE(L, R, "fcmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    // 未正确实现短路求值
+    //  使用控制流法，将逻辑表达式转化为控制流结构
+    // 注释掉的原有处理逻辑
+    /*
+    case BinaryExprAST::OpKind::And:
+      re_value = IRbuilder->CreateAnd(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;
+    case BinaryExprAST::OpKind::Or:
+      re_value = IRbuilder->CreateOr(L, R, "icmptmp");
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+      break;*/
+    default:
+      throw SyntaxError("unexpect binary op");
+      break;
+    }
   }
 }
 void ASTIRGenerator::visit(class UnaryExprAST *ast) {
@@ -644,18 +785,33 @@ void ASTIRGenerator::visit(class UnaryExprAST *ast) {
     break;
   case UnaryExprAST::UpKind::Neg:
     // 取负
-    re_value = IRbuilder->CreateNeg(U, "iutmp");
+    // Problem 生成的Neg指令错误
+    if (U->getType()->isIntegerTy()) {
+      re_value = IRbuilder->CreateNeg(U, "iutmp");
+    } else {
+      re_value = IRbuilder->CreateFNeg(U, "ifutmp");
+    }
     break;
   case UnaryExprAST::UpKind::Not:
     // 仅用于条件表达式，！0 = 1，！1 = 0
     // CreateICmpEQ(value, llvm::ConstantInt::get(int32Type, 0), "result");
     // re_value = IRbuilder->CreateNot(U,"iutmp");
-    re_value = IRbuilder->CreateICmpEQ(
-        U, llvm::ConstantInt::get(IntegerType::get(*TheContext, 32), 0),
-        "iutmp");
-    // transfrom i1 to i32
-    re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
-                                     "zextmp");
+    // 处理浮点数情形
+    if (U->getType()->isIntegerTy()) {
+      re_value = IRbuilder->CreateICmpEQ(
+          U, llvm::ConstantInt::get(IntegerType::get(*TheContext, 32), 0),
+          "iutmp");
+      // transfrom i1 to i32
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+    } else {
+      re_value = IRbuilder->CreateFCmpOEQ(
+          U, ConstantFP::get(*TheContext, APFloat(0.0)), "ifutmp");
+      // transfrom i1 to i32
+      re_value = IRbuilder->CreateZExt(re_value, Type::getInt32Ty(*TheContext),
+                                       "zextmp");
+    }
+
     // OpStr = "!";
     break;
   default:
@@ -671,7 +827,7 @@ void ASTIRGenerator::visit(class FloatExprAST *ast) {
 }
 void ASTIRGenerator::visit(class IdentifierAST *ast) {
   // 在访问前处理好exprast问题
-  auto entry = variables->lookUp(ast->getName(),ast->loc.Line);
+  auto entry = variables->lookUp(ast->getName(), ast->loc.Line);
   // int a;
   // 查询符号表
   if (!entry)
@@ -702,7 +858,8 @@ void ASTIRGenerator::visit(class IdentifierAST *ast) {
     // if A = NULL,that mean A is uninitialize
     if (!A) {
       // find a global variable which has the same name
-      auto A_G = variables->lookUp(ast->getName(), variables->head,ast->loc.Line);
+      auto A_G =
+          variables->lookUp(ast->getName(), variables->head, ast->loc.Line);
       if (!A_G)
         throw UnrecognizedVarName(ast->getName());
       // Global handle
@@ -723,7 +880,7 @@ void ASTIRGenerator::visit(class ArrayExprAST *ast) {
   // loop up memory location
   // GEP series - get ptr to Value
   // 目前处理局部情形
-  auto entry = variables->lookUp(ast->Name,ast->loc.Line);
+  auto entry = variables->lookUp(ast->Name, ast->loc.Line);
   auto llvm_type = mapToLLVMType(entry->var_type);
   if (!entry)
     throw UnrecognizedVarName(ast->Name);
@@ -755,12 +912,26 @@ void ASTIRGenerator::visit(class CallExprAST *ast) {
   Function *CalleeF = TheModule->getFunction(ast->Callee);
   if (!CalleeF)
     throw SyntaxError("Unknown Register Function!");
+  // examine every param's type and make implicit conversion
+  // 考虑隐式类型转换的情形
+  // 基于llvm_type完成类型转换
+  FunctionType *CalleeT = CalleeF->getFunctionType();
   // get params
   std::vector<Value *> ArgsV;
   // 获取每个参数的Value，pushback
   for (int i = 0; i < ast->Args.size(); i++) {
     ast->Args[i]->accept(this);
     auto AV = get_value();
+    auto ArgsT = CalleeT->getParamType(i);
+    // examine every param's type and make implicit conversion
+    // 考虑隐式类型转换的情形
+    // 在局部完成隐式类型转换 Value -> Value
+    if (AV->getType()->isIntegerTy() && ArgsT->isFloatTy()) {
+      AV = IRbuilder->CreateSIToFP(AV, ArgsT, "fp");
+    }
+    if (AV->getType()->isFloatTy() && ArgsT->isIntegerTy()) {
+      AV = IRbuilder->CreateFPToSI(AV, ArgsT, "fp");
+    }
     ArgsV.push_back(AV);
   }
   // callee + vector<Value*>
@@ -786,10 +957,10 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
   if (auto l_ast = dynamic_cast<IdentifierAST *>(ast->LHS.get())) {
     // get RHS
     ast->RHS->accept(this);
-    auto r_value = get_value();
+    Value *r_value = get_value();
     if (!r_value)
       return;
-    auto entry = variables->lookUp(l_ast->getName(),l_ast->loc.Line);
+    auto entry = variables->lookUp(l_ast->getName(), l_ast->loc.Line);
     // a = 5; generate store instruction
     if (!entry)
       throw UnrecognizedVarName(l_ast->getName());
@@ -802,7 +973,14 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     }
     if (!gepR)
       throw UnrecognizedVarName(l_ast->getName());
+    // examine left-value type and make implicit conversion
+    // HAS PROBLEM - local:generate transfrom type command
+    // FLOAT -> INT / INT float
+    // L:r_value R:gepR6
+    // CreatePtoI
     // generate instructions
+    Type *llvm_type = mapToLLVMType(entry->var_type);
+    r_value = ITConvert(r_value, llvm_type);
     IRbuilder->CreateStore(r_value, gepR);
     // 传递返回值
     re_value = r_value;
@@ -811,7 +989,7 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     // a[4]
     auto a_ast = dynamic_cast<ArrayExprAST *>(ast->LHS.get());
     // 手动处理a_ast
-    auto entry = variables->lookUp(a_ast->Name,a_ast->loc.Line);
+    auto entry = variables->lookUp(a_ast->Name, a_ast->loc.Line);
     // a = 5; generate store instruction
     if (!entry)
       throw UnrecognizedVarName(a_ast->Name);
@@ -829,6 +1007,10 @@ void ASTIRGenerator::visit(class AssignStmtAST *ast) {
     auto r_value = get_value();
     if (!r_value)
       return;
+    // examine left-value type and make implicit conversion
+    // get elem_type
+    Type *llvm_type = mapToLLVMType(sp_type->getElementTy());
+    r_value = ITConvert(r_value, llvm_type);
     IRbuilder->CreateStore(r_value, gepR);
     // 传递返回值
     re_value = r_value;
@@ -868,7 +1050,7 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
 
   // 如何处理表达式的短路求值问题
   // 调用Cond节点时，将传回ThenBB 和 ElseBB的引用
-  //传递Cond属性
+  // 传递Cond属性
   ast->Cond->accept(this);
   Value *CondV = get_value();
   if (!CondV)
@@ -881,6 +1063,10 @@ void ASTIRGenerator::visit(class IfStmtAST *ast) {
   // CreateICmpEQ:i1 , +123:i32
   if (CondV->getType() == IRbuilder->getInt32Ty()) {
     CondV = IRbuilder->CreateICmpSGT(CondV, IRbuilder->getInt32(0), "ifcond");
+  }
+  if (CondV->getType() == IRbuilder->getFloatTy()) {
+    CondV = IRbuilder->CreateFCmpOGT(
+        CondV, ConstantFP::get(*TheContext, APFloat(0.0)), "ifcond");
   }
 
   if (ast->Else) {
@@ -1078,9 +1264,9 @@ void ASTIRGenerator::visit(class WhileStmtAST *ast) {
   // 设置 布尔表达式的继承属性
   ast->Cond.get()->TBB = BodyBB;
   ast->Cond.get()->FBB = AfterBB;
-  //IfFBB1 = AfterBB;
-  //IfTBB1 = BodyBB;
-  // save
+  // IfFBB1 = AfterBB;
+  // IfTBB1 = BodyBB;
+  //  save
   Cbb.push(PreheaderBB);
   Bbb.push(AfterBB);
   // Body
@@ -1192,12 +1378,36 @@ void ASTIRGenerator::visit(class ExpStmtAST *ast) {
   if (ast->Expr)
     ast->Expr->accept(this);
   re_value = get_value();
+  
 }
 void ASTIRGenerator::visit(class RetuStmtAST *ast) {
   re_value = nullptr;
   if (ast->Expr) {
     ast->Expr->accept(this); // return Exp;
-    re_value = IRbuilder->CreateRet(get_value());
+    Value *r_Constant = get_value();
+    // IF re_value->type not match func_re_type
+    // 隐式类型转换
+    if (func_re_type->isIntegerTy() && r_Constant->getType()->isFloatTy()) {
+      // 声明为INT FLOAT->INT
+      auto f_p = cast<llvm::ConstantFP>(r_Constant)->getValue();
+      auto f_num = f_p.convertToFloat();
+      // C FLOAT->INT
+      int i_num = (int)(f_num);
+      // transfrom APFloat->APInt
+      r_Constant = ConstantInt::get(func_re_type, i_num);
+    } else if (func_re_type->isFloatTy() &&
+               r_Constant->getType()->isIntegerTy()) {
+      // 声明为Float INT->FLOAT
+      auto i_p = cast<llvm::ConstantInt>(r_Constant)->getValue();
+      auto i_num = i_p.getSExtValue();
+      // C FLOAT->INT
+      float f_num = (float)(i_num);
+      // transfrom APFloat->APInt
+      r_Constant = ConstantFP::get(func_re_type, f_num);
+    }
+    // record the re_type
+    re_value = IRbuilder->CreateRet(r_Constant);
+
   } else {
     // return;
     re_value = IRbuilder->CreateRetVoid();
@@ -1205,7 +1415,7 @@ void ASTIRGenerator::visit(class RetuStmtAST *ast) {
 }
 void ASTIRGenerator::visit(class ConstDecAST *ast) { re_value = nullptr; }
 void ASTIRGenerator::visit(class VarDecAST *ast) {
-  auto entry = variables->lookUp(ast->getName(),ast->loc.Line);
+  auto entry = variables->lookUp(ast->getName(), ast->loc.Line);
   // int a;
   // 查询符号表
   if (!entry)
@@ -1229,7 +1439,12 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
       // 设置数组初始化器 - 全部置为0
       global_var->setInitializer(ConstantAggregateZero::get(llvm_type));
     } else {
-      global_var->setInitializer(llvm::ConstantInt::get(llvm_type, 0));
+      if (llvm_type->isFloatTy()) {
+        global_var->setInitializer(
+            llvm::ConstantFP::get(*TheContext, APFloat(0.0)));
+      } else if (llvm_type->isIntegerTy()) {
+        global_var->setInitializer(llvm::ConstantInt::get(llvm_type, 0));
+      }
     }
     if (ast->initval) {
 
@@ -1258,8 +1473,12 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
         // create_store
         if (!r_value)
           return;
+        // base llvm type?
         llvm::Constant *r_Constant = llvm::dyn_cast<llvm::Constant>(r_value);
         // 全局变/常量声明中指定的初值表达式必须是常量表达式
+        // 考虑隐式类型转换的情形
+
+        r_Constant = ITGlobalConvert(r_Constant, llvm_type);
         if (r_Constant) {
           // 使用 myConstant，它现在是一个不可变的常量
           global_var->setInitializer(r_Constant);
@@ -1323,7 +1542,7 @@ void ASTIRGenerator::visit(class VarDecAST *ast) {
       // memset is overload function
       Function *InstF = Intrinsic::getDeclaration(
           TheModule.get(), llvm::Intrinsic::memset, params);
-      InstF->print(outs());
+      // InstF->print(outs());
       IRbuilder->CreateCall(InstF, ArgsV);
     }
     // 返回合格
@@ -1498,7 +1717,7 @@ void ASTIRGenerator::visit(class FuncDecAST *ast) {
   }
   // exit scope
   variables->ExitScope();
-  Type *fr_type = IRbuilder->getCurrentFunctionReturnType();
+  func_re_type = IRbuilder->getCurrentFunctionReturnType();
   // handle body right
   ast->Body->accept(this);
   // the value of body
@@ -1514,11 +1733,14 @@ void ASTIRGenerator::visit(class FuncDecAST *ast) {
   auto CurBB = IRbuilder->GetInsertBlock();
   // create br(uncond)
   if (!CurBB->getTerminator()) {
-    if (fr_type->isVoidTy()) {
+    if (func_re_type->isVoidTy()) {
       IRbuilder->CreateRetVoid();
-    } else if (fr_type->isIntegerTy()) {
+    } else if (func_re_type->isIntegerTy()) {
       // 未创建返回语句
       IRbuilder->CreateRet(ConstantInt::get(Type::getInt32Ty(*TheContext), 0));
+    } else if (func_re_type->isFloatTy()) {
+      // 未创建返回语句
+      IRbuilder->CreateRet(ConstantFP::get(Type::getFloatTy(*TheContext), 0));
     }
   }
 }

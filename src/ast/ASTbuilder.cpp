@@ -138,7 +138,7 @@ std::any ASTBuilder::visitConstDecl(SysYParser::ConstDeclContext *ctx) {
       VariableTableEntry *entry = new VariableTableEntry();
       entry->const_init = init_array;
       entry->var_type = v_type;
-      //变量声明的行
+      // 变量声明的行
       entry->def_line = ctx->getStart()->getLine();
       variables->insert(var_name, entry);
       var_ast = std::make_shared<VarDecAST>(
@@ -159,7 +159,7 @@ std::any ASTBuilder::visitConstDecl(SysYParser::ConstDeclContext *ctx) {
       VariableTableEntry *entry = new VariableTableEntry();
       entry->const_init = init_array;
       entry->var_type = c_type;
-      //变量声明的行
+      // 变量声明的行
       entry->def_line = ctx->getStart()->getLine();
       variables->insert(var_name, entry);
       var_ast = std::make_shared<VarDecAST>(
@@ -267,8 +267,8 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
         // 无数组 int a;
         VariableTableEntry *entry = new VariableTableEntry();
         entry->var_type = v_type;
-        //变量声明的行
-      entry->def_line = ctx->getStart()->getLine();
+        // 变量声明的行
+        entry->def_line = ctx->getStart()->getLine();
         variables->insert(var_name, entry);
         var_ast = std::make_shared<VarDecAST>(
             sourceLocation{ctx->getStart()->getLine(),
@@ -283,8 +283,8 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
         // 同步符号表信息
         VariableTableEntry *entry = new VariableTableEntry();
         entry->var_type = c_type;
-        //变量声明的行
-      entry->def_line = ctx->getStart()->getLine();
+        // 变量声明的行
+        entry->def_line = ctx->getStart()->getLine();
         variables->insert(var_name, entry);
         var_ast = std::make_shared<VarDecAST>(
             sourceLocation{ctx->getStart()->getLine(),
@@ -300,8 +300,8 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
         // 无数组 int a=3;
         VariableTableEntry *entry = new VariableTableEntry();
         entry->var_type = v_type;
-        //变量声明的行
-      entry->def_line = ctx->getStart()->getLine();
+        // 变量声明的行
+        entry->def_line = ctx->getStart()->getLine();
         variables->insert(var_name, entry);
         // 列表
         // 全局及局部
@@ -319,8 +319,8 @@ std::any ASTBuilder::visitVarDecl(SysYParser::VarDeclContext *ctx) {
         // 同步符号表信息
         VariableTableEntry *entry = new VariableTableEntry();
         entry->var_type = c_type;
-        //变量声明的行
-      entry->def_line = ctx->getStart()->getLine();
+        // 变量声明的行
+        entry->def_line = ctx->getStart()->getLine();
         variables->insert(var_name, entry);
         // 列表
         auto init_vector = parse_var_init(init->initVal(), dims_array);
@@ -446,9 +446,9 @@ std::any ASTBuilder::visitFuncDef(SysYParser::FuncDefContext *ctx) {
       // type
       params_type.push_back(id_type);
       // 变量表更新
-      VariableTableEntry* entry = new VariableTableEntry();
+      VariableTableEntry *entry = new VariableTableEntry();
       entry->var_type = id_type;
-      //变量声明的行
+      // 变量声明的行
       entry->def_line = ctx->getStart()->getLine();
       variables->insert(id_name, entry);
       // DecAST
@@ -614,7 +614,7 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
   // 左侧类型与右侧类型必须满足某一定则
   // 左侧为常量时，抛出错误
   if (auto l_ast = dynamic_cast<IdentifierAST *>(LHS.get())) {
-    l_entry = variables->lookUp(l_ast->getName(),l_ast->loc.Line);
+    l_entry = variables->lookUp(l_ast->getName(), l_ast->loc.Line);
     // a = 5; generate store instruction
     if (!l_entry)
       throw UnrecognizedVarName(l_ast->getName());
@@ -624,7 +624,7 @@ std::any ASTBuilder::visitAssignment(SysYParser::AssignmentContext *ctx) {
   } else {
     auto a_ast = dynamic_cast<ArrayExprAST *>(LHS.get());
     if (a_ast) {
-      l_entry = variables->lookUp(a_ast->Name,a_ast->loc.Line);
+      l_entry = variables->lookUp(a_ast->Name, a_ast->loc.Line);
       auto array_type = dynamic_cast<spanti::ArrayType *>(l_entry->var_type);
       // a = 5; generate store instruction
       // handle int a[2][2] a[2] = 5 error
@@ -758,7 +758,7 @@ std::any ASTBuilder::visitLVal(SysYParser::LValContext *ctx) {
   std::string id_name = ctx->Identifier()->getText();
   spanti::Type *ae_type;
   // 1.a
-  auto v_entry = variables->lookUp(id_name,ctx->getStart()->getLine());
+  auto v_entry = variables->lookUp(id_name, ctx->getStart()->getLine());
   spanti::Type *var_type;
   if (v_entry) {
     var_type = v_entry->var_type;
@@ -946,6 +946,8 @@ std::any ASTBuilder::visitUnary1(SysYParser::Unary1Context *ctx) {
 }
 
 std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
+  // all type-check include impliccit type conversion
+
   // build function-call node - a(5,6)
   // std::cout << "visit Unary2!" << std::endl;
   std::string func_name = ctx->Identifier()->getText();
@@ -982,6 +984,7 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
     }
     // 形参和实参类型匹配处理
     // 使用严格的兼容规则，形参和实参类型必须完全相等
+    // 隐式转换加入
     for (int i = 0; i < func_params->funcRParam().size(); i++) {
       // 类型等价部分，必要时设计为独立模块
       //  形参
@@ -989,7 +992,9 @@ std::any ASTBuilder::visitUnary2(SysYParser::Unary2Context *ctx) {
       // 实参
       auto params_kind_2 = args[i]->getType()->getTypeKind();
       // 测试
-      if (params_kind_1 != params_kind_2) {
+      // pass inmplicit conversion: int -> float
+      if (!spanti::TypeMatch(func_Ty->get_params_type()[i],
+                            args[i]->getType())) {
         throw InvalidFuncCallArg("type error on function arguments");
       }
       // 若两者均为数组时，要求维度数目和大小均对应

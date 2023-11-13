@@ -34,12 +34,11 @@ int main(){
         while(j < maxn) {
             int k = 0;
             while(k < maxn) {
-                int l = 0;        
+                int l = 0;
                 while (l < maxn) {
-                    int m = 0;  
+                    int m = 0;
                     while (m < maxn) {
                         int h = 0;
-                        
                         while (h < 7) {
                             dp[i][j][k][l][m][h] = -1;
                             h = h + 1;
@@ -54,6 +53,7 @@ int main(){
         }
         i = i + 1;
     }
+    
     i = 0;
     while (i < n) {
         list[i] = getint();
@@ -66,5 +66,4 @@ int main(){
     putint(ans);
 
     return ans;
-    
 }

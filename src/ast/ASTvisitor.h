@@ -119,6 +119,8 @@ private:
   // save C BB block and B bb Block
   std::stack<BasicBlock *> Cbb;
   std::stack<BasicBlock *> Bbb;
+  //save function re_type
+  Type* func_re_type; 
 
 public:
   void addcycle(){cycle++;}
@@ -131,6 +133,9 @@ public:
   void register_libs_to_module();
   void register_lib_to_module(std::string name, spanti::Type *re_type,
                               std::vector<spanti::Type *> params_type);
+  //Implicit type-conversion
+  Value* ITConvert(Value* goal,Type* g_type);
+  Constant* ITGlobalConvert(Constant* goal,Type* g_type);
   // 返回保存的visit
   Value *get_value() { return re_value; }
   llvm::Type *mapToLLVMType(spanti::Type *sym_type);

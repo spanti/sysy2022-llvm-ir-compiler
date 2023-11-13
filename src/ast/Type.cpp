@@ -50,3 +50,19 @@ int spanti::ArrayType::get_count_dim(){
     return elements.size();
   }
 }
+
+bool spanti::TypeMatch(Type *s_t, Type *g_t){
+  //强制类型转换 检测匹配
+  auto s_kind = s_t->getTypeKind();
+  auto g_kind = g_t->getTypeKind();
+  //
+  if(s_kind == g_kind){
+    return true;
+  }else{
+    //float->int implicit-conversion
+    if(s_kind == spanti::Type::SP_INTTYPE && g_kind == spanti::Type::SP_FLOATTYPE){
+      return true;
+    }
+  }
+  return false;
+}

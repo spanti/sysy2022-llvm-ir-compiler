@@ -1,10 +1,5 @@
-int g(int a[]){
-    return 0;
-}
 int main(){
-    //float f = 3.5678; 
     const int a[4][2] = {{1, 2}, {3, 4}, {}, 7};
-    g(a[1]);
     const int N = 3;
     int b[4][2] = {};
     int c[4][2] = {1, 2, 3, 4, 5, 6, 7, 8};

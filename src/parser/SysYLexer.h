@@ -18,8 +18,9 @@ public:
     Semicolon = 21, Question = 22, Colon = 23, Minus = 24, Exclamation = 25, 
     Tilde = 26, Addition = 27, Multiplication = 28, Division = 29, Modulo = 30, 
     LAND = 31, LOR = 32, EQ = 33, NEQ = 34, LT = 35, LE = 36, GT = 37, GE = 38, 
-    IntLiteral = 39, HexadecimalDigits = 40, ExponentPart = 41, FloatLiteral = 42, 
-    Identifier = 43, STRING = 44, WS = 45, LINE_COMMENT = 46, COMMENT = 47
+    Identifier = 39, IntLiteral = 40, HexadecimalDigits = 41, ExponentPart = 42, 
+    BinaryExponentPart = 43, FloatLiteral = 44, STRING = 45, WS = 46, LINE_COMMENT = 47, 
+    COMMENT = 48
   };
 
   explicit SysYLexer(antlr4::CharStream *input);
